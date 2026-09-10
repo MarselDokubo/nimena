@@ -1,0 +1,76 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  10. VIDEO CSS START
+/*----------------------------------------*/
+
+.video{
+    &__wrapper{
+        @media #{$lg, $md, $sm, $xs}{
+            padding-left: 0;
+        }
+    }
+    &__thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+
+        @media #{$xl, $lg}{
+            width: 45%;
+        }
+
+        @media #{$md, $sm, $xs}{
+            display: none;
+        }
+    }
+    &__play-btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--tp-common-black);
+        text-transform: uppercase;
+        @include transform(translate(-50%, -50%));
+        &:hover{
+            color: var(--tp-common-white);
+        }
+    }
+    &__progress{
+        &-item{
+            position: relative;
+            & h4{
+                font-size: 14px;
+                color: var(--tp-common-white);
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            & .progress{
+                height: 60px;
+                background-color: var(--tp-common-black-4);
+                border-radius: 0;
+                overflow: visible;
+            }
+
+            & .progress-bar{
+                background-color: var(--tp-theme-1);
+                overflow: visible;
+            }
+
+            & .progress-count{
+                position: absolute;
+                top: -5px;
+                right: 0;
+                font-size: 14px;
+                font-weight: 700;
+                color: var(--tp-common-white);
+            }
+        }
+    }
+}

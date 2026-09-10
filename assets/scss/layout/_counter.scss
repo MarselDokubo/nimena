@@ -1,0 +1,290 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  12. COUNTER CSS START
+/*----------------------------------------*/
+
+.counter{
+    &__item{
+        &-3{
+            padding-right: 65px;
+
+            @media #{$lg, $md, $sm, $xs}{
+                margin-bottom: 65px;
+                padding-right: 0;
+            }
+        }
+    }
+    &__title{
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--tp-common-white);
+        margin-bottom: 10px;
+
+        &-4{
+            font-size: 22px;
+            color: var(--tp-common-black);
+            text-transform: uppercase;
+        }
+    }
+    &__content{
+        & p{
+            font-size: 16px;
+            color: var(--tp-text-4);
+        }
+
+        &-3{
+            & p{
+                font-size: 16px;
+                color: var(--tp-common-white);
+                margin-bottom: 0;
+                padding-left: 50px;
+                margin-left: 20px;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: 50%;
+                    width: 30px;
+                    height: 1px;
+                    background-color: var(--tp-theme-1);
+                }
+            }
+        }
+        &-4{
+            & span{
+                color: var(--tp-text-12);
+            }
+
+            & p{
+                font-size: 16px;
+            }
+        }
+    }
+    &__process{
+
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+        & .progress-circular{
+            position: relative;
+            width: 130px;
+            height: 130px;
+            & .knob{
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0 !important;
+                width: 100% !important;
+                height: 100% !important;
+                font-size: 37px !important;
+                -webkit-text-fill-color: transparent;
+                background: var(--tp-common-black);
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px var(--tp-common-white);
+                color: var(--tp-common-black) !important;
+            }
+        }
+
+        &-4{
+            @media #{$md, $sm, $xs}{
+                margin-bottom: 25px;
+            }
+            & .progress-circular{
+                position: relative;
+                z-index: 1;
+                width: 170px;
+                height: 170px;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translate(-50%, -50%));
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color: var(--tp-common-black);
+                    z-index: -1;
+                    
+                }
+
+                & .knob{
+                    font-size: 28px !important;
+                    margin-top: 57px !important;
+                    color: var(--tp-common-white) !important;
+                }
+            }
+        }
+    }
+    &__list{
+        &-item{
+            &:not(:last-child){
+                border-bottom: 1px solid var(--tp-grey-1);
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        &-process{
+            position: relative;
+            @media #{$xs}{
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            & .counter-process-icon{
+                position: absolute;
+                top: 27px;
+                left: 49%;
+                @include transform(translateX(-50%));
+                & i{
+                    font-size: 40px;
+                    color: var(--tp-theme-1);
+                }
+
+                & span{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+
+                    & .features-icon-theme{
+                        fill: var(--tp-theme-1);
+                    }
+
+                    & .features-icon-black{
+                        fill: var(--tp-common-black);
+                    }
+                }
+            }
+            & .progress-circular{
+                position: relative;
+                width: 130px;
+                height: 130px;
+                & .knob{
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0;
+                    width: 100% !important;
+                    margin: 0 !important;
+                    font-size: 18px !important;
+                    color: var(--tp-common-black) !important;
+                    font-weight: 700;
+                }
+            }
+        }
+        &-content{
+            & h4{
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            & p{
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+
+        z-index: 1;
+
+        &::after{
+            position: absolute;
+            content: '';
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--tp-common-black);
+            z-index: -1;
+            @include border-radius(50%);
+        }
+
+        &:hover{
+            color: var(--tp-theme-1);
+            &::after{
+                top: 0;
+            }
+        }
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+
+        @media #{$xl}{
+            width: 46%;
+        }
+
+        @media #{$lg}{
+            width: 45%;
+        }
+        @media #{$md, $sm, $xs}{
+            display: none;
+        }
+    }
+    &__overlay{
+        position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--tp-common-black);
+            opacity: .9;
+            z-index: -1;
+        }
+    }
+    &__number{
+        position: relative;
+
+        & .counter-number-stroke{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            font-size: 160px;
+            -webkit-text-fill-color: transparent;
+            background: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 1px var(--tp-grey-2);
+            opacity: .1;
+            font-weight: 700;
+        }
+        & h4{
+            font-size: 80px;
+            color: var(--tp-common-white);
+            margin-bottom: 0;
+        }
+    }
+    &__inner{
+        &-4{
+            padding: 60px 0 70px;
+            border-top: 1px solid var(--tp-grey-1);
+        }
+    }
+}
+
+.counter-play-btn{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--tp-common-black);
+    background-color: var(--tp-common-white);
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    @include border-radius(50%);
+}

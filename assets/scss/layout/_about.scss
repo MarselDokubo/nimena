@@ -1,0 +1,290 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  05. ABOUT CSS START
+/*----------------------------------------*/
+
+.about{
+    &__wrapper{
+        @media #{$xl, $lg, $md, $sm, $xs}{
+            padding-left: 0;
+        }
+
+        &-2{
+            & > p{
+                margin-bottom: 30px;
+            }
+        }
+        &-3{
+
+            @media #{$xl}{
+                padding-left: 0;
+            }
+
+            @media #{$lg}{
+                padding-left: 0;
+                padding-right: 15px;
+            }
+
+            @media #{$md, $sm, $xs}{
+                padding-left: 0;
+                margin-top: 50px;
+                padding-right: 0;
+            }
+            & > p{
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+        }
+
+        &-4{
+            & > p{
+                font-size: 16px;
+            }
+        }
+    }
+    &__content{
+        & > p{
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+    }
+    &__author{
+        margin-right: 100px;
+        padding: 15px 15px;
+        background-color: var(--tp-common-white);
+        @include box-shadow(0px 16px 32px 0px rgba(0, 0, 0, 0.04));
+        @media #{$lg, $sm, $xs}{
+            margin-right: 0;
+        }
+        &-inner{
+            @media #{$xs}{
+                margin-bottom: 25px;
+                margin-right: 0;
+            }
+        }
+        &-border{
+            position: relative;
+
+            &::after{
+                @include tp-afbf($width:2px, $height:100%, $bg-color: var(--tp-theme-1), $left: auto, $right: 0);
+            }
+        }
+        &-thumb{
+            & img{
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &-info{
+            & h4{
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            & span{
+                font-size: 14px;
+                line-height: 1;
+            }
+        }
+        &-content-3{
+            & p{
+                line-height: 1;
+                margin-bottom: 23px;
+                & span{
+                    font-size: 20px;
+                    color: var(--tp-common-dark-3);
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &-4{
+            margin-right: 0;
+        }
+    }
+    &__item{
+        padding: 40px 25px 35px;
+        position: relative;
+        @include box-shadow(0px 16px 32px 0px rgba(0, 0, 0, 0.04));
+        &::after{
+            position: absolute;
+            content: '';
+            left: auto;
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--tp-theme-1);
+        }
+        &:hover{
+            &::after{
+                left: 0;
+                right: auto;
+                width: 100%;
+            }
+        }
+        &-icon{
+            margin-bottom: 10px;
+            & i{
+                font-size: 50px;
+                color: var(--tp-theme-1);
+            }
+        }
+        &-content{
+            & h4{
+                font-size: 20px;
+                line-height: 1;
+                margin-bottom: 0;
+                & span{
+                    font-size: 60px;
+                }
+            }
+            & p{
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__shape{
+        &-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        &-2{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            
+            @media #{$lg, $md, $sm, $xs}{
+                width: 100%;
+            }
+        }
+        &-3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            
+            @media #{$lg, $md, $sm, $xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__thumb{
+        &-wrapper{
+            &-2{
+                @media #{$xl, $lg, $md, $sm, $xs}{
+                    margin-right: 0;
+                }
+                & .about-thumb-shape{
+                    position: absolute;
+                    top: 35%;
+                    left: 36%;
+
+                    @media #{$xs}{
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+    &__progress{
+        &-item{
+            border-bottom: 1px solid var(--tp-border-9);
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+        }
+        &-process{
+            position: relative;
+            @media #{$xs}{
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            & .about-process-icon{
+                position: absolute;
+                top: 27px;
+                left: 49%;
+                @include transform(translateX(-50%));
+                & i{
+                    font-size: 40px;
+                    color: var(--tp-theme-2);
+                }
+
+                & span{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+
+                    & .features-icon-theme{
+                        fill: var(--tp-theme-2);
+                    }
+
+                    & .features-icon-black{
+                        fill: var(--tp-common-dark-3);
+                    }
+                }
+            }
+            & .progress-circular{
+                position: relative;
+                width: 130px;
+                height: 130px;
+                & .knob{
+                    position: absolute;
+                    bottom: 47px;
+                    left: 0;
+                    width: 100% !important;
+                    margin: 0 !important;
+                    font-size: 30px !important;
+                    color: var(--tp-common-black) !important;
+                    font-weight: 700;
+                }
+            }
+        }
+        &-content{
+            & h4{
+                font-size: 24px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            & p{
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__experience-text{
+        border-bottom: 1px solid var(--tp-border-9);
+        margin-bottom: 20px;
+        & p{
+            font-size: 20px;
+            color: var(--tp-common-black);
+            line-height: 1.5;
+            position: relative;
+            padding-left: 80px;
+            padding-right: 80px;
+            margin-bottom: 20px;
+            @media #{$sm, $xs}{
+                padding-right: 0;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 50%;
+                @include transform(translateY(-50%));
+                width: 50px;
+                height: 2px;
+                background-color: var(--tp-theme-1);
+            }
+            & span{
+                color: var(--tp-theme-1);
+            }
+        }
+    }
+}

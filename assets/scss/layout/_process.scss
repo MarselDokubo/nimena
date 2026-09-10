@@ -1,0 +1,151 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  09. PROCESS CSS START
+/*----------------------------------------*/
+
+
+.process{
+    $self: &;
+    &__item{
+        padding: 40px 40px 25px;
+
+        @media #{$xl}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &-overlay{
+            position: relative;
+            z-index: 1;
+            &::after{
+                @include tp-afbf(full, $bg-color: var(--tp-common-white));
+                z-index: -1;
+            }
+
+            &::before{
+                @include tp-afbf($bg-color: var(--tp-theme-1), $width: 8px, $height: 8px, $right: 20px, $top:0, $left:auto);
+                opacity: 0;
+            }
+        }
+
+        &:hover{
+
+            &::after{
+                background-color: var(--tp-common-black);
+                opacity: .94;
+            }
+            &::before{
+                opacity: 1;
+                top: 20px;
+            }
+            #{$self}{
+                &__title{
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+
+        &-2{
+            padding: 50px 35px 40px;
+            border: 1px solid var(--tp-grey-1);
+            @include box-shadow(0px 16px 32px 0px rgba(0, 0, 0, 0.04));
+
+            @media #{$xl}{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media #{$xs}{
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            &:hover{
+                @include box-shadow(none);
+            }
+        }
+    }
+    &__icon{
+        & i{
+            font-size: 60px;
+            color: var(--tp-theme-1);
+        }
+
+        &-2{
+            margin-bottom: 15px;
+            & i{
+                font-size: 70px;
+                color: var(--tp-text-13);
+            }
+        }
+    }
+    &__title{
+        font-size: 17px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        
+        &-2{
+            font-size: 24px;
+            color: var(--tp-common-dark-3);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+    }
+    &__thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    &__content{
+        &-2{
+            & p{
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__step{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        & span{
+            display: inline-block;
+            font-weight: 700;
+            color: var(--tp-common-dark-3);
+            background-color: var(--tp-theme-2);
+            padding: 5px 10px 2px;
+            text-transform: uppercase;
+            line-height: 1;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 100%;
+                width: 10px;
+                height: 10px;
+                border-top: 0px solid transparent;
+                border-left: 10px solid var(--tp-theme-2);
+                border-bottom: 10px solid transparent;
+            }
+        }
+    }
+}
+
+
+.process-style-2{
+    .process__step span{
+        color: var(--tp-common-white);
+        background-color: var(--tp-theme-1);
+
+        &::after{
+            border-left-color: var(--tp-theme-1);
+        }
+    }
+
+    .process__title-2{
+        color: var(--tp-common-black);
+    }
+}

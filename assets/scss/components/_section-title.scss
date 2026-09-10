@@ -1,0 +1,101 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  SECTION TITLE CSS START
+/*----------------------------------------*/
+
+.section{
+    &__title{
+        font-size: 60px;
+        color: var(--tp-common-black);
+        font-weight: var(--tp-fw-bold);
+        text-transform: uppercase;
+
+        @media #{$xl}{
+            font-size: 45px;
+        }
+
+        @media #{$lg}{
+            font-size: 35px;
+        }
+
+        @media #{$sm}{
+            font-size: 45px;
+        }
+
+        @media #{$xs}{
+            font-size: 30px;
+        }
+        &-pre{
+            font-size: 14px;
+            font-weight: var(--tp-fw-bold);
+            color: var(--tp-theme-1);
+            display: inline-block;
+            text-transform: uppercase;
+            &.has-border{
+                display: block;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                border-bottom: 1px solid var(--tp-border-1);
+                &.has-border-dark{
+                    border-color: var(--tp-border-4);
+                }
+            }
+        }
+        &-inner{
+            & p{
+                margin-left: 50px;
+                font-size: 16px;
+                margin-bottom: 5px;
+
+                @media #{$md, $sm, $xs}{
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &-wrapper{
+            &.section-titile-white{
+                & .section__title{
+                    color: var(--tp-common-white);
+                }
+
+                & .section__title-pre.has-border{
+                    border-color: var(--tp-common-black-2);
+                }
+
+                & .section__title-inner p{
+                    color: var(--tp-text-4);
+                }
+            }
+        }
+    }
+}
+
+.section-title-dark{
+    .section__title-pre{
+        color: var(--tp-text-12);
+    }
+
+    .section__title{
+        color: var(--tp-common-dark-3);
+    }
+
+    .section__title-inner p {
+        color: var(--tp-text-2);
+    }
+}
+
+.section-titile-dark-white{
+     .section__title-pre{
+        color: var(--tp-theme-2);
+    }
+
+    .section__title{
+        color: var(--tp-common-white);
+    }
+
+    .section__title-inner p {
+        color: var(--tp-text-2);
+    }
+}

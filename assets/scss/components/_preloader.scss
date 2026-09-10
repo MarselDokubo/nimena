@@ -1,0 +1,80 @@
+#loading{
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999999;
+	margin-top: 0px;
+	top: 0px;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#loading-center-absolute {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 25%;
+	transform: translate(-50%, -50%);
+
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px){
+	#loading-center-absolute{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+	#loading-center-absolute{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+	#loading-center-absolute{
+		width: 45%;
+	}
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+	#loading-center-absolute{
+		width: 50%;
+	}
+}
+@media (max-width: 575px){
+	#loading-center-absolute{
+		width: 60%;
+	}
+}
+
+#object{
+	width: 80px;
+	height: 80px;
+	background-color: #323232;
+	-webkit-animation: preloader 1s infinite ease-in-out;
+	animation: preloader 1s infinite ease-in-out;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+}
+@-webkit-keyframes preloader {
+  0% { -webkit-transform: perspective(160px); }
+  50% { -webkit-transform: perspective(160px) rotateY(-180deg); }
+  100% { -webkit-transform: perspective(160px) rotateY(-180deg) rotateX(-180deg); }
+}
+
+@keyframes preloader {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
+}

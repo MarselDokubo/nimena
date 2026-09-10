@@ -1,0 +1,99 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  17. HISTORY CSS START
+/*----------------------------------------*/
+
+.history{
+    $self:&;
+    &__item{
+        position: relative;
+        padding: 30px 30px 22px;
+        border: 1px solid #efefef;
+        box-shadow: 0px 16px 32px 0px rgba(27, 27, 27, 0.06);
+
+       &:hover{
+           box-shadow: none;
+            #{$self}{
+                &__year{
+                    & span{
+                        background-color: var(--tp-theme-1);
+                        &::after{
+                            border-left-color: var(--tp-theme-1);
+                        }
+                    }
+                }
+            }
+       }
+    }
+    &__year{
+        position: absolute;
+        top: 0;
+        right: 20px;
+        @include transform(translateY(-50%));
+
+        & span{
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--tp-common-white);
+            background-color: var(--tp-common-black);
+
+            &::after{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 100%;
+                width: 8px;
+                height: 8px;
+                border-top: 0px solid transparent;
+                border-left: 8px solid var(--tp-common-black);
+                border-bottom: 8px solid transparent;
+            }
+        }
+    }
+    &__icon{
+        margin-bottom: 15px;
+    }
+    &__title{
+        font-size: 20px;
+        color: var(--tp-common-black);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &__content{
+        & p{
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+    &__icon{
+        & i{
+            font-size: 50px;
+            color: var(--tp-theme-1);
+        }
+    }
+    &__thumb{
+        margin-left: -230px;
+
+        @media #{$md, $sm, $xs}{
+            margin-left: 0;
+        }
+
+        & img{
+            @media #{$md, $sm, $xs}{
+                width: 100%;
+            }
+        }
+    }
+    &__section-wrapper{
+        @media #{$md, $sm, $xs}{
+            padding-right: 0;
+        }
+    }
+}
