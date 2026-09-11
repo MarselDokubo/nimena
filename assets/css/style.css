@@ -9789,3 +9789,30 @@ html, body { max-width: 100%; overflow-x: hidden; }
     line-height: 1.55;
   }
 }
+
+
+/* === NIMENA MOBILE HERO BOTTOM ALIGNMENT 2026-09-11 === */
+/* On phones, anchor the hero copy toward the lower portion of the image instead of vertically centering it. */
+@media (max-width: 575px) {
+  .slider__area .slider__item.slider__height {
+    align-items: flex-end !important;
+  }
+
+  .slider__area .slider__item.slider__height > .container {
+    padding-bottom: 68px;
+  }
+
+  .slider__area .slider__content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .slider__area .slider__title {
+    margin-bottom: 0;
+  }
+
+  .slider__area .slider__btn {
+    margin-top: 26px;
+  }
+}
