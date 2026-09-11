@@ -16,6 +16,28 @@
 		$("#loading").fadeOut(500);
 	});
 
+	// === NIMENA + NSE HEADER LOCKUP 2026-09-11 ===
+	$('.header__bottom .logo > a').each(function () {
+		var $brandLink = $(this);
+		var $nimenaLogo = $brandLink.find('img').first();
+
+		if (!$nimenaLogo.length || $brandLink.find('.nse-partner-logo').length) {
+			return;
+		}
+
+		var nimenaSrc = $nimenaLogo.attr('src') || '';
+		var nseSrc = nimenaSrc.replace(/nimena-logo\.svg(?:\?.*)?$/, 'nse-logo.svg');
+
+		$brandLink.addClass('nimena-brand-lockup');
+		$nimenaLogo.addClass('nimena-primary-logo');
+		$('<img>', {
+			src: nseSrc,
+			alt: 'Nigerian Society of Engineers logo',
+			'class': 'nse-partner-logo',
+			decoding: 'async'
+		}).appendTo($brandLink);
+	});
+
 
 	if (jQuery("#theme-color").length > 0){
 		const colorInput = document.querySelector('#theme-color');
