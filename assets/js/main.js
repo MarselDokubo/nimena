@@ -171,8 +171,11 @@
 			loop: true,
 			effect: 'fade',
 
+			speed: 1100,
+
 			autoplay: {
-				delay: 5000,
+				delay: 8000,
+				disableOnInteraction: false,
 			},
 
 			// If we need pagination
