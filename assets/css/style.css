@@ -9811,3 +9811,72 @@ html, body { max-width: 100%; overflow-x: hidden; }
     font-size: clamp(44px, 12.5vw, 56px);
   }
 }
+
+
+/* === NIMENA + NSE HEADER LOCKUP 2026-09-11 === */
+.header__bottom .nimena-brand-lockup {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: max-content;
+  max-width: none;
+}
+.header__bottom .nimena-brand-lockup .nimena-primary-logo {
+  width: auto;
+  height: 72px;
+  max-width: 90px;
+  object-fit: contain;
+}
+.header__bottom .nimena-brand-lockup .nse-partner-logo {
+  width: auto;
+  height: 60px;
+  max-width: 52px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 991px) {
+  .header__bottom .nimena-brand-lockup {
+    gap: 9px;
+  }
+  .header__bottom .nimena-brand-lockup .nimena-primary-logo {
+    height: 62px;
+    max-width: 78px;
+  }
+  .header__bottom .nimena-brand-lockup .nse-partner-logo {
+    height: 54px;
+    max-width: 46px;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__bottom .row {
+    min-height: 78px;
+  }
+  .header__bottom .nimena-brand-lockup {
+    gap: 8px;
+  }
+  .header__bottom .nimena-brand-lockup .nimena-primary-logo {
+    height: 64px;
+    max-width: 80px;
+  }
+  .header__bottom .nimena-brand-lockup .nse-partner-logo {
+    height: 56px;
+    max-width: 48px;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    font-size: 22px;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn i {
+    margin: 0;
+    font-size: 22px;
+  }
+}
