@@ -9618,7 +9618,15 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .nimena-equal-services .services__title { min-height: 102px; }
 .nimena-equal-services .services__btn { margin-top: auto; }
 @media (max-width: 991px) { .nimena-equal-services .services__content { min-height: 255px; } }
-@media (max-width: 575px) { .nimena-equal-services .services__content { min-height: 0; } .nimena-equal-services .services__title { min-height: 0; } }
+@media (max-width: 575px) {
+  .nimena-equal-services .services__content {
+    min-height: 0;
+    padding: 24px 18px 22px;
+  }
+  .nimena-equal-services .services__title {
+    min-height: 0;
+  }
+}
 
 /* Member Value tiles: equal-height cards regardless of line wrapping. */
 .nimena-equal-process > [class*="col-"] { display: flex; }
