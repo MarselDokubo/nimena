@@ -9759,15 +9759,32 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 
 /* === NIMENA MOBILE HERO REFINEMENT 2026-09-11 === */
-/* Simplify the homepage hero on phones while preserving the desktop/tablet composition. */
-@media (max-width: 575px) {
+/* Mobile/tablet hero: remove supporting copy and anchor the heading + CTA low in the image. */
+@media (max-width: 767px) {
   .slider__area .slider__content > p {
     display: none !important;
   }
 
+  .slider__area .slider__item.slider__height.d-flex.align-items-center,
+  .slider__area .slider__item.slider__height {
+    align-items: flex-end !important;
+  }
+
+  .slider__area .slider__item.slider__height > .container {
+    width: 100%;
+    padding-bottom: 54px;
+  }
+
+  .slider__area .slider__content {
+    max-width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   .slider__area .slider__title {
-    font-size: clamp(44px, 12.5vw, 56px);
-    line-height: 0.98;
+    font-size: clamp(44px, 10.5vw, 58px);
+    line-height: .98;
     margin-bottom: 0;
     max-width: 100%;
   }
@@ -9775,44 +9792,14 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .slider__area .slider__btn {
     margin-top: 24px;
   }
-
-  .slider__area .slider__content {
-    max-width: 100%;
-  }
 }
 
-/* Keep supporting copy on small tablets, but make it more compact. */
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider__area .slider__content > p {
-    max-width: 38rem;
-    font-size: 15px;
-    line-height: 1.55;
-  }
-}
-
-
-/* === NIMENA MOBILE HERO BOTTOM ALIGNMENT 2026-09-11 === */
-/* On phones, anchor the hero copy toward the lower portion of the image instead of vertically centering it. */
 @media (max-width: 575px) {
-  .slider__area .slider__item.slider__height {
-    align-items: flex-end !important;
-  }
-
   .slider__area .slider__item.slider__height > .container {
-    padding-bottom: 68px;
-  }
-
-  .slider__area .slider__content {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 46px;
   }
 
   .slider__area .slider__title {
-    margin-bottom: 0;
-  }
-
-  .slider__area .slider__btn {
-    margin-top: 26px;
+    font-size: clamp(44px, 12.5vw, 56px);
   }
 }
