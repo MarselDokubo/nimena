@@ -9756,3 +9756,36 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .nimena-chairman-section > .container > .row { align-items:center; }
 .nimena-chairman-section .about__wrapper { padding-top:0!important; }
 @media(max-width:991px){.nimena-chairman-section .about__wrapper{padding-left:0!important;margin-top:30px}}
+
+
+/* === NIMENA MOBILE HERO REFINEMENT 2026-09-11 === */
+/* Simplify the homepage hero on phones while preserving the desktop/tablet composition. */
+@media (max-width: 575px) {
+  .slider__area .slider__content > p {
+    display: none !important;
+  }
+
+  .slider__area .slider__title {
+    font-size: clamp(44px, 12.5vw, 56px);
+    line-height: 0.98;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+
+  .slider__area .slider__btn {
+    margin-top: 24px;
+  }
+
+  .slider__area .slider__content {
+    max-width: 100%;
+  }
+}
+
+/* Keep supporting copy on small tablets, but make it more compact. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .slider__area .slider__content > p {
+    max-width: 38rem;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+}
