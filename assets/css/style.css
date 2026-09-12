@@ -9906,29 +9906,31 @@ html, body { max-width: 100%; overflow-x: hidden; }
   }
 }
 
-/* Reliable, touch-friendly navigation inside the off-canvas menu. */
-.nimena-mobile-nav ul { margin: 0; padding: 0; list-style: none; }
-.nimena-mobile-nav li { position: relative; border-top: 1px solid #e6ebf0; }
-.nimena-mobile-nav > ul > li:last-child { border-bottom: 1px solid #e6ebf0; }
-.nimena-mobile-nav li > a {
-  display: block; padding: 13px 48px 13px 0; color: #082d61;
-  font-size: 15px; line-height: 1.45; font-weight: 700;
+/* Keep the navigation-drawer mark compact regardless of the SVG's intrinsic size. */
+.offcanvas__logo {
+  flex: 0 0 auto;
 }
-.nimena-mobile-nav li > a:hover { color: #ff5e14; }
-.nimena-mobile-nav .submenu { padding: 0 0 8px 15px; }
-.nimena-mobile-nav .submenu li { border-top-color: #edf1f4; }
-.nimena-mobile-nav .submenu li > a { padding: 10px 44px 10px 0; font-size: 14px; font-weight: 600; }
-.nimena-mobile-expand {
-  position: absolute; top: 6px; right: 0; width: 38px; height: 38px;
-  display: inline-flex; align-items: center; justify-content: center;
-  color: #082d61; background: #f3f6f9; border: 1px solid #dce4eb;
-  transition: color .2s ease, background .2s ease, transform .2s ease;
+.offcanvas__logo > a {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
 }
-.nimena-mobile-expand:hover { color: #fff; background: #ff5e14; border-color: #ff5e14; }
-.nimena-mobile-expand i { margin: 0; transition: transform .2s ease; }
-.nimena-mobile-expand[aria-expanded="true"] i { transform: rotate(45deg); }
-.offcanvas__area .modal-content { min-height: 100vh; }
-.offcanvas__area .modal-dialog { overflow-y: auto; }
+.offcanvas__logo > a > img {
+  display: block;
+  width: 68px !important;
+  height: 68px !important;
+  max-width: 68px !important;
+  max-height: 68px !important;
+  object-fit: contain;
+}
+@media (max-width: 575px) {
+  .offcanvas__logo > a > img {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+  }
+}
 
 /* === NIMENA CONNECTED MEDIA + RESEARCH HUB 2026-09-11 === */
 .nimena-media-hub { background: #f4f7fa; }

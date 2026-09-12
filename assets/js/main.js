@@ -62,71 +62,10 @@
 
 	////////////////////////////////////////////////////
 	// 02. Mobile Menu Js
-	function buildNimenaMobileMenu() {
-		var $sourceList = $('#mobile-menu > ul').first();
-		var $menuMount = $('.mobile-menu').first();
-
-		if (!$sourceList.length || !$menuMount.length) {
-			return;
-		}
-
-		var $mobileList = $sourceList.clone(false);
-		$mobileList
-			.addClass('nimena-mobile-nav__list')
-			.removeAttr('style')
-			.find('ul')
-			.removeAttr('style')
-			.hide();
-
-		$mobileList.find('li.has-dropdown').each(function () {
-			var $item = $(this);
-			var $submenu = $item.children('ul').first();
-			var menuLabel = $.trim($item.children('a').first().text());
-
-			if (!$submenu.length) {
-				return;
-			}
-
-			var $expandButton = $('<button type="button" class="nimena-mobile-expand" aria-expanded="false"><i class="fal fa-plus" aria-hidden="true"></i></button>');
-			$expandButton.attr('aria-label', 'Expand ' + menuLabel + ' submenu');
-
-			$expandButton.on('click', function () {
-				var isExpanded = $(this).attr('aria-expanded') === 'true';
-
-				$(this)
-					.attr('aria-expanded', String(!isExpanded))
-					.attr('aria-label', (isExpanded ? 'Expand ' : 'Collapse ') + menuLabel + ' submenu');
-				$item.toggleClass('dropdown-opened', !isExpanded);
-				$submenu.stop(true, true).slideToggle(200);
-			});
-
-			$item.append($expandButton);
-		});
-
-		$menuMount
-			.empty()
-			.append($('<nav class="nimena-mobile-nav" aria-label="Mobile navigation"></nav>').append($mobileList));
-	}
-
-	var $offcanvasMenu = $('#offcanvasmodal');
-	var $offcanvasToggle = $('.hamburger-btn');
-
-	buildNimenaMobileMenu();
-	$offcanvasToggle.attr({
-		'aria-controls': 'offcanvasmodal',
-		'aria-expanded': 'false',
-		'aria-label': 'Open navigation'
-	});
-	$('.offcanvas__close-btn')
-		.attr({'aria-label': 'Close navigation', 'data-bs-dismiss': 'modal'})
-		.removeAttr('data-bs-target data-bs-toggle');
-
-	$offcanvasMenu.on('show.bs.modal', function () {
-		buildNimenaMobileMenu();
-		$offcanvasToggle.attr('aria-expanded', 'true');
-	});
-	$offcanvasMenu.on('hidden.bs.modal', function () {
-		$offcanvasToggle.attr('aria-expanded', 'false');
+	$('#mobile-menu').meanmenu({
+		meanMenuContainer: '.mobile-menu',
+		meanScreenWidth: "1199",
+		meanExpand: ['<i class="fal fa-plus"></i>'],
 	});
 
 
