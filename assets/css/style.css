@@ -9880,3 +9880,74 @@ html, body { max-width: 100%; overflow-x: hidden; }
     font-size: 22px;
   }
 }
+
+/* === NIMENA CONNECTED MEDIA + RESEARCH HUB 2026-09-11 === */
+.nimena-media-hub { background: #f4f7fa; }
+.nimena-media-hub .g-4 > [class*="col-"] { display: flex; }
+.nimena-media-card {
+  width: 100%; min-height: 360px; padding: 38px 38px 34px; display: flex; flex-direction: column;
+  border: 1px solid #dde5ed; border-top: 4px solid #ff5e14; background: #fff;
+  box-shadow: 0 16px 42px rgba(8,45,97,.065); transition: transform .25s ease, box-shadow .25s ease;
+}
+.nimena-media-card:hover { transform: translateY(-5px); box-shadow: 0 22px 48px rgba(8,45,97,.11); }
+.nimena-media-card__eyebrow { display: block; margin-bottom: 12px; color: #ff5e14; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.nimena-media-card h4 { color: #082d61; font-size: 28px; line-height: 1.12; margin-bottom: 14px; }
+.nimena-media-card p { margin-bottom: 22px; }
+.nimena-media-card__primary { margin-top: auto; padding-top: 22px; color: #082d61; font-weight: 700; border-top: 1px solid #e8edf2; }
+.nimena-media-card__primary i { margin-left: 8px; color: #ff5e14; }
+.nimena-source-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 24px; }
+.nimena-source-list a { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 8px 13px; color: #082d61; font-size: 14px; font-weight: 650; line-height: 1.2; background: #f2f5f8; border: 1px solid #dfe6ed; }
+.nimena-source-list a:hover { color: #fff; background: #082d61; border-color: #082d61; }
+.nimena-source-list a i { font-size: 12px; }
+.nimena-sidebar-links { margin: 0; }
+.nimena-sidebar-links li { margin-bottom: 10px; }
+.nimena-sidebar-links li a { display: flex; align-items: center; min-height: 44px; padding: 10px 13px; color: #082d61; font-weight: 600; background: #f4f7fa; border-left: 3px solid #ff5e14; }
+.nimena-sidebar-links li a:hover { color: #fff; background: #082d61; }
+
+.nimena-journal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 30px 0; }
+.nimena-journal-card { min-height: 320px; padding: 28px; display: flex; flex-direction: column; color: #5c6670; border: 1px solid #dfe6ed; border-top: 4px solid #ff5e14; background: #f8fafc; }
+.nimena-journal-card:hover { color: #5c6670; background: #fff; box-shadow: 0 14px 36px rgba(8,45,97,.09); }
+.nimena-journal-card span { color: #ff5e14; font-size: 14px; font-weight: 800; letter-spacing: .08em; }
+.nimena-journal-card strong { display: block; margin: 9px 0 14px; color: #082d61; font-size: 19px; line-height: 1.25; }
+.nimena-journal-card small { display: block; color: #68727d; font-size: 14px; line-height: 1.65; }
+.nimena-journal-card b { margin-top: auto; padding-top: 20px; color: #082d61; font-size: 14px; }
+.nimena-callout { display: flex; gap: 18px; align-items: flex-start; margin: 28px 0 34px; padding: 24px 26px; color: #fff; background: #082d61; border-left: 5px solid #ff5e14; }
+.nimena-callout > i { color: #ff5e14; font-size: 34px; }
+.nimena-callout strong, .nimena-callout span { display: block; }
+.nimena-callout strong { margin-bottom: 5px; color: #fff; font-size: 19px; }
+.nimena-callout span { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.55; }
+.nimena-action-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.nimena-office-network { background: #f4f7fa; }
+.nimena-office-network .g-4 > [class*="col-"] { display: flex; }
+.nimena-office-card { width: 100%; padding: 30px 28px; background: #fff; border: 1px solid #dfe6ed; border-top: 4px solid #ff5e14; }
+.nimena-office-card span { color: #ff5e14; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.nimena-office-card h4 { margin: 9px 0 12px; color: #082d61; font-size: 23px; }
+.nimena-office-card p { margin: 0; }
+
+.nimena-profile-record { background: #082d61; overflow: hidden; }
+.nimena-profile-record__image { height: 100%; min-height: 590px; }
+.nimena-profile-record__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.nimena-profile-record__content { padding: 74px 0 74px 55px; }
+.nimena-profile-record__content .section__title-pre { color: #ff5e14; }
+.nimena-profile-record__content h3 { max-width: 650px; margin-bottom: 18px; color: #fff; font-size: clamp(34px, 3.4vw, 54px); line-height: 1.03; }
+.nimena-profile-record__content > p { max-width: 680px; color: rgba(255,255,255,.72); }
+.nimena-record-links { display: grid; gap: 12px; margin-top: 28px; max-width: 700px; }
+.nimena-record-links a { display: grid; grid-template-columns: 130px 1fr auto; gap: 18px; align-items: center; padding: 18px 20px; color: #fff; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.055); }
+.nimena-record-links a:hover { color: #fff; background: rgba(255,255,255,.10); border-color: rgba(255,94,20,.65); }
+.nimena-record-links span { color: #ff5e14; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+.nimena-record-links strong { color: #fff; font-size: 16px; line-height: 1.35; }
+
+@media (max-width: 991px) {
+  .nimena-profile-record__content { padding: 55px 0 70px; }
+  .nimena-profile-record__image { min-height: 520px; }
+}
+@media (max-width: 767px) {
+  .nimena-media-card { min-height: 0; padding: 30px 25px; }
+  .nimena-media-card h4 { font-size: 24px; }
+  .nimena-journal-grid { grid-template-columns: 1fr; }
+  .nimena-journal-card { min-height: 0; }
+  .nimena-profile-record__image { min-height: 460px; }
+  .nimena-record-links a { grid-template-columns: 1fr auto; gap: 8px 14px; }
+  .nimena-record-links span { grid-column: 1 / -1; }
+}
