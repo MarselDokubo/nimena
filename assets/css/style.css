@@ -38,7 +38,7 @@
 /*----------------------------------------*/
 /*  01. THEME DEFAULT CSS START
 /*----------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 :root {
   /**
   @font family declaration
@@ -9963,182 +9963,111 @@ html, body { max-width: 100%; overflow-x: hidden; }
   object-fit: contain;
 }
 
-/* Homepage professional priorities: substantial, connected and distinctly maritime. */
+/* Homepage professional priorities: light typography over the original architectural drawing. */
 .nimena-priorities {
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  isolation: isolate;
+  padding: 70px 0 76px;
   background: #ff5e14;
 }
-.nimena-priorities::after {
+.nimena-priorities__drawing {
   position: absolute;
-  content: "";
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(circle at 84% 18%, rgba(255,255,255,.14), transparent 31%),
-    linear-gradient(112deg, rgba(8,45,97,.28) 0%, rgba(8,45,97,.08) 48%, rgba(255,94,20,.08) 100%);
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
 }
-.nimena-priorities__backdrop {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  opacity: .28;
-  background: url("../img/brand/brand-shape-1.png") center / cover no-repeat;
-  mix-blend-mode: multiply;
-}
-.nimena-priorities__layout {
-  display: grid;
-  grid-template-columns: minmax(270px, .82fr) minmax(0, 1.65fr);
-  gap: clamp(42px, 6vw, 88px);
+.nimena-priorities__heading {
+  display: flex;
   align-items: center;
-}
-.nimena-priorities__intro {
-  max-width: 455px;
-}
-.nimena-priorities__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 18px;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .12em;
+  gap: 16px;
+  margin-bottom: 30px;
+  color: rgba(255,255,255,.88);
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: .2em;
   text-transform: uppercase;
 }
-.nimena-priorities__eyebrow::before {
+.nimena-priorities__heading::after {
   content: "";
-  width: 34px;
+  width: 64px;
   height: 2px;
-  background: #fff;
-}
-.nimena-priorities__intro h2 {
-  margin-bottom: 20px;
-  color: #fff;
-  font-size: clamp(38px, 4vw, 58px);
-  line-height: 1.02;
-  letter-spacing: -.035em;
-}
-.nimena-priorities__intro p {
-  margin-bottom: 28px;
-  color: rgba(255,255,255,.86);
-  font-size: 17px;
-  line-height: 1.72;
-}
-.nimena-priorities__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  padding-bottom: 7px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  border-bottom: 2px solid rgba(255,255,255,.55);
-}
-.nimena-priorities__link:hover {
-  color: #082d61;
-  border-color: #082d61;
+  background: rgba(255,255,255,.68);
 }
 .nimena-priorities__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 13px;
+  column-gap: clamp(24px, 6vw, 90px);
+  row-gap: 18px;
 }
-.nimena-priority-card {
+.nimena-priority {
   position: relative;
-  min-height: 142px;
-  padding: 22px 18px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 58px;
+  padding: 16px 0 14px;
   color: #fff;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(7,42,77,.16);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+  border-bottom: 1px solid rgba(255,255,255,.26);
+  transition: color .25s ease, border-color .25s ease, transform .25s ease;
 }
-.nimena-priority-card:hover {
-  color: #fff;
-  transform: translateY(-5px);
-  background: #082d61;
-  border-color: #082d61;
-  box-shadow: 0 18px 34px rgba(8,45,97,.22);
-}
-.nimena-priority-card__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 22px;
-  color: #082d61;
-  font-size: 20px;
-  background: rgba(255,255,255,.92);
-  border-radius: 50%;
-}
-.nimena-priority-card strong,
-.nimena-priority-card small {
-  display: block;
-}
-.nimena-priority-card strong {
-  color: #fff;
-  font-size: 15px;
-  line-height: 1.2;
-  letter-spacing: .035em;
-  text-transform: uppercase;
-}
-.nimena-priority-card small {
-  margin-top: 5px;
-  color: rgba(255,255,255,.72);
+.nimena-priority span {
+  color: rgba(255,255,255,.58);
   font-size: 12px;
-  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: .08em;
 }
-@media (max-width: 991px) {
-  .nimena-priorities {
-    padding: 82px 0;
-  }
-  .nimena-priorities__layout {
-    grid-template-columns: 1fr;
-    gap: 44px;
-  }
-  .nimena-priorities__intro {
-    max-width: 700px;
-  }
+.nimena-priority strong {
+  color: #fff;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(19px, 2vw, 25px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 14px rgba(117,39,0,.12);
+}
+.nimena-priority:hover,
+.nimena-priority:focus-visible {
+  color: #082d61;
+  border-color: rgba(8,45,97,.7);
+  transform: translateX(4px);
+}
+.nimena-priority:hover strong,
+.nimena-priority:focus-visible strong,
+.nimena-priority:hover span,
+.nimena-priority:focus-visible span {
+  color: #082d61;
 }
 @media (max-width: 575px) {
   .nimena-priorities {
-    padding: 72px 0;
+    padding: 54px 0 58px;
   }
-  .nimena-priorities__intro h2 {
-    font-size: clamp(36px, 10.5vw, 46px);
-  }
-  .nimena-priorities__intro p {
-    font-size: 16px;
+  .nimena-priorities__heading {
+    margin-bottom: 22px;
+    font-size: 14px;
   }
   .nimena-priorities__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    column-gap: 14px;
+    row-gap: 10px;
   }
-  .nimena-priority-card {
-    min-height: 136px;
-    padding: 18px 14px;
+  .nimena-priority {
+    display: block;
+    min-height: 68px;
+    padding: 13px 0 12px;
   }
-  .nimena-priority-card__icon {
-    width: 38px;
-    height: 38px;
-    margin-bottom: 18px;
-    font-size: 18px;
+  .nimena-priority span {
+    display: block;
+    margin-bottom: 7px;
   }
-  .nimena-priority-card strong {
-    font-size: 13px;
-  }
-}
-@media (max-width: 359px) {
-  .nimena-priorities__grid {
-    grid-template-columns: 1fr;
+  .nimena-priority strong {
+    display: block;
+    font-size: clamp(15px, 4.4vw, 18px);
+    letter-spacing: .045em;
   }
 }
 @media (max-width: 575px) {
