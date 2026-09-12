@@ -9346,10 +9346,6 @@ blockquote cite::before {
 
 
 /* NIMENA content adaptation: preserves the Miiler navy/orange/white theme */
-.nimena-brand-word{display:block;color:#fff;font-size:17px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;text-align:center;opacity:.88;white-space:nowrap;}
-.brand__item:hover .nimena-brand-word{opacity:1;}
-@media (max-width:767px){.nimena-brand-word{font-size:13px;letter-spacing:.8px;}}
-
 .nimena-brand-word-dark{color:#0f326a!important;}
 
 
@@ -9850,6 +9846,58 @@ html, body { max-width: 100%; overflow-x: hidden; }
   }
 }
 
+@media (max-width: 1199px) {
+  .header__bottom .header__hamburger .offcanvas-btn-text {
+    display: none;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    padding: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0;
+    color: #082d61;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn i {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 22px;
+    margin: 0;
+    border-top: 3px solid currentColor;
+    font-size: 0 !important;
+    line-height: 1;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn i::before,
+  .header__bottom .header__hamburger button.hamburger-btn i::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    display: block;
+    height: 3px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn i::before {
+    top: 7px;
+    width: 32px;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn i::after {
+    top: 17px;
+    width: 22px;
+  }
+  .header__bottom .header__hamburger button.hamburger-btn:hover,
+  .header__bottom .header__hamburger button.hamburger-btn:focus-visible {
+    background: transparent !important;
+    color: #ff5e14;
+  }
+}
+
 @media (max-width: 575px) {
   .header__bottom .row {
     min-height: 86px;
@@ -9880,18 +9928,9 @@ html, body { max-width: 100%; overflow-x: hidden; }
     max-width: 54px;
   }
   .header__bottom .header__hamburger button.hamburger-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0;
-    font-size: 22px;
-  }
-  .header__bottom .header__hamburger button.hamburger-btn i {
-    margin: 0;
-    font-size: 22px;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
   }
 }
 
@@ -9922,6 +9961,185 @@ html, body { max-width: 100%; overflow-x: hidden; }
   max-width: 68px !important;
   max-height: 68px !important;
   object-fit: contain;
+}
+
+/* Homepage professional priorities: substantial, connected and distinctly maritime. */
+.nimena-priorities {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  background: #ff5e14;
+}
+.nimena-priorities::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(255,255,255,.14), transparent 31%),
+    linear-gradient(112deg, rgba(8,45,97,.28) 0%, rgba(8,45,97,.08) 48%, rgba(255,94,20,.08) 100%);
+}
+.nimena-priorities__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: .28;
+  background: url("../img/brand/brand-shape-1.png") center / cover no-repeat;
+  mix-blend-mode: multiply;
+}
+.nimena-priorities__layout {
+  display: grid;
+  grid-template-columns: minmax(270px, .82fr) minmax(0, 1.65fr);
+  gap: clamp(42px, 6vw, 88px);
+  align-items: center;
+}
+.nimena-priorities__intro {
+  max-width: 455px;
+}
+.nimena-priorities__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.nimena-priorities__eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: #fff;
+}
+.nimena-priorities__intro h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+}
+.nimena-priorities__intro p {
+  margin-bottom: 28px;
+  color: rgba(255,255,255,.86);
+  font-size: 17px;
+  line-height: 1.72;
+}
+.nimena-priorities__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 7px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255,255,255,.55);
+}
+.nimena-priorities__link:hover {
+  color: #082d61;
+  border-color: #082d61;
+}
+.nimena-priorities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 13px;
+}
+.nimena-priority-card {
+  position: relative;
+  min-height: 142px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(7,42,77,.16);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.nimena-priority-card:hover {
+  color: #fff;
+  transform: translateY(-5px);
+  background: #082d61;
+  border-color: #082d61;
+  box-shadow: 0 18px 34px rgba(8,45,97,.22);
+}
+.nimena-priority-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 22px;
+  color: #082d61;
+  font-size: 20px;
+  background: rgba(255,255,255,.92);
+  border-radius: 50%;
+}
+.nimena-priority-card strong,
+.nimena-priority-card small {
+  display: block;
+}
+.nimena-priority-card strong {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.nimena-priority-card small {
+  margin-top: 5px;
+  color: rgba(255,255,255,.72);
+  font-size: 12px;
+  line-height: 1.35;
+}
+@media (max-width: 991px) {
+  .nimena-priorities {
+    padding: 82px 0;
+  }
+  .nimena-priorities__layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  .nimena-priorities__intro {
+    max-width: 700px;
+  }
+}
+@media (max-width: 575px) {
+  .nimena-priorities {
+    padding: 72px 0;
+  }
+  .nimena-priorities__intro h2 {
+    font-size: clamp(36px, 10.5vw, 46px);
+  }
+  .nimena-priorities__intro p {
+    font-size: 16px;
+  }
+  .nimena-priorities__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .nimena-priority-card {
+    min-height: 136px;
+    padding: 18px 14px;
+  }
+  .nimena-priority-card__icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+  .nimena-priority-card strong {
+    font-size: 13px;
+  }
+}
+@media (max-width: 359px) {
+  .nimena-priorities__grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 575px) {
   .offcanvas__logo > a > img {
