@@ -24,7 +24,7 @@ This build keeps the Miiler template's visual system and adapts the content, ima
 - `news-local-content.html` — Local-content and indigenous-capacity coverage
 - `faq.html` — Frequently Asked Questions
 - `contact.html` — Contact
-- `login.html` / `register.html` — Member portal interface placeholders pending backend integration
+- `login/index.html` / `register/index.html` — transition pages for the single secure member portal planned at `portal.nimena.org.ng`
 
 The earlier `index-nimena.html` draft and unused Miiler commerce/demo pages are intentionally not part of this production build.
 
