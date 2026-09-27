@@ -13,6 +13,8 @@ export const memberNavigation = [
   { href: "/dashboard#membership", label: "Membership", icon: "card" },
   { href: "/dashboard#payments", label: "Payments", icon: "wallet" },
   { href: "/dashboard#development", label: "CPD & events", icon: "calendar" },
+  { href: "/research", label: "Research profile", icon: "book" },
+  { href: "/conferences", label: "Conferences", icon: "calendar" },
   { href: "/dashboard#documents", label: "Documents", icon: "file" },
   { href: "/dashboard#community", label: "Community", icon: "users" },
   { href: "/programmes", label: "Programmes", icon: "shield" },
@@ -25,6 +27,7 @@ export const secretariatNavigation = [
   { href: "/secretariat#renewals", label: "Renewals", icon: "wallet" },
   { href: "/secretariat#reports", label: "Reports", icon: "chart" },
   { href: "/secretariat/programmes", label: "Programme reviews", icon: "shield" },
+  { href: "/secretariat/conferences", label: "Conference management", icon: "calendar" },
   { href: "/secretariat#settings", label: "Settings", icon: "settings" },
 ] as const;
 
@@ -258,3 +261,102 @@ export const demoProgrammeSubmissions: DemoProgrammeSubmission[] = [
     status: "Decision pending",
   },
 ];
+
+export type ResearchSubmissionStatus =
+  | "Editorial screening"
+  | "Under review"
+  | "Revision requested"
+  | "Accepted";
+
+export const demoResearchSubmissions = [
+  {
+    reference: "AJM-2026-184",
+    journal: "AJOMENA",
+    title: "Reliability-centred maintenance for coastal support vessels",
+    status: "Under review" as ResearchSubmissionStatus,
+    updated: "18 Sep 2026",
+    ojsUrl: "https://nimenajournals.com/ajomena/login",
+  },
+  {
+    reference: "JBS-2026-096",
+    journal: "JBESED",
+    title: "Port electrification pathways for emerging blue economies",
+    status: "Revision requested" as ResearchSubmissionStatus,
+    updated: "20 Sep 2026",
+    ojsUrl: "https://nimenajournals.com/jbesed/login",
+  },
+] as const;
+
+export const demoPublications = [
+  {
+    title: "Energy-efficiency opportunities in small vessel operations",
+    journal: "Sample external publication",
+    year: "2025",
+    doi: "10.xxxx/sample-doi",
+  },
+  {
+    title: "Digital inspection methods for marine machinery",
+    journal: "Sample conference proceedings",
+    year: "2024",
+    doi: "Not supplied",
+  },
+] as const;
+
+export type ConferenceSubmissionStatus =
+  | "Administrative screening"
+  | "Reviewer assignment"
+  | "Under review"
+  | "Revision requested"
+  | "Accepted";
+
+export const demoConferences = [
+  {
+    id: "CONF-DEMO-2027",
+    title: "NIMENA Annual Technical Conference",
+    label: "Demonstration event",
+    date: "Date to be confirmed",
+    venue: "Venue to be confirmed",
+    mode: "In person with online sessions",
+    registrationState: "Prototype registration open",
+    abstractDeadline: "Deadline to be confirmed",
+    memberFee: 45000,
+    nonMemberFee: 65000,
+    studentFee: 20000,
+    tracks: [
+      "Marine engineering systems",
+      "Naval architecture and ship design",
+      "Offshore engineering and energy",
+      "Blue economy, policy and sustainability",
+    ],
+  },
+] as const;
+
+export const demoConferenceSubmissions = [
+  {
+    reference: "CFP-2027-031",
+    title: "Condition monitoring for medium-speed marine engines",
+    presenter: "Engr. Chinedu Okafor",
+    track: "Marine engineering systems",
+    type: "Full paper",
+    status: "Under review" as ConferenceSubmissionStatus,
+    score: 78,
+  },
+  {
+    reference: "CFP-2027-029",
+    title: "Modular hull concepts for inland passenger transport",
+    presenter: "Tomi Adeyemi",
+    track: "Naval architecture and ship design",
+    type: "Extended abstract",
+    status: "Reviewer assignment" as ConferenceSubmissionStatus,
+    score: 0,
+  },
+  {
+    reference: "CFP-2027-024",
+    title: "Financing coastal resilience through blue-economy instruments",
+    presenter: "Maryam Bello",
+    track: "Blue economy, policy and sustainability",
+    type: "Abstract",
+    status: "Revision requested" as ConferenceSubmissionStatus,
+    score: 64,
+  },
+] as const;

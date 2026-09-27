@@ -10184,3 +10184,43 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media(max-width:991px){.nimena-programme-jump__inner,.nimena-services-entry__links{grid-template-columns:1fr 1fr}.nimena-programme-jump a:nth-child(2),.nimena-services-entry__links a:nth-child(2){border-right:0}.nimena-programme-jump a:nth-child(-n+2),.nimena-services-entry__links a:nth-child(-n+2){border-bottom:1px solid #ededed}.nimena-programme-section__layout,.nimena-programme-integrity__inner,.nimena-magazine-intro__layout,.nimena-magazine-pitch__layout{grid-template-columns:1fr;gap:36px}.nimena-magazine-grid__items{grid-template-columns:1fr 1fr}}
 @media(max-width:767px){.nimena-programme-hero{padding:110px 0 85px}.nimena-programme-hero h1{font-size:46px}.nimena-programme-hero p{font-size:17px}.nimena-programme-section{padding:78px 0}.nimena-programme-process{grid-template-columns:1fr}.nimena-programme-process div{min-height:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.18)}.nimena-programme-process div:last-child{border-bottom:0}.nimena-services-entry__head h2{font-size:36px}.nimena-magazine-grid__items{grid-template-columns:1fr}}
 @media(max-width:520px){.nimena-programme-jump__inner,.nimena-services-entry__links{grid-template-columns:1fr}.nimena-programme-jump a,.nimena-programme-jump a:nth-child(2),.nimena-services-entry__links a,.nimena-services-entry__links a:nth-child(2){border-right:0;border-bottom:1px solid #ededed}.nimena-programme-jump a:last-child,.nimena-services-entry__links a:last-child{border-bottom:0}.nimena-programme-actions{display:grid}.nimena-programme-action{justify-content:center}}
+
+/* Research, journals and conference pathways */
+.nimena-research-hero h1{max-width:980px}
+.nimena-research-journals{padding:110px 0;background:#fff}
+.nimena-research-heading{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.7fr);gap:clamp(45px,8vw,115px);align-items:end;margin-bottom:48px}
+.nimena-research-heading h2{max-width:720px;margin:0;color:#00235a;font-size:clamp(38px,5vw,66px);font-weight:900;line-height:.98;letter-spacing:-.03em;text-transform:uppercase}
+.nimena-research-heading>p{margin:0;color:#365484;font-size:18px;line-height:1.7}
+.nimena-research-journals .nimena-journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:0;background:#dcdcdc;border:1px solid #dcdcdc}
+.nimena-research-journals .nimena-journal-card{min-height:520px;padding:42px;display:flex;flex-direction:column;border:0;border-top:5px solid #00235a;background:#fff;box-shadow:none}
+.nimena-research-journals .nimena-journal-card:hover{transform:none;background:#fff;box-shadow:none}
+.nimena-research-journals .nimena-journal-card--orange{border-top-color:#ff5e14}
+.nimena-research-journals .nimena-journal-card>span{color:#ff5e14;font-size:12px;font-weight:800;letter-spacing:.16em}
+.nimena-research-journals .nimena-journal-card h3{margin:18px 0 20px;color:#00235a;font-size:30px;font-weight:800;line-height:1.15}
+.nimena-research-journals .nimena-journal-card p{margin:0 0 25px;color:#666;font-size:16px;line-height:1.7}
+.nimena-research-journals .nimena-journal-card ul{margin:0 0 30px;padding:0;list-style:none;border-top:1px solid #ededed}
+.nimena-research-journals .nimena-journal-card li{position:relative;padding:13px 0 13px 21px;color:#213b61;font-size:14px;border-bottom:1px solid #ededed}
+.nimena-research-journals .nimena-journal-card li::before{content:"";position:absolute;top:20px;left:1px;width:7px;height:7px;background:#ff5e14}
+.nimena-journal-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.nimena-journal-actions a{min-height:42px;display:inline-flex;align-items:center;padding:0 15px;color:#00235a;border:1px solid #d2d2d2;background:#fff;font-size:11px;font-weight:800;letter-spacing:.035em;text-transform:uppercase}
+.nimena-journal-actions a:first-child{color:#fff;border-color:#00235a;background:#00235a}
+.nimena-journal-actions a:hover{color:#fff;border-color:#ff5e14;background:#ff5e14}
+.nimena-research-callout{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:center;margin-top:34px;padding:30px 34px;color:#fff;background:#00235a;border-left:5px solid #ff5e14}
+.nimena-research-callout span{display:block;margin-bottom:6px;color:#ff8a55;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.nimena-research-callout strong{display:block;color:#fff;font-size:22px}
+.nimena-research-callout p{margin:6px 0 0;color:rgba(255,255,255,.67);font-size:14px}
+.nimena-research-callout .nimena-programme-action{white-space:nowrap}
+.nimena-publishing-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:34px;border:1px solid rgba(255,255,255,.17)}
+.nimena-publishing-steps article{min-height:210px;padding:26px;border-right:1px solid rgba(255,255,255,.17);border-bottom:1px solid rgba(255,255,255,.17)}
+.nimena-publishing-steps article:nth-child(3n){border-right:0}
+.nimena-publishing-steps article:nth-last-child(-n+3){border-bottom:0}
+.nimena-publishing-steps span{color:#ff8a55;font-size:11px;font-weight:800;letter-spacing:.13em}
+.nimena-publishing-steps strong{display:block;margin:23px 0 8px;color:#fff;font-size:18px}
+.nimena-publishing-steps p{margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.58}
+.nimena-conference-capabilities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:34px;border-top:1px solid #dcdcdc;border-left:1px solid #dcdcdc}
+.nimena-conference-capabilities article{min-height:205px;padding:27px;border-right:1px solid #dcdcdc;border-bottom:1px solid #dcdcdc;background:#fff}
+.nimena-conference-capabilities i{margin-bottom:24px;color:#ff5e14;font-size:27px}
+.nimena-conference-capabilities strong{display:block;margin-bottom:7px;color:#00235a;font-size:18px}
+.nimena-conference-capabilities p{margin:0;color:#777;font-size:14px;line-height:1.62}
+@media(max-width:991px){.nimena-research-heading{grid-template-columns:1fr;gap:24px}.nimena-publishing-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.nimena-publishing-steps article:nth-child(3n){border-right:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:nth-child(2n){border-right:0}.nimena-publishing-steps article:nth-last-child(-n+3){border-bottom:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:nth-last-child(-n+2){border-bottom:0}}
+@media(max-width:767px){.nimena-research-journals{padding:78px 0}.nimena-research-journals .nimena-journal-grid{grid-template-columns:1fr}.nimena-research-journals .nimena-journal-card{min-height:0;padding:31px 25px}.nimena-research-journals .nimena-journal-card h3{font-size:25px}.nimena-research-callout{grid-template-columns:1fr;padding:27px 24px}.nimena-research-callout .nimena-programme-action{justify-content:center}.nimena-conference-capabilities{grid-template-columns:1fr}.nimena-conference-capabilities article{min-height:0}.nimena-publishing-steps{grid-template-columns:1fr}.nimena-publishing-steps article,.nimena-publishing-steps article:nth-child(2n),.nimena-publishing-steps article:nth-child(3n),.nimena-publishing-steps article:nth-last-child(-n+2){min-height:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:last-child{border-bottom:0}}

@@ -11,8 +11,12 @@ This directory is intentionally separate from the existing static public website
 | `/` | Choose a member, applicant or secretariat journey |
 | `/apply` | Five-step membership application based on the current NIMENA form |
 | `/dashboard` | Member record, renewal, CPD, documents and events |
+| `/research` | Member research profile, OJS-linked activity and reviewer recognition |
+| `/conferences` | Conference catalogue, sample registration, attendance and CPD journey |
+| `/conferences/cfp` | Conference abstract/full-paper submission workspace |
 | `/secretariat` | Application queue, operational metrics and review activity |
 | `/secretariat/applications/NIM-2026-0142` | Detailed application review and recommendation workspace |
+| `/secretariat/conferences` | Conference review, decisions, scheduling and attendance operations |
 
 All displayed identities, credentials, payments and documents are fictional sample data. The application draft is stored only in the visitor's browser under the versioned key `nimena.portal.application.v1`. Selecting a file does not upload or transmit it.
 
@@ -57,6 +61,18 @@ The prototype deliberately does not contain a real login, database, payment proc
 7. Migration and reconciliation of the existing membership register.
 
 See [docs/PRODUCT_BLUEPRINT.md](docs/PRODUCT_BLUEPRINT.md) and [docs/phase-1-schema.sql](docs/phase-1-schema.sql) for the proposed workflow and data model.
+
+## Scholarly services prototype
+
+The review build separates journal and conference responsibilities:
+
+- `/research` maintains a sample member research identity and links back to OJS.
+- `/conferences` demonstrates delegate registration, sample fees and attendance evidence.
+- `/conferences/cfp` demonstrates conference abstracts, declarations and draft saving.
+- `/secretariat/conferences` demonstrates blind-review assignment, scoring, decisions and programme scheduling.
+- OJS remains the authoritative system for journal manuscripts, peer review, production and publication.
+
+See [docs/SCHOLARLY_SERVICES_BLUEPRINT.md](docs/SCHOLARLY_SERVICES_BLUEPRINT.md), [docs/OJS_AUDIT_2026-09-27.md](docs/OJS_AUDIT_2026-09-27.md) and [docs/scholarly-services-schema.sql](docs/scholarly-services-schema.sql). All displayed conference, research and journal-status records are fictional and browser-only.
 
 
 ## Institutional programme prototype

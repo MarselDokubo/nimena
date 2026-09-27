@@ -45,12 +45,16 @@ export function ProgrammeWorkspace() {
   const [notice, setNotice] = useState("");
 
   useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(storageKey);
-      if (saved) setSubmissions(JSON.parse(saved) as DemoProgrammeSubmission[]);
-    } catch {
-      setSubmissions([]);
-    }
+    const restore = window.setTimeout(() => {
+      try {
+        const saved = window.localStorage.getItem(storageKey);
+        if (saved) setSubmissions(JSON.parse(saved) as DemoProgrammeSubmission[]);
+      } catch {
+        setSubmissions([]);
+      }
+    }, 0);
+
+    return () => window.clearTimeout(restore);
   }, []);
 
   const programme = useMemo(

@@ -625,3 +625,193 @@ textarea.form-control { min-height: 140px; padding-top: 18px; resize: vertical; 
   .programme-tab:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
   .programme-tab:last-child { border-bottom: 0; }
 }
+
+/* Research profile */
+.research-metrics,
+.conference-admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  background: white;
+}
+.research-metrics article,
+.conference-admin-metrics article {
+  min-height: 118px;
+  display: grid;
+  align-content: center;
+  padding: 20px;
+  border-right: 1px solid var(--line);
+}
+.research-metrics article:last-child,
+.conference-admin-metrics article:last-child { border-right: 0; }
+.research-metrics span,
+.conference-admin-metrics span { color: var(--orange-600); font-size: .64rem; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
+.research-metrics strong,
+.conference-admin-metrics strong { margin-top: 8px; color: var(--navy-900); font-size: 1.25rem; line-height: 1.15; }
+.research-metrics small,
+.conference-admin-metrics small { margin-top: 5px; color: var(--ink-500); font-size: .67rem; }
+.research-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(290px, .7fr);
+  gap: 18px;
+  align-items: start;
+}
+.research-profile-form { display: grid; gap: 18px; }
+.research-submissions { display: grid; gap: 0; padding-top: 0; padding-bottom: 0; }
+.research-submissions article { display: grid; gap: 5px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.research-submissions article:last-child { border-bottom: 0; }
+.research-submissions article > span { color: var(--orange-600); font-size: .63rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.research-submissions article > strong { color: var(--navy-900); font-size: .82rem; }
+.research-submissions article > div { display: flex; align-items: center; gap: 10px; }
+.research-submissions em { padding: 4px 7px; color: var(--navy-900); background: #eef2f7; font-size: .62rem; font-style: normal; font-weight: 700; }
+.research-submissions small { color: var(--ink-500); font-size: .65rem; }
+.research-submissions a { display: inline-flex; align-items: center; gap: 6px; width: max-content; color: var(--navy-900); font-size: .67rem; font-weight: 750; }
+.research-submissions a:hover { color: var(--orange-600); }
+.research-submissions a svg { width: 15px; }
+.research-publications { display: grid; padding-top: 5px; padding-bottom: 5px; }
+.research-publications article { display: grid; grid-template-columns: 54px 1fr; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.research-publications article:last-child { border-bottom: 0; }
+.research-publications article > span { display: grid; place-items: center; min-height: 48px; color: var(--orange-600); background: #fff3ed; font-size: .7rem; font-weight: 800; }
+.research-publications article > div { display: grid; align-content: center; gap: 3px; }
+.research-publications strong { color: var(--navy-900); font-size: .78rem; }
+.research-publications small { color: var(--ink-500); font-size: .66rem; }
+.research-ojs-card .panel__body { display: grid; padding-top: 0; padding-bottom: 0; }
+.research-ojs-card .panel__body > a { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.research-ojs-card .panel__body > a:last-child { border-bottom: 0; }
+.research-ojs-card a strong { color: var(--navy-900); font-size: .8rem; }
+.research-ojs-card a span { color: var(--ink-500); font-size: .67rem; }
+.research-ojs-card a svg { grid-column: 2; grid-row: 1 / 3; align-self: center; color: var(--orange-600); }
+.reviewer-history { display: grid; gap: 14px; }
+.reviewer-history article { display: flex; align-items: center; gap: 12px; }
+.reviewer-history article > div { display: grid; gap: 2px; }
+.reviewer-history article > div strong { color: var(--navy-900); font-size: .75rem; }
+.reviewer-history article > div small { color: var(--ink-500); font-size: .65rem; }
+.portal-list { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.portal-list li { position: relative; padding: 11px 0 11px 22px; border-bottom: 1px solid var(--line); color: var(--ink-700); font-size: .73rem; }
+.portal-list li:last-child { border-bottom: 0; }
+.portal-list li::before { content: ""; position: absolute; left: 1px; top: 18px; width: 7px; height: 7px; background: var(--orange-600); }
+
+/* Conference member workspace */
+.conference-nav { display: flex; border: 1px solid var(--line); background: white; overflow-x: auto; }
+.conference-nav button,
+.conference-nav a { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; flex: 1; min-width: 150px; padding: 0 18px; color: var(--ink-700); border: 0; border-right: 1px solid var(--line); background: transparent; cursor: pointer; font-size: .7rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.conference-nav > :last-child { border-right: 0; }
+.conference-nav button:hover,
+.conference-nav a:hover,
+.conference-nav .is-active { color: white; background: var(--navy-900); box-shadow: inset 0 -4px var(--orange-600); }
+.conference-detail-layout,
+.conference-form-layout,
+.cfp-layout,
+.conference-admin-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(290px, .7fr); gap: 18px; align-items: start; }
+.conference-hero-card { position: relative; overflow: hidden; min-height: 440px; display: flex; flex-direction: column; justify-content: flex-end; padding: clamp(28px, 5vw, 58px); color: white; background: var(--navy-900); }
+.conference-hero-card::after { content: ""; position: absolute; width: 340px; height: 340px; top: -190px; right: -130px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; box-shadow: 0 0 0 50px rgba(255,255,255,.025), 0 0 0 100px rgba(255,255,255,.018); }
+.conference-hero-card > * { position: relative; z-index: 1; }
+.conference-hero-card > span { color: #ffb38f; font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.conference-hero-card h3 { max-width: 680px; margin: 14px 0 12px; color: white; font-size: clamp(2rem, 5vw, 4.1rem); line-height: .98; text-transform: uppercase; }
+.conference-hero-card > p { max-width: 650px; margin: 0; color: rgba(255,255,255,.68); }
+.conference-hero-card dl { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin: 34px 0 0; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); }
+.conference-hero-card dl div { display: grid; gap: 4px; }
+.conference-hero-card dt { color: rgba(255,255,255,.45); font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; }
+.conference-hero-card dd { margin: 0; font-size: .75rem; font-weight: 700; }
+.conference-hero-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.conference-hero-card .button--outline { color: white; border-color: rgba(255,255,255,.25); background: transparent; }
+.numbered-topics { display: grid; margin: 0; padding: 0; list-style: none; }
+.numbered-topics li { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); color: var(--navy-900); font-size: .75rem; font-weight: 700; }
+.numbered-topics li:last-child { border-bottom: 0; }
+.numbered-topics span { color: var(--orange-600); font-size: .66rem; letter-spacing: .08em; }
+.conference-registration-form,
+.cfp-form { display: grid; gap: 20px; }
+.conference-category { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 0; padding: 0; border: 0; }
+.conference-category legend { margin-bottom: 8px; color: var(--navy-900); font-size: .76rem; font-weight: 700; }
+.conference-category label { display: flex; align-items: flex-start; gap: 10px; padding: 15px; border: 2px solid #f1f1f1; background: #f7f7f7; cursor: pointer; }
+.conference-category label:has(input:checked) { border-color: var(--orange-600); background: white; box-shadow: inset 4px 0 var(--orange-600); }
+.conference-category input { margin-top: 4px; accent-color: var(--orange-600); }
+.conference-category span { display: grid; gap: 3px; }
+.conference-category strong { color: var(--navy-900); font-size: .73rem; }
+.conference-category small { color: var(--ink-500); font-size: .65rem; }
+.fee-summary { position: sticky; top: 108px; }
+.fee-summary .panel__body { display: grid; gap: 0; }
+.fee-summary .panel__body > div { display: flex; justify-content: space-between; gap: 20px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .73rem; }
+.fee-summary .panel__body > div span { color: var(--ink-500); }
+.fee-summary .panel__body > div strong { color: var(--navy-900); text-transform: capitalize; }
+.fee-summary .fee-summary__total { margin-top: 8px; padding: 18px 0; }
+.fee-summary .fee-summary__total strong { font-size: 1.15rem; }
+.fee-summary p { margin: 16px 0 0; color: var(--ink-500); font-size: .67rem; }
+.attendance-check { display: grid; grid-template-columns: 170px 1fr; gap: 28px; align-items: center; }
+.attendance-check > div:last-child { display: grid; gap: 16px; }
+.qr-placeholder { width: 170px; height: 170px; display: grid; place-items: center; color: white; border: 14px solid white; outline: 1px solid var(--line); background: repeating-conic-gradient(var(--navy-900) 0 25%, white 0 50%) 0 / 34px 34px; }
+.qr-placeholder span { display: grid; place-items: center; width: 52px; height: 52px; color: white; background: var(--orange-600); font-size: 1.3rem; font-weight: 900; }
+.conference-message { margin: 0 22px 22px; }
+.cfp-abstract { min-height: 220px !important; }
+.declaration-stack { display: grid; gap: 10px; }
+.declaration-stack .declaration { margin-top: 0; }
+.vertical-steps { display: grid; margin: 0; padding: 0; list-style: none; }
+.vertical-steps li { position: relative; display: grid; grid-template-columns: 34px 1fr; gap: 12px; min-height: 70px; }
+.vertical-steps li:not(:last-child)::before { content: ""; position: absolute; left: 16px; top: 32px; bottom: 0; width: 1px; background: var(--line-strong); }
+.vertical-steps li > span { position: relative; z-index: 1; width: 34px; height: 34px; display: grid; place-items: center; color: white; background: var(--navy-900); font-size: .62rem; font-weight: 800; }
+.vertical-steps li > div { display: grid; align-content: start; gap: 3px; padding-top: 3px; }
+.vertical-steps strong { color: var(--navy-900); font-size: .76rem; }
+.vertical-steps small { color: var(--ink-500); font-size: .66rem; }
+
+/* Conference Secretariat */
+.conference-admin-layout { grid-template-columns: minmax(0, 1.35fr) minmax(360px, .65fr); }
+.conference-submission-queue { display: grid; }
+.queue-empty { padding: 1.25rem; color: var(--ink-500); font-size: .72rem; text-align: center; border-bottom: 1px solid var(--line); }
+.conference-submission-queue > button { display: grid; grid-template-columns: 98px minmax(0,1fr) 135px 45px; align-items: center; gap: 14px; min-height: 78px; padding: 13px 18px; color: var(--ink-900); border: 0; border-bottom: 1px solid var(--line); background: white; text-align: left; cursor: pointer; }
+.conference-submission-queue > button:hover { background: #fafafa; }
+.conference-submission-queue > button.is-active { background: #fff8f4; box-shadow: inset 4px 0 var(--orange-600); }
+.conference-submission-queue button > span { color: var(--orange-600); font-size: .62rem; font-weight: 800; letter-spacing: .06em; }
+.conference-submission-queue button > div { display: grid; gap: 3px; }
+.conference-submission-queue strong { color: var(--navy-900); font-size: .74rem; }
+.conference-submission-queue small { color: var(--ink-500); font-size: .65rem; }
+.conference-submission-queue em { padding: 5px 7px; color: var(--navy-900); background: #eef2f7; font-size: .6rem; font-style: normal; font-weight: 700; text-align: center; }
+.conference-submission-queue b { color: var(--ink-500); font-size: .67rem; }
+.conference-review-card { position: sticky; top: 108px; }
+.conference-review-form { display: grid; gap: 16px; }
+.conference-score-grid { display: grid; gap: 10px; }
+.conference-score-grid label { display: grid; grid-template-columns: 105px 1fr 34px; align-items: center; gap: 10px; color: var(--ink-700); font-size: .68rem; }
+.conference-score-grid input { accent-color: var(--orange-600); }
+.conference-score-grid strong { color: var(--navy-900); font-size: .67rem; }
+.conference-score-total { display: flex; justify-content: space-between; padding: 13px 15px; color: var(--navy-900); background: #f7f7f7; font-size: .73rem; }
+.conference-score-total strong { color: var(--orange-600); }
+.schedule-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.conference-operations { display: grid; grid-template-columns: 1fr; gap: 9px; }
+.conference-operations .quick-action { width: 100%; cursor: pointer; text-align: left; }
+
+@media (max-width: 1100px) {
+  .research-layout,
+  .conference-detail-layout,
+  .conference-form-layout,
+  .cfp-layout,
+  .conference-admin-layout { grid-template-columns: 1fr; }
+  .fee-summary,
+  .conference-review-card { position: static; }
+  .conference-submission-queue > button { grid-template-columns: 90px minmax(0,1fr) 135px; }
+  .conference-submission-queue b { grid-column: 2 / -1; }
+}
+@media (max-width: 760px) {
+  .research-metrics,
+  .conference-admin-metrics { grid-template-columns: 1fr 1fr; }
+  .research-metrics article:nth-child(2),
+  .conference-admin-metrics article:nth-child(2) { border-right: 0; }
+  .research-metrics article:nth-child(-n+2),
+  .conference-admin-metrics article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .conference-category { grid-template-columns: 1fr; }
+  .conference-hero-card dl { grid-template-columns: 1fr; gap: 10px; }
+  .attendance-check { grid-template-columns: 1fr; }
+  .qr-placeholder { margin: auto; }
+  .conference-submission-queue > button { grid-template-columns: 1fr; gap: 4px; padding: 16px 18px; }
+  .conference-submission-queue b { grid-column: auto; }
+}
+@media (max-width: 520px) {
+  .research-metrics,
+  .conference-admin-metrics { grid-template-columns: 1fr; }
+  .research-metrics article,
+  .conference-admin-metrics article { border-right: 0; border-bottom: 1px solid var(--line); }
+  .research-metrics article:last-child,
+  .conference-admin-metrics article:last-child { border-bottom: 0; }
+  .conference-nav button,
+  .conference-nav a { min-width: 132px; }
+  .conference-hero-card__actions { display: grid; }
+  .schedule-fields { grid-template-columns: 1fr; }
+}

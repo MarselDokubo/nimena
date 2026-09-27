@@ -8,6 +8,9 @@ This build keeps the Miiler template's visual system and adapts the content, ima
 - `index.html` — Home (canonical homepage)
 - `about.html` — About NIMENA
 - `services.html` — Professional Services
+- `research/index.html` — Research & Journals hub, journal pathways and conference services
+- `programmes/index.html` — Institutional programmes
+- `magazine/index.html` — NIMENA professional magazine
 - `services-details.html` — Membership
 - `team.html` — National Leadership
 - `team-details.html` — Leadership / Institution detail
@@ -61,3 +64,14 @@ The site uses relative links so it can work both as a GitHub Pages project site 
 - `portal/docs/INSTITUTIONAL_PROGRAMMES_BLUEPRINT.md` — governance and production requirements.
 
 The public accreditation directory is deliberately empty until NIMENA formally approves criteria, assessors and publishing authority.
+
+## Research, journals and conferences
+
+- `research/index.html` is the public route to AJOMENA, JBESED, author guidance, researcher services, conference pathways and the current Call for Papers.
+- Journal manuscript submission and peer review remain in OJS at `nimenajournals.com`; the public site and portal link to those records rather than duplicating them.
+- `portal/src/app/research/` demonstrates a member research profile and OJS-linked status summaries.
+- `portal/src/app/conferences/` demonstrates conference registration, CFP submission, attendance and CPD.
+- `portal/src/app/secretariat/conferences/` demonstrates abstract review, decisions and programme scheduling.
+- `portal/docs/OJS_AUDIT_2026-09-27.md` records the public OJS audit and staging prerequisites.
+
+All new research and conference records are fictional prototype data. No real payment, upload, OJS write or editorial decision is performed.

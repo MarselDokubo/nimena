@@ -37,7 +37,9 @@ export function PortalFrame({ children, eyebrow, title, role = "member" }: Porta
         <nav className="sidebar__nav" aria-label={`${role} navigation`}>
           <p>{role === "secretariat" ? "Secretariat" : "Member workspace"}</p>
           {nav.map((item) => {
-            const active = item.href === pathname || (pathname.startsWith("/secretariat/applications") && item.label === "Applications");
+            const active = item.href === pathname
+              || (item.href === "/conferences" && pathname.startsWith("/conferences"))
+              || (pathname.startsWith("/secretariat/applications") && item.label === "Applications");
             return (
               <Link
                 aria-current={active ? "page" : undefined}

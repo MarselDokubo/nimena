@@ -77,8 +77,8 @@ export default function MemberDashboard() {
               <div className="panel__body quick-actions">
                 <Link className="quick-action" href="#payments"><Icon name="wallet" /><span>Pay or renew</span></Link>
                 <Link className="quick-action" href="#documents"><Icon name="upload" /><span>Upload document</span></Link>
-                <Link className="quick-action" href="#development"><Icon name="calendar" /><span>Find an event</span></Link>
-                <Link className="quick-action" href="#development"><Icon name="book" /><span>Record CPD</span></Link>
+                <Link className="quick-action" href="/conferences"><Icon name="calendar" /><span>Conference centre</span></Link>
+                <Link className="quick-action" href="/research"><Icon name="book" /><span>Research profile</span></Link>
                 <Link className="quick-action" href="#membership"><Icon name="card" /><span>Download ID card</span></Link>
                 <Link className="quick-action" href="/programmes"><Icon name="shield" /><span>Institutional programmes</span></Link>
               </div>
