@@ -57,3 +57,15 @@ The prototype deliberately does not contain a real login, database, payment proc
 7. Migration and reconciliation of the existing membership register.
 
 See [docs/PRODUCT_BLUEPRINT.md](docs/PRODUCT_BLUEPRINT.md) and [docs/phase-1-schema.sql](docs/phase-1-schema.sql) for the proposed workflow and data model.
+
+
+## Institutional programme prototype
+
+The review build now includes four connected workflows:
+
+- `/programmes` — member/applicant workspace for accreditation and endorsement, innovation and technology transfer, magazine pitches, and industry partnership or sponsorship proposals.
+- `/secretariat/programmes` — sample screening queue, evidence checklist and routing decisions.
+- `docs/INSTITUTIONAL_PROGRAMMES_BLUEPRINT.md` — governance, roles, states and production boundary.
+- `docs/institutional-programmes-schema.sql` — proposed PostgreSQL entities for a production implementation.
+
+All programme records and file controls remain prototype-only. The member workspace stores sample activity in browser local storage; it does not transmit or upload data.

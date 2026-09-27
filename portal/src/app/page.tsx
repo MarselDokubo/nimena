@@ -13,13 +13,13 @@ export default function PortalEntry() {
           <h1>One professional record. Every member service.</h1>
           <p>
             A connected workspace for applications, membership, development,
-            documents, events and support.
+            documents, events, accreditation, innovation and institutional opportunities.
           </p>
         </div>
         <div className="entry-intro__foot">
           <span className="entry-stat"><strong>05</strong> membership pathways</span>
           <span className="entry-stat"><strong>02</strong> chapter options in the current form</span>
-          <span className="entry-stat"><strong>01</strong> verified member record</span>
+          <span className="entry-stat"><strong>04</strong> institutional programme pathways</span>
         </div>
       </section>
 
@@ -40,7 +40,7 @@ export default function PortalEntry() {
               <span className="access-card__icon"><Icon name="card" /></span>
               <span>
                 <strong>Member workspace</strong>
-                <small>Membership, payments, CPD and documents</small>
+                <small>Membership, payments, CPD, documents and programmes</small>
               </span>
               <Icon className="access-card__arrow" name="arrow" />
             </Link>

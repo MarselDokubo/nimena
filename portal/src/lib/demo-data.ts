@@ -15,6 +15,7 @@ export const memberNavigation = [
   { href: "/dashboard#development", label: "CPD & events", icon: "calendar" },
   { href: "/dashboard#documents", label: "Documents", icon: "file" },
   { href: "/dashboard#community", label: "Community", icon: "users" },
+  { href: "/programmes", label: "Programmes", icon: "shield" },
 ] as const;
 
 export const secretariatNavigation = [
@@ -23,6 +24,7 @@ export const secretariatNavigation = [
   { href: "/secretariat#members", label: "Members", icon: "users" },
   { href: "/secretariat#renewals", label: "Renewals", icon: "wallet" },
   { href: "/secretariat#reports", label: "Reports", icon: "chart" },
+  { href: "/secretariat/programmes", label: "Programme reviews", icon: "shield" },
   { href: "/secretariat#settings", label: "Settings", icon: "settings" },
 ] as const;
 
@@ -163,3 +165,96 @@ export const applicationDetail = {
     { name: "Signature", type: "PNG", state: "Verified" },
   ],
 } as const;
+
+
+export type InstitutionalProgrammeKey =
+  | "accreditation"
+  | "innovation"
+  | "magazine"
+  | "partnerships";
+
+export const institutionalProgrammes = [
+  {
+    key: "accreditation",
+    title: "Accreditation & Endorsement",
+    shortTitle: "Accreditation",
+    description: "Apply for assessment of a training provider, course, laboratory or academic programme.",
+    action: "Start an assessment request",
+    evidence: "Curriculum, facilities, faculty, quality controls and supporting approvals",
+  },
+  {
+    key: "innovation",
+    title: "Innovation & Technology Transfer",
+    shortTitle: "Innovation",
+    description: "Submit an industry challenge, solution, startup, patent or commercialisation opportunity.",
+    action: "Submit an innovation opportunity",
+    evidence: "Problem statement, solution maturity, ownership, partners and support requested",
+  },
+  {
+    key: "magazine",
+    title: "Professional Magazine",
+    shortTitle: "Magazine",
+    description: "Pitch accessible technical commentary, interviews, chapter stories or industry lessons.",
+    action: "Pitch a magazine contribution",
+    evidence: "Working title, audience, synopsis, author profile and available media",
+  },
+  {
+    key: "partnerships",
+    title: "Industry Partnerships & Sponsorships",
+    shortTitle: "Partnerships",
+    description: "Propose a technical collaboration, programme partnership, sponsorship or institutional alliance.",
+    action: "Propose a partnership",
+    evidence: "Organisation profile, shared objective, contribution, beneficiaries and expected outcomes",
+  },
+] as const;
+
+export type ProgrammeSubmissionStatus =
+  | "Draft"
+  | "Submitted for screening"
+  | "Evidence review"
+  | "Technical review"
+  | "Decision pending";
+
+export type DemoProgrammeSubmission = {
+  id: string;
+  programme: InstitutionalProgrammeKey;
+  title: string;
+  organisation: string;
+  submitted: string;
+  status: ProgrammeSubmissionStatus;
+};
+
+export const demoProgrammeSubmissions: DemoProgrammeSubmission[] = [
+  {
+    id: "ACC-2026-004",
+    programme: "accreditation",
+    title: "Marine Machinery Maintenance Diploma",
+    organisation: "Sample Maritime Training Institute",
+    submitted: "16 Sep 2026",
+    status: "Evidence review",
+  },
+  {
+    id: "INN-2026-011",
+    programme: "innovation",
+    title: "Low-cost vessel fuel monitoring challenge",
+    organisation: "Example Coastal Logistics Ltd",
+    submitted: "18 Sep 2026",
+    status: "Technical review",
+  },
+  {
+    id: "MAG-2026-007",
+    programme: "magazine",
+    title: "Lessons from preventable machinery failures",
+    organisation: "Engr. Amina Yusuf",
+    submitted: "19 Sep 2026",
+    status: "Submitted for screening",
+  },
+  {
+    id: "PAR-2026-003",
+    programme: "partnerships",
+    title: "Young Marine Engineers Skills Programme",
+    organisation: "Demo Offshore Services",
+    submitted: "20 Sep 2026",
+    status: "Decision pending",
+  },
+];

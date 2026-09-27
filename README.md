@@ -50,3 +50,14 @@ This build has been restructured so public pages no longer require `.html` in th
 - `/news-singapore-local-capacity/` → `news-singapore-local-capacity/index.html`
 
 The site uses relative links so it can work both as a GitHub Pages project site (for example `https://<user>.github.io/nimena/`) and later behind a custom domain. A `.nojekyll` file is included for direct static serving by GitHub Pages.
+
+
+## Institutional programme additions
+
+- `programmes/index.html` — public accreditation and endorsement, innovation and technology transfer, professional magazine, and industry partnership/sponsorship hub.
+- `magazine/index.html` — public professional magazine distinct from AJOMENA and JBESED peer-reviewed journals.
+- `portal/src/app/programmes/` — browser-only prototype submission workspace.
+- `portal/src/app/secretariat/programmes/` — prototype Secretariat screening queue.
+- `portal/docs/INSTITUTIONAL_PROGRAMMES_BLUEPRINT.md` — governance and production requirements.
+
+The public accreditation directory is deliberately empty until NIMENA formally approves criteria, assessors and publishing authority.

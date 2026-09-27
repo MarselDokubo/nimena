@@ -80,7 +80,7 @@ export default function MemberDashboard() {
                 <Link className="quick-action" href="#development"><Icon name="calendar" /><span>Find an event</span></Link>
                 <Link className="quick-action" href="#development"><Icon name="book" /><span>Record CPD</span></Link>
                 <Link className="quick-action" href="#membership"><Icon name="card" /><span>Download ID card</span></Link>
-                <Link className="quick-action" href="#community"><Icon name="users" /><span>Member community</span></Link>
+                <Link className="quick-action" href="/programmes"><Icon name="shield" /><span>Institutional programmes</span></Link>
               </div>
             </section>
 
