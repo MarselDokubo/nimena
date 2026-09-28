@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { demoPublications, demoResearchSubmissions } from "@/lib/demo-data";
 
@@ -65,7 +66,7 @@ export function ResearchWorkspace() {
       <div className="notice-strip">
         <Icon name="shield" />
         <p><strong>Prototype boundary:</strong> the records below are fictional and are not being read from nimenajournals.com.</p>
-        <a className="button button--small button--outline" href="https://nimenajournals.com" rel="noreferrer" target="_blank">Open OJS</a>
+        <Link className="button button--small button--outline" href="/journals">Open journals prototype</Link>
       </div>
 
       <section className="research-metrics" aria-label="Research activity summary">
@@ -117,14 +118,14 @@ export function ResearchWorkspace() {
           </section>
 
           <section className="panel">
-            <div className="panel__head"><div><h2>Journal activity</h2><p>Status summaries will link back to the authoritative OJS record</p></div><a href="https://nimenajournals.com/ajomena/login" rel="noreferrer" target="_blank">OJS sign in</a></div>
+            <div className="panel__head"><div><h2>Journal activity</h2><p>Sample submission summaries connected to the journal workflow preview</p></div><Link href="/journals/author">Author workspace</Link></div>
             <div className="panel__body research-submissions">
               {demoResearchSubmissions.map((submission) => (
                 <article key={submission.reference}>
                   <span>{submission.journal} · {submission.reference}</span>
                   <strong>{submission.title}</strong>
                   <div><em>{submission.status}</em><small>Updated {submission.updated}</small></div>
-                  <a href={submission.ojsUrl} rel="noreferrer" target="_blank">Continue in OJS <Icon name="arrow" /></a>
+                  <Link href={submission.ojsUrl}>Continue in prototype <Icon name="arrow" /></Link>
                 </article>
               ))}
             </div>
@@ -144,8 +145,8 @@ export function ResearchWorkspace() {
           <section className="panel research-ojs-card">
             <div className="panel__head"><div><h2>NIMENA Journals</h2><p>Submission and peer review remain open to members and non-members</p></div></div>
             <div className="panel__body">
-              <a href="https://nimenajournals.com/ajomena/index" rel="noreferrer" target="_blank"><strong>AJOMENA</strong><span>Offshore, marine engineering and naval architecture</span><Icon name="arrow" /></a>
-              <a href="https://nimenajournals.com/jbesed/index" rel="noreferrer" target="_blank"><strong>JBESED</strong><span>Blue economy and sustainable energy development</span><Icon name="arrow" /></a>
+              <Link href="/journals/ajomena"><strong>AJOMENA</strong><span>Offshore, marine engineering and naval architecture</span><Icon name="arrow" /></Link>
+              <Link href="/journals/jbesed"><strong>JBESED</strong><span>Blue economy and sustainable energy development</span><Icon name="arrow" /></Link>
             </div>
           </section>
 

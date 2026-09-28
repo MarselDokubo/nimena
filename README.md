@@ -61,6 +61,7 @@ The site uses relative links so it can work both as a GitHub Pages project site 
 - `magazine/index.html` — public professional magazine distinct from AJOMENA and JBESED peer-reviewed journals.
 - `portal/src/app/programmes/` — browser-only prototype submission workspace.
 - `portal/src/app/secretariat/programmes/` — prototype Secretariat screening queue.
+- `portal/src/app/journals/` — presentation prototype for AJOMENA, JBESED, author submission, peer review and editorial production.
 - `portal/docs/INSTITUTIONAL_PROGRAMMES_BLUEPRINT.md` — governance and production requirements.
 
 The public accreditation directory is deliberately empty until NIMENA formally approves criteria, assessors and publishing authority.

@@ -14,6 +14,7 @@ export const memberNavigation = [
   { href: "/dashboard#payments", label: "Payments", icon: "wallet" },
   { href: "/dashboard#development", label: "CPD & events", icon: "calendar" },
   { href: "/research", label: "Research profile", icon: "book" },
+  { href: "/journals", label: "NIMENA Journals", icon: "book" },
   { href: "/conferences", label: "Conferences", icon: "calendar" },
   { href: "/dashboard#documents", label: "Documents", icon: "file" },
   { href: "/dashboard#community", label: "Community", icon: "users" },
@@ -28,6 +29,7 @@ export const secretariatNavigation = [
   { href: "/secretariat#reports", label: "Reports", icon: "chart" },
   { href: "/secretariat/programmes", label: "Programme reviews", icon: "shield" },
   { href: "/secretariat/conferences", label: "Conference management", icon: "calendar" },
+  { href: "/journals/editor", label: "Journal editorial", icon: "book" },
   { href: "/secretariat#settings", label: "Settings", icon: "settings" },
 ] as const;
 
@@ -275,7 +277,7 @@ export const demoResearchSubmissions = [
     title: "Reliability-centred maintenance for coastal support vessels",
     status: "Under review" as ResearchSubmissionStatus,
     updated: "18 Sep 2026",
-    ojsUrl: "https://nimenajournals.com/ajomena/login",
+    ojsUrl: "/journals/author",
   },
   {
     reference: "JBS-2026-096",
@@ -283,7 +285,7 @@ export const demoResearchSubmissions = [
     title: "Port electrification pathways for emerging blue economies",
     status: "Revision requested" as ResearchSubmissionStatus,
     updated: "20 Sep 2026",
-    ojsUrl: "https://nimenajournals.com/jbesed/login",
+    ojsUrl: "/journals/author",
   },
 ] as const;
 

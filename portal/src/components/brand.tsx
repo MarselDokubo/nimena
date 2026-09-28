@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Brand({ compact = false }: { compact?: boolean }) {
+export function Brand({ compact = false, subtitle = "Member Services" }: { compact?: boolean; subtitle?: string }) {
   return (
     <Link className={`brand${compact ? " brand--compact" : ""}`} href="/">
       <span className="brand__marks" aria-hidden="true">
@@ -11,7 +11,7 @@ export function Brand({ compact = false }: { compact?: boolean }) {
       </span>
       <span className="brand__copy">
         <strong>NIMENA</strong>
-        {!compact && <small>Member Services</small>}
+        {!compact && <small>{subtitle}</small>}
       </span>
     </Link>
   );

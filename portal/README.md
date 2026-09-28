@@ -17,8 +17,18 @@ This directory is intentionally separate from the existing static public website
 | `/secretariat` | Application queue, operational metrics and review activity |
 | `/secretariat/applications/NIM-2026-0142` | Detailed application review and recommendation workspace |
 | `/secretariat/conferences` | Conference review, decisions, scheduling and attendance operations |
+| `/journals` | Branded NIMENA Journals presentation prototype |
+| `/journals/ajomena` | AJOMENA public journal and prototype current issue |
+| `/journals/jbesed` | JBESED public journal and prototype current issue |
+| `/journals/call-for-papers` | Journal Call for Papers and preparation guidance |
+| `/journals/policies` | Proposed author, reviewer and editorial policy architecture |
+| `/journals/author` | Interactive manuscript-submission preview |
+| `/journals/reviewer` | Interactive confidential peer-review preview |
+| `/journals/editor` | Editorial pipeline, decisions, production and setup preview |
 
 All displayed identities, credentials, payments and documents are fictional sample data. The application draft is stored only in the visitor's browser under the versioned key `nimena.portal.application.v1`. Selecting a file does not upload or transmit it.
+
+The journals prototype follows the same boundary. Author drafts remain in browser storage, selected manuscript files are never uploaded, and reviewer/editor actions affect only temporary on-screen state. See [`docs/JOURNALS_PROTOTYPE_GUIDE.md`](docs/JOURNALS_PROTOTYPE_GUIDE.md).
 
 ## Run locally
 
@@ -71,6 +81,7 @@ The review build separates journal and conference responsibilities:
 - `/conferences/cfp` demonstrates conference abstracts, declarations and draft saving.
 - `/secretariat/conferences` demonstrates blind-review assignment, scoring, decisions and programme scheduling.
 - OJS remains the authoritative system for journal manuscripts, peer review, production and publication.
+- `/journals` now demonstrates the approved-design target for a later OJS theme and workflow configuration; it does not replace or write to the existing OJS installation.
 
 See [docs/SCHOLARLY_SERVICES_BLUEPRINT.md](docs/SCHOLARLY_SERVICES_BLUEPRINT.md), [docs/OJS_AUDIT_2026-09-27.md](docs/OJS_AUDIT_2026-09-27.md) and [docs/scholarly-services-schema.sql](docs/scholarly-services-schema.sql). All displayed conference, research and journal-status records are fictional and browser-only.
 
