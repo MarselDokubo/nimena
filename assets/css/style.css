@@ -10419,3 +10419,47 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .nimena-home-gateway h2 { font-size: 30px; }
   .nimena-home-publication h3 { font-size: 30px; }
 }
+
+/* Unified public-page heading scale: matches the established homepage titles. */
+.nimena-programme-hero h1,
+.nimena-hub-hero h1,
+.nimena-search-hero h1,
+.nimena-programme-section h2,
+.nimena-magazine-intro h2,
+.nimena-research-heading h2,
+.nimena-hub-heading h2,
+.nimena-split-feature h2,
+.nimena-home-impact__heading h2 {
+  font-size: clamp(34px, 4.2vw, 60px);
+  font-weight: var(--tp-fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.nimena-programme-integrity h2,
+.nimena-services-entry__head h2,
+.nimena-magazine-pitch h2,
+.nimena-hub-cta h2 {
+  font-size: clamp(30px, 3.2vw, 46px);
+  font-weight: var(--tp-fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+@media (max-width: 575px) {
+  .nimena-programme-hero h1,
+  .nimena-hub-hero h1,
+  .nimena-search-hero h1,
+  .nimena-programme-section h2,
+  .nimena-magazine-intro h2,
+  .nimena-research-heading h2,
+  .nimena-hub-heading h2,
+  .nimena-split-feature h2,
+  .nimena-home-impact__heading h2 {
+    font-size: 30px;
+  }
+  .nimena-programme-integrity h2,
+  .nimena-services-entry__head h2,
+  .nimena-magazine-pitch h2,
+  .nimena-hub-cta h2 {
+    font-size: 28px;
+  }
+}
