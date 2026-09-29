@@ -10376,22 +10376,46 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media(max-width:991px){.nimena-home-impact__heading{grid-template-columns:1fr;gap:18px}.nimena-home-impact__grid{grid-template-columns:1fr 1fr}.nimena-home-gateways__grid,.nimena-home-publications__grid{grid-template-columns:1fr}}
 @media(max-width:767px){.nimena-home-impact{padding:75px 0}.nimena-home-impact__grid{grid-template-columns:1fr}.nimena-home-impact__grid>div{min-height:0}.nimena-home-gateway{min-height:500px;padding:35px 26px}.nimena-home-publications{padding:75px 0}.nimena-home-publication{min-height:470px;padding:35px 26px}.nimena-home-publication h3{font-size:32px}}
 
-/* Keep the publications heading consistent with the established section-title scale. */
-.nimena-home-publications .nimena-hub-heading h2 {
+/* Keep all remodelled homepage headings consistent with the established section-title scale. */
+.nimena-home-directory .nimena-hub-heading h2,
+.nimena-home-publications .nimena-hub-heading h2,
+.nimena-home-impact__heading h2 {
   font-size: 60px;
   font-weight: var(--tp-fw-bold);
   line-height: 1.1;
   letter-spacing: 0;
 }
+.nimena-home-gateway h2 {
+  font-size: clamp(32px, 3vw, 44px);
+  font-weight: var(--tp-fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+.nimena-home-publication h3 {
+  font-size: 36px;
+  font-weight: var(--tp-fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .nimena-home-publications .nimena-hub-heading h2 { font-size: 45px; }
+  .nimena-home-directory .nimena-hub-heading h2,
+  .nimena-home-publications .nimena-hub-heading h2,
+  .nimena-home-impact__heading h2 { font-size: 45px; }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .nimena-home-publications .nimena-hub-heading h2 { font-size: 35px; }
+  .nimena-home-directory .nimena-hub-heading h2,
+  .nimena-home-publications .nimena-hub-heading h2,
+  .nimena-home-impact__heading h2 { font-size: 35px; }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .nimena-home-publications .nimena-hub-heading h2 { font-size: 45px; }
+  .nimena-home-directory .nimena-hub-heading h2,
+  .nimena-home-publications .nimena-hub-heading h2,
+  .nimena-home-impact__heading h2 { font-size: 45px; }
 }
 @media (max-width: 575px) {
-  .nimena-home-publications .nimena-hub-heading h2 { font-size: 30px; }
+  .nimena-home-directory .nimena-hub-heading h2,
+  .nimena-home-publications .nimena-hub-heading h2,
+  .nimena-home-impact__heading h2 { font-size: 30px; }
+  .nimena-home-gateway h2 { font-size: 30px; }
+  .nimena-home-publication h3 { font-size: 30px; }
 }

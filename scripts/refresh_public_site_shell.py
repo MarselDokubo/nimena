@@ -128,6 +128,6 @@ for path in sorted(ROOT.rglob("index.html")):
     html = html.replace("nimenahqt@nimena.com.ng", "nimenahqt@nimena.org.ng")
     html = html.replace('href="services-details/"', 'href="membership/"')
     html = html.replace('href="../services-details/"', 'href="../membership/"')
-    html = re.sub(r'assets/css/style\.css\?v=[^"\']+', 'assets/css/style.css?v=20260929-2', html)
+    html = re.sub(r'assets/css/style\.css\?v=[^"\']+', 'assets/css/style.css?v=20260929-3', html)
     path.write_text(html, encoding="utf-8")
     print(path.relative_to(ROOT))
