@@ -10375,3 +10375,23 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .nimena-home-publications{padding:110px 0;background:#f5f7fa}.nimena-home-publications__grid{display:grid;grid-template-columns:1fr 1fr}.nimena-home-publication{position:relative;isolation:isolate;min-height:500px;display:flex;align-items:flex-end;padding:48px;overflow:hidden;background-position:center;background-size:cover}.nimena-home-publication::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,25,66,.06),rgba(0,25,66,.97))}.nimena-home-publication--journals{background-image:url('../img/nimena/archive/research-knowledge.webp')}.nimena-home-publication--magazine{background-image:url('../img/current/singapore-blue-economy-panel.webp')}.nimena-home-publication span{color:#ff8a55;font-size:11px;font-weight:900;letter-spacing:.15em}.nimena-home-publication h3{max-width:540px;margin:13px 0;color:#fff;font-size:39px;font-weight:900;line-height:1.05;text-transform:uppercase}.nimena-home-publication p{max-width:550px;margin:0;color:rgba(255,255,255,.72);font-size:16px}.nimena-home-publication>div>div{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.nimena-home-publication a{min-height:48px;display:inline-flex;align-items:center;padding:0 19px;color:#fff;background:#ff5e14;font-size:11px;font-weight:800;text-transform:uppercase}.nimena-home-publication a:last-child{border:1px solid rgba(255,255,255,.48);background:transparent}.nimena-home-publication a:hover{color:#00235a;background:#fff}
 @media(max-width:991px){.nimena-home-impact__heading{grid-template-columns:1fr;gap:18px}.nimena-home-impact__grid{grid-template-columns:1fr 1fr}.nimena-home-gateways__grid,.nimena-home-publications__grid{grid-template-columns:1fr}}
 @media(max-width:767px){.nimena-home-impact{padding:75px 0}.nimena-home-impact__grid{grid-template-columns:1fr}.nimena-home-impact__grid>div{min-height:0}.nimena-home-gateway{min-height:500px;padding:35px 26px}.nimena-home-publications{padding:75px 0}.nimena-home-publication{min-height:470px;padding:35px 26px}.nimena-home-publication h3{font-size:32px}}
+
+/* Keep the publications heading consistent with the established section-title scale. */
+.nimena-home-publications .nimena-hub-heading h2 {
+  font-size: 60px;
+  font-weight: var(--tp-fw-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .nimena-home-publications .nimena-hub-heading h2 { font-size: 45px; }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .nimena-home-publications .nimena-hub-heading h2 { font-size: 35px; }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nimena-home-publications .nimena-hub-heading h2 { font-size: 45px; }
+}
+@media (max-width: 575px) {
+  .nimena-home-publications .nimena-hub-heading h2 { font-size: 30px; }
+}
