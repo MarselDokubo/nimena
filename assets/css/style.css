@@ -10224,3 +10224,154 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .nimena-conference-capabilities p{margin:0;color:#777;font-size:14px;line-height:1.62}
 @media(max-width:991px){.nimena-research-heading{grid-template-columns:1fr;gap:24px}.nimena-publishing-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.nimena-publishing-steps article:nth-child(3n){border-right:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:nth-child(2n){border-right:0}.nimena-publishing-steps article:nth-last-child(-n+3){border-bottom:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:nth-last-child(-n+2){border-bottom:0}}
 @media(max-width:767px){.nimena-research-journals{padding:78px 0}.nimena-research-journals .nimena-journal-grid{grid-template-columns:1fr}.nimena-research-journals .nimena-journal-card{min-height:0;padding:31px 25px}.nimena-research-journals .nimena-journal-card h3{font-size:25px}.nimena-research-callout{grid-template-columns:1fr;padding:27px 24px}.nimena-research-callout .nimena-programme-action{justify-content:center}.nimena-conference-capabilities{grid-template-columns:1fr}.nimena-conference-capabilities article{min-height:0}.nimena-publishing-steps{grid-template-columns:1fr}.nimena-publishing-steps article,.nimena-publishing-steps article:nth-child(2n),.nimena-publishing-steps article:nth-child(3n),.nimena-publishing-steps article:nth-last-child(-n+2){min-height:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.17)}.nimena-publishing-steps article:last-child{border-bottom:0}}
+
+/* === NIMENA PUBLIC ECOSYSTEM 2026-09-29 === */
+@media (min-width:1200px){
+  .header__menu-wrapper{margin-left:0!important}
+  .main-menu>nav>ul{display:flex;align-items:center;justify-content:center}
+  .main-menu>nav>ul>li>a{padding:31px 13px;font-size:13px;white-space:nowrap}
+  .main-menu ul li .submenu{width:255px}
+  .main-menu ul li .submenu li a{font-size:14px;line-height:1.35}
+}
+.header__action a.nimena-header-join{width:auto;min-width:68px;padding:0 15px;color:#fff!important;background:#ff5e14;font-size:12px;font-weight:800;text-transform:uppercase}
+.header__action a.nimena-header-join:hover{color:#fff!important;background:#00235a}
+.header__link a{margin-right:22px}
+.nimena-public-page p{font-size:16px;line-height:1.75}
+
+.nimena-hub-hero{position:relative;isolation:isolate;min-height:620px;display:flex;align-items:flex-end;padding:160px 0 90px;background:#00235a var(--hub-image) center/cover no-repeat;overflow:hidden}
+.nimena-hub-hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,25,66,.98) 0%,rgba(0,35,90,.91) 45%,rgba(0,35,90,.42) 78%,rgba(0,35,90,.2) 100%)}
+.nimena-hub-hero::after{content:"";position:absolute;z-index:-1;right:-160px;bottom:-320px;width:620px;height:620px;border:1px solid rgba(255,255,255,.17);border-radius:50%;box-shadow:0 0 0 78px rgba(255,255,255,.025),0 0 0 156px rgba(255,255,255,.018)}
+.nimena-hub-hero__content{max-width:900px}
+.nimena-hub-hero h1{max-width:890px;margin:0 0 25px;color:#fff;font-size:clamp(52px,6.5vw,90px);font-weight:900;line-height:.96;letter-spacing:-.045em;text-transform:uppercase}
+.nimena-hub-hero p{max-width:730px;margin:0;color:rgba(255,255,255,.78);font-size:20px;line-height:1.65}
+.nimena-hub-hero .nimena-programme-actions{margin-top:35px}
+.nimena-hub-hero .nimena-programme-action--outline{color:#fff;border-color:rgba(255,255,255,.4)}
+.nimena-hub-hero .nimena-programme-action--outline:hover{color:#00235a;background:#fff}
+
+.nimena-action-strip{position:relative;z-index:3;border-bottom:1px solid #e6e9ed;background:#fff;box-shadow:0 18px 38px rgba(0,35,90,.06)}
+.nimena-action-strip__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.nimena-action-strip a{min-height:118px;display:flex;align-items:center;gap:19px;padding:22px 26px;color:#00235a;border-right:1px solid #e6e9ed}
+.nimena-action-strip a:last-child{border-right:0}
+.nimena-action-strip a:hover{color:#fff;background:#00235a}
+.nimena-action-strip i{width:42px;color:#ff5e14;font-size:30px;text-align:center}
+.nimena-action-strip span{font-size:14px;font-weight:800;line-height:1.35;text-transform:uppercase}
+.nimena-action-strip small{display:block;margin-bottom:4px;color:#6d7f9d;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.nimena-action-strip a:hover small{color:rgba(255,255,255,.65)}
+
+.nimena-hub-section{padding:110px 0;border-bottom:1px solid #e8ebef;background:#fff}
+.nimena-hub-section--soft{background:#f5f7fa}
+.nimena-hub-section--navy{color:#fff;background:#00235a}
+.nimena-hub-heading{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:80px;align-items:end;margin-bottom:52px}
+.nimena-hub-heading h2,.nimena-split-feature h2{max-width:760px;margin:0;color:#00235a;font-size:clamp(38px,4.5vw,64px);font-weight:900;line-height:1;letter-spacing:-.035em;text-transform:uppercase}
+.nimena-hub-heading>p{margin:0;color:#536987;font-size:18px;line-height:1.65}
+.nimena-hub-section--navy .nimena-hub-heading h2,.nimena-hub-section--navy .nimena-split-feature h2{color:#fff}
+.nimena-hub-section--navy .nimena-hub-heading>p{color:rgba(255,255,255,.68)}
+.nimena-hub-grid{display:grid;border-top:1px solid #dce1e7;border-left:1px solid #dce1e7}
+.nimena-hub-grid--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.nimena-hub-grid--four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.nimena-hub-card{min-height:265px;padding:34px;border-right:1px solid #dce1e7;border-bottom:1px solid #dce1e7;background:#fff;transition:transform .25s ease,background .25s ease}
+.nimena-hub-card:hover{position:relative;z-index:1;background:#f8fafc;transform:translateY(-4px)}
+.nimena-hub-card>i{display:block;margin-bottom:37px;color:#ff5e14;font-size:33px}
+.nimena-hub-card h3{margin:0 0 12px;color:#00235a;font-size:21px;font-weight:800}
+.nimena-hub-card p{margin:0;color:#66758e;font-size:15px;line-height:1.65}
+.nimena-hub-section--navy .nimena-hub-grid{border-color:rgba(255,255,255,.16)}
+.nimena-hub-section--navy .nimena-hub-card{border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.035)}
+.nimena-hub-section--navy .nimena-hub-card h3{color:#fff}.nimena-hub-section--navy .nimena-hub-card p{color:rgba(255,255,255,.62)}
+
+.nimena-pathway-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid rgba(255,255,255,.18)}
+.nimena-pathway-grid article{min-height:280px;padding:32px 27px;border-right:1px solid rgba(255,255,255,.18)}
+.nimena-pathway-grid article:last-child{border-right:0}.nimena-pathway-grid span{color:#ff8a55;font-size:12px;font-weight:900;letter-spacing:.15em}
+.nimena-pathway-grid h3{margin:54px 0 13px;color:#fff;font-size:22px}.nimena-pathway-grid p{margin:0;color:rgba(255,255,255,.62);font-size:14px;line-height:1.65}
+.nimena-step-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #d9dfe6;border-left:1px solid #d9dfe6}
+.nimena-step-grid article{min-height:248px;padding:30px 25px;border-right:1px solid #d9dfe6;border-bottom:1px solid #d9dfe6}
+.nimena-step-grid b{color:#ff5e14;font-size:12px;letter-spacing:.14em}.nimena-step-grid h3{margin:45px 0 12px;color:#00235a;font-size:19px}.nimena-step-grid p{margin:0;color:#66758e;font-size:14px;line-height:1.6}
+.nimena-hub-section--navy .nimena-step-grid{border-color:rgba(255,255,255,.17)}
+.nimena-hub-section--navy .nimena-step-grid article{border-color:rgba(255,255,255,.17)}
+.nimena-hub-section--navy .nimena-step-grid h3{color:#fff}.nimena-hub-section--navy .nimena-step-grid p{color:rgba(255,255,255,.62)}
+
+.nimena-split-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(45px,8vw,110px);align-items:center}
+.nimena-split-feature__image{position:relative;min-height:470px;overflow:hidden;background:#dfe6ed}
+.nimena-split-feature__image::after{content:"";position:absolute;right:0;bottom:0;width:31%;height:12px;background:#ff5e14}
+.nimena-split-feature__image img{width:100%;height:100%;min-height:470px;position:absolute;inset:0;object-fit:cover}
+.nimena-split-feature>div>p{margin:24px 0 0;color:#536987;font-size:18px;line-height:1.7}
+.nimena-check-list{margin:27px 0 0;padding:0;list-style:none;border-top:1px solid #dbe1e7}
+.nimena-check-list li{position:relative;padding:14px 0 14px 25px;border-bottom:1px solid #dbe1e7;color:#243958;font-size:15px}
+.nimena-check-list li::before{content:"";position:absolute;left:0;top:23px;width:8px;height:8px;background:#ff5e14}
+
+.nimena-directory-state{margin-top:42px;padding:31px 34px;border:1px solid #d7dde5;border-left:6px solid #ff5e14;background:#fff}
+.nimena-directory-state span{display:block;margin-bottom:14px;color:#ff5e14;font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}
+.nimena-directory-state strong{display:block;color:#00235a;font-size:20px;line-height:1.4}.nimena-directory-state p{margin:7px 0 0;color:#66758e;font-size:14px}.nimena-directory-state a{display:inline-block;margin-top:18px;color:#0067a8;font-weight:700;text-decoration:underline}
+.nimena-hub-section--soft .nimena-directory-state{background:#fff}
+.nimena-hub-cta{padding:68px 0;background:#ff5e14;color:#fff}
+.nimena-hub-cta .container{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:55px;align-items:center}
+.nimena-hub-cta span{font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.nimena-hub-cta h2{max-width:820px;margin:10px 0 0;color:#fff;font-size:clamp(31px,4vw,52px);font-weight:900;line-height:1.05;text-transform:uppercase}
+.nimena-hub-cta .container>div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:11px}.nimena-hub-cta a{min-height:54px;display:inline-flex;align-items:center;padding:0 24px;color:#00235a;background:#fff;font-size:12px;font-weight:800;text-transform:uppercase}.nimena-hub-cta a:last-child{color:#fff;border:1px solid rgba(255,255,255,.55);background:transparent}.nimena-hub-cta a:hover{color:#fff;background:#00235a;border-color:#00235a}
+
+.nimena-topic-list{border-top:1px solid rgba(255,255,255,.17)}
+.nimena-topic-list a,.nimena-topic-list>div{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 3px;color:#fff;border-bottom:1px solid rgba(255,255,255,.17);font-size:20px;font-weight:700}
+.nimena-topic-list a i,.nimena-topic-list>div i{color:#ff7b3e;font-size:19px}.nimena-topic-list a:hover{padding-left:17px;color:#ff8a55}
+.nimena-topic-list--light{border-color:#d9dfe6}.nimena-topic-list--light>div{color:#00235a;border-color:#d9dfe6}
+.nimena-resource-stack{display:grid;border-top:1px solid #d8dee6}
+.nimena-resource-stack a{min-height:105px;display:flex;align-items:center;gap:23px;padding:20px;color:#00235a;border-bottom:1px solid #d8dee6;font-size:19px;font-weight:800}.nimena-resource-stack i{width:48px;color:#ff5e14;font-size:33px}.nimena-resource-stack a:hover{padding-left:32px;color:#0067a8;background:#fff}
+
+.nimena-accordion{border-top:1px solid #d9dfe6}.nimena-accordion details{border-bottom:1px solid #d9dfe6}.nimena-accordion summary{min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:18px 22px;color:#00235a;background:#f7f8fa;font-size:17px;font-weight:800;cursor:pointer;list-style:none}.nimena-accordion summary::-webkit-details-marker{display:none}.nimena-accordion summary i{color:#ff5e14;transition:transform .2s ease}.nimena-accordion details[open] summary{color:#fff;background:#00235a}.nimena-accordion details[open] summary i{transform:rotate(45deg)}.nimena-accordion details>div{display:grid;grid-template-columns:1fr 1fr;padding:25px 28px;background:#fff}.nimena-accordion details>div a{position:relative;padding:11px 25px;color:#0067a8;font-size:15px}.nimena-accordion details>div a::before{content:"";position:absolute;left:5px;top:20px;width:7px;height:7px;background:#ff5e14}.nimena-accordion details>div a:hover{text-decoration:underline}
+.nimena-career-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.nimena-career-grid article{border:1px solid #dbe1e7;background:#fff}.nimena-career-grid img{width:100%;height:260px;object-fit:cover;filter:saturate(.75)}.nimena-career-grid article>div{padding:27px}.nimena-career-grid span{color:#ff5e14;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.nimena-career-grid h3{margin:10px 0;color:#00235a;font-size:23px}.nimena-career-grid p{margin:0;color:#66758e;font-size:14px}
+
+.nimena-event-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.nimena-event-grid article{min-height:270px;display:grid;grid-template-columns:130px 1fr;border:1px solid #d9dfe6;background:#fff}.nimena-event-card__date{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:25px;color:#fff;background:#00235a;text-align:center}.nimena-event-card__date strong{font-size:23px}.nimena-event-card__date span{margin-top:8px;color:#ff8a55;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.nimena-event-grid article>div:last-child{padding:30px}.nimena-event-grid article>div:last-child>span{color:#ff5e14;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.nimena-event-grid h3{margin:11px 0;color:#00235a;font-size:22px}.nimena-event-grid p{margin:0 0 15px;color:#66758e;font-size:14px}.nimena-event-grid a{color:#0067a8;font-size:13px;font-weight:800;text-transform:uppercase}.nimena-event-grid a:hover{text-decoration:underline}
+
+.nimena-tier-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid rgba(255,255,255,.18)}.nimena-tier-grid article{min-height:315px;padding:32px 28px;border-right:1px solid rgba(255,255,255,.18)}.nimena-tier-grid article:last-child{border-right:0}.nimena-tier-grid span{color:#ff8a55;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.nimena-tier-grid h3{margin:65px 0 15px;color:#fff;font-size:24px}.nimena-tier-grid p{margin:0;color:rgba(255,255,255,.65);font-size:14px;line-height:1.65}
+
+.nimena-search-hero{padding:145px 0 85px;color:#fff;background:#00235a}.nimena-search-hero h1{margin:0;color:#fff;font-size:clamp(54px,7vw,90px);font-weight:900;line-height:1;text-transform:uppercase}.nimena-search-hero p{max-width:740px;margin:20px 0 0;color:rgba(255,255,255,.7);font-size:18px}.nimena-search-page{min-height:520px;padding:85px 0 120px;background:#f5f7fa}.nimena-search-form{max-width:900px}.nimena-search-form label{display:block;margin-bottom:13px;color:#00235a;font-size:15px;font-weight:800}.nimena-search-form>div{display:grid;grid-template-columns:1fr auto}.nimena-search-form input{height:68px;padding:0 22px;border:1px solid #cfd7e1;background:#fff;font-size:17px}.nimena-search-form input:focus{border-color:#0067a8;outline:3px solid rgba(0,103,168,.15)}.nimena-search-form button{min-width:140px;border:0;color:#fff;background:#ff5e14;font-size:13px;font-weight:800;text-transform:uppercase}.nimena-search-form button:hover{background:#00235a}.nimena-search-summary{margin:35px 0 22px;color:#536987;font-size:15px}.nimena-search-results{display:grid;grid-template-columns:1fr 1fr;gap:18px}.nimena-search-result{min-height:210px;padding:28px;border:1px solid #d7dee7;background:#fff}.nimena-search-result>span{color:#ff5e14;font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.nimena-search-result h2{margin:10px 0 9px;font-size:23px}.nimena-search-result h2 a{color:#00235a}.nimena-search-result p{margin:0;color:#66758e;font-size:14px}.nimena-search-result__link{display:inline-block;margin-top:20px;color:#0067a8;font-size:12px;font-weight:800;text-transform:uppercase}.nimena-search-result__link:hover{text-decoration:underline}
+
+@media (max-width:1399px) and (min-width:1200px){
+  .main-menu>nav>ul>li>a{padding-left:8px;padding-right:8px;font-size:12px}
+  .header__action a.nimena-header-join{display:none}
+}
+@media (max-width:1199px){
+  .header__action a.nimena-header-join{display:none}
+  .nimena-hub-hero{min-height:570px;padding-top:125px}
+  .nimena-hub-grid--four{grid-template-columns:1fr 1fr}
+  .nimena-pathway-grid{grid-template-columns:repeat(3,1fr)}
+  .nimena-pathway-grid article:nth-child(3){border-right:0}.nimena-pathway-grid article:nth-child(-n+3){border-bottom:1px solid rgba(255,255,255,.18)}
+  .nimena-step-grid{grid-template-columns:repeat(3,1fr)}
+  .nimena-tier-grid{grid-template-columns:1fr 1fr}.nimena-tier-grid article:nth-child(2){border-right:0}.nimena-tier-grid article:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}
+}
+@media (max-width:991px){
+  .nimena-hub-heading,.nimena-split-feature,.nimena-hub-cta .container{grid-template-columns:1fr;gap:38px}
+  .nimena-hub-heading{align-items:start}
+  .nimena-action-strip__grid{grid-template-columns:1fr 1fr}.nimena-action-strip a:nth-child(2){border-right:0}.nimena-action-strip a:nth-child(-n+2){border-bottom:1px solid #e6e9ed}
+  .nimena-hub-grid--three{grid-template-columns:1fr 1fr}
+  .nimena-event-grid{grid-template-columns:1fr}
+  .nimena-career-grid{grid-template-columns:1fr 1fr}.nimena-career-grid article:last-child{grid-column:1/-1}
+  .nimena-hub-cta .container>div:last-child{justify-content:flex-start}
+}
+@media (max-width:767px){
+  .nimena-hub-hero{min-height:520px;padding:110px 0 68px;background-position:65% center}.nimena-hub-hero::before{background:rgba(0,29,73,.9)}.nimena-hub-hero h1{font-size:44px}.nimena-hub-hero p{font-size:17px}
+  .nimena-action-strip__grid{grid-template-columns:1fr}.nimena-action-strip a,.nimena-action-strip a:nth-child(2){min-height:88px;border-right:0;border-bottom:1px solid #e6e9ed}.nimena-action-strip a:last-child{border-bottom:0}
+  .nimena-hub-section{padding:75px 0}.nimena-hub-heading{margin-bottom:37px}.nimena-hub-heading h2,.nimena-split-feature h2{font-size:38px}.nimena-hub-heading>p{font-size:16px}
+  .nimena-hub-grid--three,.nimena-hub-grid--four,.nimena-pathway-grid,.nimena-step-grid,.nimena-tier-grid,.nimena-career-grid,.nimena-search-results{grid-template-columns:1fr}
+  .nimena-hub-card{min-height:0}.nimena-hub-card>i{margin-bottom:24px}
+  .nimena-pathway-grid article,.nimena-pathway-grid article:nth-child(3),.nimena-tier-grid article,.nimena-tier-grid article:nth-child(2){min-height:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.18)}.nimena-pathway-grid article:last-child,.nimena-tier-grid article:last-child{border-bottom:0}.nimena-pathway-grid h3,.nimena-tier-grid h3{margin-top:28px}
+  .nimena-step-grid article{min-height:0}.nimena-step-grid h3{margin-top:27px}
+  .nimena-split-feature__image,.nimena-split-feature__image img{min-height:340px}
+  .nimena-career-grid article:last-child{grid-column:auto}.nimena-career-grid img{height:230px}
+  .nimena-accordion details>div{grid-template-columns:1fr;padding:20px}
+  .nimena-event-grid article{grid-template-columns:1fr;min-height:0}.nimena-event-card__date{min-height:105px}.nimena-event-grid article>div:last-child{padding:25px}
+  .nimena-search-hero{padding:110px 0 66px}.nimena-search-form>div{grid-template-columns:1fr}.nimena-search-form button{height:58px}.nimena-search-page{padding:60px 0 85px}
+}
+@media (max-width:520px){
+  .nimena-hub-hero h1{font-size:39px}.nimena-hub-cta{padding:55px 0}.nimena-hub-cta h2{font-size:31px}.nimena-hub-cta .container>div:last-child{display:grid}.nimena-hub-cta a{justify-content:center}
+}
+
+/* NIMENA homepage ecosystem extensions */
+.nimena-home-actions{margin-top:0}
+.nimena-home-directory .nimena-hub-card{display:block;color:inherit}
+.nimena-home-directory .nimena-hub-card>span{display:inline-block;margin-top:23px;color:#0067a8;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.nimena-home-directory .nimena-hub-card:hover>span{text-decoration:underline}
+.nimena-home-impact{padding:105px 0 90px;color:#fff;background:#00235a}
+.nimena-home-impact__heading{display:grid;grid-template-columns:.45fr 1.55fr;gap:65px;align-items:end;margin-bottom:55px}.nimena-home-impact__heading>span{color:#ff8a55;font-size:12px;font-weight:900;letter-spacing:.15em;text-transform:uppercase}.nimena-home-impact__heading h2{max-width:820px;margin:0;color:#fff;font-size:clamp(39px,4.5vw,64px);font-weight:900;line-height:1;letter-spacing:-.035em;text-transform:uppercase}
+.nimena-home-impact__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.18);border-left:1px solid rgba(255,255,255,.18)}.nimena-home-impact__grid>div{min-height:245px;padding:30px;border-right:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)}.nimena-home-impact__grid strong{display:block;color:#ff7433;font-size:68px;font-weight:900;line-height:1}.nimena-home-impact__grid span{display:block;margin-top:39px;color:#fff;font-size:17px;font-weight:800;text-transform:uppercase}.nimena-home-impact__grid p{margin:8px 0 0;color:rgba(255,255,255,.58);font-size:14px}
+.nimena-home-gateways{padding:110px 0;background:#f4f6f9}.nimena-home-gateways__grid{display:grid;grid-template-columns:1fr 1fr}.nimena-home-gateway{position:relative;isolation:isolate;min-height:580px;display:flex;align-items:flex-end;padding:54px;overflow:hidden;background-position:center;background-size:cover}.nimena-home-gateway::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,35,90,.1),rgba(0,35,90,.97))}.nimena-home-gateway--member{background-image:url('../img/nimena/archive/gallery-conference.webp')}.nimena-home-gateway--partner{background-image:url('../img/current/singapore-innovation-night-engagement.webp')}.nimena-home-gateway>div{max-width:580px}.nimena-home-gateway span{color:#ff8a55;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.nimena-home-gateway h2{margin:15px 0;color:#fff;font-size:clamp(31px,3.5vw,49px);font-weight:900;line-height:1.04;text-transform:uppercase}.nimena-home-gateway p{margin:0;color:rgba(255,255,255,.72);font-size:16px}.nimena-home-gateway .nimena-programme-action--outline{color:#fff;border-color:rgba(255,255,255,.45)}
+.nimena-home-publications{padding:110px 0;background:#f5f7fa}.nimena-home-publications__grid{display:grid;grid-template-columns:1fr 1fr}.nimena-home-publication{position:relative;isolation:isolate;min-height:500px;display:flex;align-items:flex-end;padding:48px;overflow:hidden;background-position:center;background-size:cover}.nimena-home-publication::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,25,66,.06),rgba(0,25,66,.97))}.nimena-home-publication--journals{background-image:url('../img/nimena/archive/research-knowledge.webp')}.nimena-home-publication--magazine{background-image:url('../img/current/singapore-blue-economy-panel.webp')}.nimena-home-publication span{color:#ff8a55;font-size:11px;font-weight:900;letter-spacing:.15em}.nimena-home-publication h3{max-width:540px;margin:13px 0;color:#fff;font-size:39px;font-weight:900;line-height:1.05;text-transform:uppercase}.nimena-home-publication p{max-width:550px;margin:0;color:rgba(255,255,255,.72);font-size:16px}.nimena-home-publication>div>div{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.nimena-home-publication a{min-height:48px;display:inline-flex;align-items:center;padding:0 19px;color:#fff;background:#ff5e14;font-size:11px;font-weight:800;text-transform:uppercase}.nimena-home-publication a:last-child{border:1px solid rgba(255,255,255,.48);background:transparent}.nimena-home-publication a:hover{color:#00235a;background:#fff}
+@media(max-width:991px){.nimena-home-impact__heading{grid-template-columns:1fr;gap:18px}.nimena-home-impact__grid{grid-template-columns:1fr 1fr}.nimena-home-gateways__grid,.nimena-home-publications__grid{grid-template-columns:1fr}}
+@media(max-width:767px){.nimena-home-impact{padding:75px 0}.nimena-home-impact__grid{grid-template-columns:1fr}.nimena-home-impact__grid>div{min-height:0}.nimena-home-gateway{min-height:500px;padding:35px 26px}.nimena-home-publications{padding:75px 0}.nimena-home-publication{min-height:470px;padding:35px 26px}.nimena-home-publication h3{font-size:32px}}
