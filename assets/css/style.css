@@ -409,6 +409,260 @@ input[type=color] {
   }
 }
 
+/* NIMENA conference photo and video archive */
+.nimena-archive-collections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.nimena-archive-feature {
+  min-width: 0;
+  border: 1px solid #e5e9ee;
+  background: #fff;
+}
+.nimena-archive-feature > img,
+.nimena-archive-video-cover {
+  width: 100%;
+  height: 265px;
+  object-fit: cover;
+}
+.nimena-archive-feature > div:last-child {
+  padding: 28px;
+}
+.nimena-archive-tag {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff5e14;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.nimena-archive-feature h3 {
+  margin: 0 0 12px;
+  color: #082d61;
+  font-size: 25px;
+  line-height: 1.15;
+}
+.nimena-archive-feature p,
+.nimena-archive-feature li {
+  color: #647286;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.nimena-archive-feature ul {
+  margin: 17px 0 21px;
+  padding-left: 18px;
+}
+.nimena-archive-feature > div:last-child > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #082d61;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nimena-archive-feature > div:last-child > a:hover { color: #ff5e14; }
+.nimena-archive-video-cover {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(255,94,20,.97), rgba(255,94,20,.8) 42%, transparent 42%),
+    repeating-linear-gradient(135deg, #082d61 0 28px, #0d396f 28px 56px);
+}
+.nimena-archive-video-cover::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: -95px;
+  bottom: -95px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  box-shadow: 0 0 0 34px rgba(255,255,255,.04), 0 0 0 68px rgba(255,255,255,.03);
+}
+.nimena-archive-video-cover > span {
+  font-size: 76px;
+  font-weight: 800;
+  line-height: .85;
+}
+.nimena-archive-video-cover > small {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.nimena-archive-video-cover > i {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-top: 22px;
+  color: #082d61;
+  border-radius: 50%;
+  background: #fff;
+}
+.nimena-archive-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 28px;
+  padding: 13px;
+  border: 1px solid #e3e8ed;
+  background: #fff;
+}
+.nimena-archive-filter button {
+  min-height: 42px;
+  padding: 0 18px;
+  color: #637185;
+  border: 1px solid #e3e8ed;
+  background: #f7f8fa;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nimena-archive-filter button:hover,
+.nimena-archive-filter button.is-active {
+  color: #fff;
+  border-color: #082d61;
+  background: #082d61;
+}
+.nimena-archive-filter > span {
+  margin-left: auto;
+  padding: 0 10px;
+  color: #637185;
+  font-size: 12px;
+  font-weight: 600;
+}
+.nimena-archive-media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.nimena-archive-media-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e3e8ed;
+  background: #fff;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.nimena-archive-media-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff5e14;
+  box-shadow: 0 16px 30px rgba(8,45,97,.09);
+}
+.nimena-archive-media-card > img,
+.nimena-archive-media-card > div {
+  width: 100%;
+  height: 205px;
+  object-fit: cover;
+}
+.nimena-archive-media-card > p {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 17px 18px 19px;
+}
+.nimena-archive-media-card p small {
+  color: #ff5e14;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.nimena-archive-media-card p strong {
+  color: #082d61;
+  font-size: 16px;
+}
+.nimena-archive-media-card p span {
+  margin-top: 3px;
+  color: #667489;
+  font-size: 12px;
+}
+.nimena-archive-media-card--video > div {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background:
+    linear-gradient(145deg, rgba(255,94,20,.9), transparent 52%),
+    repeating-linear-gradient(135deg, #082d61 0 26px, #103b70 26px 52px);
+}
+.nimena-archive-media-card--video > div span {
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  color: rgba(255,255,255,.28);
+  font-size: 74px;
+  font-weight: 800;
+  line-height: 1;
+}
+.nimena-archive-media-card--video > div i {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  color: #082d61;
+  border-radius: 50%;
+  background: #fff;
+}
+.nimena-archive-empty {
+  padding: 35px;
+  color: #657389;
+  border: 1px dashed #ccd4dc;
+  background: #fff;
+  text-align: center;
+}
+.nimena-archive-standard {
+  display: grid;
+  min-width: min(100%, 360px);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.nimena-archive-standard span {
+  padding: 15px 18px;
+  color: #ff9a6a;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.nimena-archive-standard strong {
+  padding: 14px 18px;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  font-size: 14px;
+}
+.nimena-archive-standard strong:last-child { border-bottom: 0; }
+
+@media (max-width: 1199px) {
+  .nimena-archive-collections { grid-template-columns: 1fr 1fr; }
+  .nimena-archive-media-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .nimena-archive-collections { grid-template-columns: 1fr; }
+  .nimena-archive-feature > img,
+  .nimena-archive-video-cover { height: 230px; }
+  .nimena-archive-media-grid { grid-template-columns: 1fr 1fr; }
+  .nimena-archive-filter > span { width: 100%; margin-left: 0; padding: 8px 0 0; }
+}
+@media (max-width: 575px) {
+  .nimena-archive-media-grid { grid-template-columns: 1fr; }
+  .nimena-archive-media-card > img,
+  .nimena-archive-media-card > div { height: 235px; }
+  .nimena-archive-feature > div:last-child { padding: 23px 20px; }
+  .nimena-archive-filter button { flex: 1 1 calc(50% - 8px); padding: 0 10px; }
+}
+
 .basic-pagination ul li {
   display: inline-block;
 }

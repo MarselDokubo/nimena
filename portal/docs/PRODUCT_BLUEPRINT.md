@@ -14,7 +14,7 @@ The current build is a front-end prototype. It is safe for review because it use
 | Member | Maintain approved profile, renew membership, download receipts/certificates, record CPD and register for events |
 | Membership officer | Triage applications, verify documents, request corrections, record notes and prepare a recommendation |
 | Committee reviewer | Review complete applications and record the Membership Committee decision |
-| Council approver | Record Council consideration and the final approval or rejection |
+| National Chairman / authorised approver | Record final approval or rejection after the Membership Committee recommendation |
 | Finance officer | Reconcile invoices/payments, issue receipts and review renewal exceptions |
 | System administrator | Manage roles, grades, chapters, fee rules, templates and audit access without silently changing decisions |
 
@@ -43,18 +43,19 @@ Every transition records who acted, the previous and new state, a timestamp and 
 
 ## Application information
 
-The existing NIMENA form maps into these records:
+The official **Form No. 1, Rev. 09 — April 2021** maps into these records:
 
 | Record | Information |
 | --- | --- |
-| Application | Reference, grade, chapter, state, assignee, version and submission dates |
-| Applicant profile | Name, permanent address, email, telephone, date of birth, sex and nationality |
+| Application | Reference, Form No. 1 revision, membership type, chapter, state, assignee, version, date received and submission dates |
+| Applicant profile | Surname, other names, permanent address, email, telephone, date of birth, sex, country of origin and country of residence |
 | Engineering registration | COREN or other council, registration number and evidence |
-| Professional memberships | Body, membership type, number and effective date |
-| Qualifications | Institution, qualification, course and award year |
-| Employment | Employer, position/rank, projects and dates |
+| Professional memberships | Body, membership type, number, effective date and evidence |
+| Qualifications | Institution, qualification, course, award year and certificate |
+| Employment | Employer, position/rank, projects supervised or carried out, and service dates |
 | Documents | Purpose, private storage key, checksum, type, size and verification state |
-| Declaration | Text/version accepted, authenticated actor, timestamp and originating application version |
+| Declaration | Text/version accepted, signature evidence, authenticated actor, date, timestamp and originating application version |
+| Official use | Date received, date reviewed, recommendation, membership number, Membership Committee Chairman sign-off and National Chairman approval |
 | Review | Stage, checklist, recommendation, reviewer, notes and decision date |
 
 Corporate Firm applications require an organization record and an authorized representative; they should not be forced into an individual member profile.
@@ -67,6 +68,7 @@ Corporate Firm applications require an organization record and an authorized rep
 - Draft saving, submission receipt and visible status history
 - Correction request and resubmission
 - Member dashboard and digital membership card after approval
+- Branded professional profile with a member-controlled PDF/data download
 - Renewal invoice, payment state and downloadable receipt
 - Private document/certificate library
 - CPD record and event registration history
@@ -79,6 +81,7 @@ Corporate Firm applications require an organization record and an authorized rep
 - Internal notes separated from applicant-visible messages
 - Correction request templates and response history
 - Committee and Council decision recording
+- Protected Form No. 1 official-use record with committee and National Chairman sign-off
 - Membership-number issuance after approval
 - Renewal/payment exception queues and basic exports
 - Append-only activity/audit timeline
@@ -107,6 +110,7 @@ The public GitHub Pages website may continue to host institutional content. The 
 - Validate file type by content, cap sizes, scan uploads and serve them with forced private access.
 - Use server-verified payment webhooks with idempotency keys; the browser cannot mark an invoice paid.
 - Maintain append-only audit events for review, approval, fee and role changes.
+- Generate profile downloads on demand from authorised current data and audit staff-generated exports; never expose private application evidence in the download.
 - Define retention and deletion rules before collecting real personal data.
 - Back up the database, test restoration and document incident handling.
 

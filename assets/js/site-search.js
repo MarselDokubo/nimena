@@ -10,6 +10,7 @@
     { title: "Apply for Membership", url: "../register/", type: "Membership", description: "Begin a NIMENA membership application.", keywords: "register registration apply join membership" },
     { title: "Education, CPD & Careers", url: "../education-careers/", type: "Professional development", description: "Courses, webinars, CPD records, mentoring and career resources.", keywords: "education training cpd webinar course career jobs mentoring certificate" },
     { title: "Conferences & Events", url: "../conferences/", type: "Events", description: "Conferences, webinars, chapter events, registration and conference calls for papers.", keywords: "conference event webinar calendar register ticket abstract cfp proceedings" },
+    { title: "Conference Photo & Video Archive", url: "../archive/", type: "Archive", description: "Photographs, recordings and event collections from NIMENA conferences and global engagements.", keywords: "archive conference photos photographs video recordings events history 13th 14th singapore" },
     { title: "Recognition, Awards & Scholarships", url: "../recognition/", type: "Recognition", description: "Professional awards, Fellowship, scholarships, nominations and verified records.", keywords: "recognition awards medals fellowship scholarship grants nominations winners" },
     { title: "Research & Journals", url: "../research/", type: "Research", description: "AJOMENA, JBESED, scholarly publishing, author guidance and research services.", keywords: "research journals ajomena jbesed publication paper author reviewer ojs" },
     { title: "Call for Papers", url: "../news-call-for-papers/", type: "Research", description: "Current information about submitting research to NIMENA journals.", keywords: "call papers submission manuscript ajomena jbesed research" },
@@ -86,4 +87,3 @@
   input.value = initialQuery;
   search(initialQuery);
 })();
-

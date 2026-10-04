@@ -44,6 +44,7 @@ export function ConferenceCentre() {
         <button aria-selected={view === "register"} className={view === "register" ? "is-active" : ""} onClick={() => setView("register")} role="tab" type="button">Registration</button>
         <Link href="/conferences/cfp">Call for papers</Link>
         <button aria-selected={view === "attendance"} className={view === "attendance" ? "is-active" : ""} onClick={() => setView("attendance")} role="tab" type="button">Attendance &amp; CPD</button>
+        <a href="https://nimena.org.ng/archive/" rel="noopener" target="_blank">Conference archive</a>
       </div>
 
       <div className="notice-strip"><Icon name="shield" /><p><strong>Prototype only:</strong> dates, venue, prices and payment controls are sample information. No payment will be collected.</p></div>

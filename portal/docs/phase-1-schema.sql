@@ -61,6 +61,11 @@ create type payment_status as enum (
   'refunded'
 );
 
+create type application_approval_capacity as enum (
+  'membership_committee_chair',
+  'national_chairman'
+);
+
 create table users (
   id uuid primary key default gen_random_uuid(),
   auth_subject text not null unique,
@@ -108,7 +113,8 @@ create table person_profiles (
   telephone text,
   date_of_birth date,
   sex text,
-  nationality text,
+  country_of_origin text,
+  country_of_residence text,
   permanent_address text,
   public_directory_opt_in boolean not null default false,
   created_at timestamptz not null default now(),
@@ -139,9 +145,12 @@ create table membership_applications (
   organization_id uuid references organizations(id),
   grade_id uuid not null references membership_grades(id),
   chapter_id uuid references chapters(id),
+  form_number text not null default 'FORM 01',
+  form_revision text not null default 'REV. 09 - APRIL 2021',
   status application_status not null default 'draft',
   version integer not null default 1 check (version > 0),
   assigned_to uuid references users(id),
+  received_at timestamptz,
   submitted_at timestamptz,
   decided_at timestamptz,
   created_at timestamptz not null default now(),
@@ -212,6 +221,7 @@ create table application_declarations (
   application_version integer not null,
   declaration_version text not null,
   declaration_text text not null,
+  signature_document_id uuid references application_documents(id),
   accepted_by uuid not null references users(id),
   accepted_at timestamptz not null,
   unique (application_id, application_version)
@@ -228,6 +238,18 @@ create table application_reviews (
   applicant_message text,
   completed_at timestamptz,
   created_at timestamptz not null default now()
+);
+
+create table application_approvals (
+  id uuid primary key default gen_random_uuid(),
+  application_id uuid not null references membership_applications(id) on delete cascade,
+  capacity application_approval_capacity not null,
+  approver_id uuid not null references users(id),
+  decision text not null,
+  decision_note text,
+  signed_at timestamptz not null,
+  created_at timestamptz not null default now(),
+  unique (application_id, capacity)
 );
 
 create table application_events (
@@ -310,6 +332,8 @@ create index application_documents_application_idx
   on application_documents (application_id, status);
 create index application_events_timeline_idx
   on application_events (application_id, occurred_at);
+create index application_approvals_application_idx
+  on application_approvals (application_id, signed_at);
 create index memberships_status_idx
   on memberships (status, current_period_ends_on);
 create index invoices_status_idx

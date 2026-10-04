@@ -23,7 +23,7 @@ def main_navigation(prefix: str) -> str:
 <li class="has-dropdown"><a href="{prefix}education-careers/">Education &amp; Careers</a><ul class="submenu">
 <li><a href="{prefix}education-careers/">Learning &amp; CPD</a></li><li><a href="{prefix}education-careers/#careers">Careers &amp; Mentoring</a></li><li><a href="{prefix}programmes/#accreditation">Accreditation &amp; Endorsement</a></li><li><a href="{prefix}services/">Professional Services</a></li></ul></li>
 <li class="has-dropdown"><a href="{prefix}conferences/">Conferences</a><ul class="submenu">
-<li><a href="{prefix}conferences/">Event Directory</a></li><li><a href="{prefix}conferences/#delegate">Delegate Registration</a></li><li><a href="{prefix}conferences/#cfp">Conference CFP</a></li><li><a href="{prefix}portfolio/">Past Activities</a></li></ul></li>
+<li><a href="{prefix}conferences/">Event Directory</a></li><li><a href="{prefix}conferences/#delegate">Delegate Registration</a></li><li><a href="{prefix}conferences/#cfp">Conference CFP</a></li><li><a href="{prefix}archive/">Conference Archive</a></li><li><a href="{prefix}portfolio/">Gallery &amp; Activities</a></li></ul></li>
 <li class="has-dropdown"><a href="{prefix}recognition/">Recognition</a><ul class="submenu">
 <li><a href="{prefix}recognition/">Recognition Programmes</a></li><li><a href="{prefix}recognition/#programmes">Medals, Awards &amp; Fellowship</a></li><li><a href="{prefix}recognition/#archive">Recipients Archive</a></li><li><a href="{prefix}team/">National Leadership</a></li></ul></li>
 <li class="has-dropdown"><a href="{prefix}research/">Research &amp; Publications</a><ul class="submenu">
@@ -44,7 +44,7 @@ def utility_links(prefix: str, variant: bool) -> str:
 
 def footer_navigation(prefix: str) -> str:
     return f'''<ul class="nimena-footer-nav">
-<li><a href="{prefix}about/">About NIMENA</a></li><li><a href="{prefix}membership/">Membership</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}education-careers/">Education, CPD &amp; Careers</a></li><li><a href="{prefix}conferences/">Conferences &amp; Events</a></li><li><a href="{prefix}recognition/">Recognition &amp; Awards</a></li><li><a href="{prefix}research/">Research &amp; Publications</a></li><li><a href="{prefix}magazine/">NIMENA Magazine</a></li><li><a href="{prefix}partnerships/">Industry Partnerships</a></li><li><a href="{prefix}programmes/">Institutional Programmes</a></li><li><a href="{prefix}blog/">News &amp; Media</a></li><li><a href="{prefix}portfolio/">Gallery &amp; Activities</a></li><li><a href="{prefix}search/">Search</a></li><li><a href="{prefix}contact/">Contact</a></li>
+<li><a href="{prefix}about/">About NIMENA</a></li><li><a href="{prefix}membership/">Membership</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}education-careers/">Education, CPD &amp; Careers</a></li><li><a href="{prefix}conferences/">Conferences &amp; Events</a></li><li><a href="{prefix}archive/">Conference Archive</a></li><li><a href="{prefix}recognition/">Recognition &amp; Awards</a></li><li><a href="{prefix}research/">Research &amp; Publications</a></li><li><a href="{prefix}magazine/">NIMENA Magazine</a></li><li><a href="{prefix}partnerships/">Industry Partnerships</a></li><li><a href="{prefix}programmes/">Institutional Programmes</a></li><li><a href="{prefix}blog/">News &amp; Media</a></li><li><a href="{prefix}portfolio/">Gallery &amp; Activities</a></li><li><a href="{prefix}search/">Search</a></li><li><a href="{prefix}contact/">Contact</a></li>
 </ul>'''
 
 
@@ -128,6 +128,6 @@ for path in sorted(ROOT.rglob("index.html")):
     html = html.replace("nimenahqt@nimena.com.ng", "nimenahqt@nimena.org.ng")
     html = html.replace('href="services-details/"', 'href="membership/"')
     html = html.replace('href="../services-details/"', 'href="../membership/"')
-    html = re.sub(r'assets/css/style\.css\?v=[^"\']+', 'assets/css/style.css?v=20260929-6', html)
+    html = re.sub(r'assets/css/style\.css\?v=[^"\']+', 'assets/css/style.css?v=20261004-1', html)
     path.write_text(html, encoding="utf-8")
     print(path.relative_to(ROOT))
