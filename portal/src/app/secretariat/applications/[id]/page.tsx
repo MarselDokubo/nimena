@@ -47,6 +47,18 @@ export default async function ApplicationReviewPage({ params }: PageProps) {
             </div>
 
             <div className="detail-section">
+              <h3>Membership of professional bodies</h3>
+              <div className="record-list">
+                {applicationDetail.professionalBodies.map((record) => (
+                  <article className="record" key={`${record.body}-${record.number}`}>
+                    <div className="record__title"><strong>{record.body}</strong><span>{record.effectiveDate}</span></div>
+                    <p>{record.type} · {record.number}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="detail-section">
               <h3>Professional registration</h3>
               <dl className="definition-grid">
                 {applicationDetail.registration.map(([label, value]) => (
@@ -95,7 +107,12 @@ export default async function ApplicationReviewPage({ params }: PageProps) {
 
             <div className="detail-section">
               <h3>Applicant declaration</h3>
-              <p style={{ margin: 0, color: "var(--ink-700)", fontSize: ".78rem" }}>The applicant confirmed that the supplied information is complete and accurate. Production submissions will record the declaration version, timestamp, authenticated user and audit event.</p>
+              <dl className="definition-grid">
+                {applicationDetail.declaration.map(([label, value]) => (
+                  <div className="definition-item" key={label}><dt>{label}</dt><dd>{value}</dd></div>
+                ))}
+              </dl>
+              <p style={{ margin: "18px 0 0", color: "var(--ink-700)", fontSize: ".78rem" }}>The applicant confirmed that the supplied information is complete and accurate. Production submissions will record the declaration version, timestamp, authenticated user and audit event.</p>
             </div>
           </section>
 

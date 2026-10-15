@@ -9,8 +9,9 @@ This directory is intentionally separate from the existing static public website
 | Route | Purpose |
 | --- | --- |
 | `/` | Choose a member, applicant or secretariat journey |
-| `/apply` | Five-step membership application based on the current NIMENA form |
+| `/apply` | Seven-section digital version of NIMENA Form No. 1 (Rev. 09 — April 2021) |
 | `/dashboard` | Member record, renewal, CPD, documents and events |
+| `/profile` | Branded member/applicant profile with PDF print-save and data download |
 | `/research` | Member research profile, OJS-linked activity and reviewer recognition |
 | `/conferences` | Conference catalogue, sample registration, attendance and CPD journey |
 | `/conferences/cfp` | Conference abstract/full-paper submission workspace |
@@ -26,7 +27,7 @@ This directory is intentionally separate from the existing static public website
 | `/journals/reviewer` | Interactive confidential peer-review preview |
 | `/journals/editor` | Editorial pipeline, decisions, production and setup preview |
 
-All displayed identities, credentials, payments and documents are fictional sample data. The application draft is stored only in the visitor's browser under the versioned key `nimena.portal.application.v1`. Selecting a file does not upload or transmit it.
+All displayed identities, credentials, payments and documents are fictional sample data. The Form No. 1 application draft is stored only in the visitor's browser under the versioned key `nimena.portal.application.form01.v2`. Selecting a file does not upload or transmit it. Submitting the preview creates a browser-local profile record that can be opened at `/profile`, saved through the browser as a PDF and downloaded as a JSON data copy.
 
 The journals prototype follows the same boundary. Author drafts remain in browser storage, selected manuscript files are never uploaded, and reviewer/editor actions affect only temporary on-screen state. See [`docs/JOURNALS_PROTOTYPE_GUIDE.md`](docs/JOURNALS_PROTOTYPE_GUIDE.md).
 
@@ -48,7 +49,7 @@ npm run build
 
 ## Product basis
 
-The application fields and membership pathways were mapped from `assets/documents/NIMENA-Membership-Application-Form.docx` in the parent project. The form currently identifies these pathways:
+The application fields and membership pathways were mapped directly from the supplied **NIMENA Form No. 1, Rev. 09 — April 2021**. The form currently identifies these pathways:
 
 - Corporate
 - Associate
@@ -56,7 +57,7 @@ The application fields and membership pathways were mapped from `assets/document
 - Student
 - Corporate Firm
 
-It also identifies Lagos and Eastern chapters, professional-body registration, engineering registration, qualifications, employment history, a declaration and a staged institutional review.
+It also identifies Lagos and Eastern chapters, country of origin and residence, professional-body evidence, COREN/other engineering-council registration, academic certificates, employment/project history, signature and declaration, Membership Committee review and National Chairman approval.
 
 ## Before production
 
@@ -84,6 +85,8 @@ The review build separates journal and conference responsibilities:
 - `/journals` now demonstrates the approved-design target for a later OJS theme and workflow configuration; it does not replace or write to the existing OJS installation.
 
 See [docs/SCHOLARLY_SERVICES_BLUEPRINT.md](docs/SCHOLARLY_SERVICES_BLUEPRINT.md), [docs/OJS_AUDIT_2026-09-27.md](docs/OJS_AUDIT_2026-09-27.md) and [docs/scholarly-services-schema.sql](docs/scholarly-services-schema.sql). All displayed conference, research and journal-status records are fictional and browser-only.
+
+The public conference photo/video archive is defined in [docs/CONFERENCE_ARCHIVE_BLUEPRINT.md](docs/CONFERENCE_ARCHIVE_BLUEPRINT.md), with a proposed production data model in [docs/conference-archive-schema.sql](docs/conference-archive-schema.sql). Large supplied conference recordings remain external source files in the prototype and are not committed to GitHub.
 
 
 ## Institutional programme prototype

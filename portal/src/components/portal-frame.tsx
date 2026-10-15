@@ -39,6 +39,7 @@ export function PortalFrame({ children, eyebrow, title, role = "member" }: Porta
           {nav.map((item) => {
             const active = item.href === pathname
               || (item.href === "/conferences" && pathname.startsWith("/conferences"))
+              || (item.href === "/profile" && pathname.startsWith("/profile"))
               || (pathname.startsWith("/secretariat/applications") && item.label === "Applications");
             return (
               <Link

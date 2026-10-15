@@ -10,6 +10,7 @@
     { title: "Apply for Membership", url: "../register/", type: "Membership", description: "Begin a NIMENA membership application.", keywords: "register registration apply join membership" },
     { title: "Education, CPD & Careers", url: "../education-careers/", type: "Professional development", description: "Courses, webinars, CPD records, mentoring and career resources.", keywords: "education training cpd webinar course career jobs mentoring certificate" },
     { title: "Conferences & Events", url: "../conferences/", type: "Events", description: "Conferences, webinars, chapter events, registration and conference calls for papers.", keywords: "conference event webinar calendar register ticket abstract cfp proceedings" },
+    { title: "Conference Photo & Video Archive", url: "../archive/", type: "Archive", description: "Photographs, recordings and event collections from NIMENA conferences and global engagements.", keywords: "archive conference photos photographs video recordings events history 13th 14th singapore" },
     { title: "Recognition, Awards & Scholarships", url: "../recognition/", type: "Recognition", description: "Professional awards, Fellowship, scholarships, nominations and verified records.", keywords: "recognition awards medals fellowship scholarship grants nominations winners" },
     { title: "Research & Journals", url: "../research/", type: "Research", description: "AJOMENA, JBESED, scholarly publishing, author guidance and research services.", keywords: "research journals ajomena jbesed publication paper author reviewer ojs" },
     { title: "Call for Papers", url: "../news-call-for-papers/", type: "Research", description: "Current information about submitting research to NIMENA journals.", keywords: "call papers submission manuscript ajomena jbesed research" },
@@ -18,6 +19,8 @@
     { title: "Institutional Programmes", url: "../programmes/", type: "Programmes", description: "Accreditation, innovation, technology transfer, magazine and partnerships.", keywords: "accreditation endorsement innovation technology transfer programmes" },
     { title: "Professional Services", url: "../services/", type: "Services", description: "NIMENA professional, technical and industry services.", keywords: "services professional standards technical consulting" },
     { title: "News & Insights", url: "../blog/", type: "News", description: "Institutional news, maritime insight and independent media coverage.", keywords: "news media updates insight press articles" },
+    { title: "Maritime and Energy Ecosystem Capability Model", url: "../news-maritime-energy-ecm/", type: "Innovation", description: "NIMENA's capability assessment and coordinated roadmap for Nigeria's maritime and energy innovation ecosystem.", keywords: "ecm ecosystem capability model plug and play innovation agenda capital networks regulation maritime energy" },
+    { title: "Maritime Innovation and Technology Leadership Award", url: "../news-eferebo-maritime-innovation-award/", type: "Recognition", description: "Independent coverage of Engr. Eferebo I. Sylvanus receiving the 2026 maritime innovation leadership award.", keywords: "eferebo award democracy heroes recognition leadership technology indigenous maritime innovation" },
     { title: "Gallery & Activities", url: "../portfolio/", type: "Activities", description: "Current and archived NIMENA conferences, engagements and professional activities.", keywords: "gallery photos activities singapore conference events archive" },
     { title: "Frequently Asked Questions", url: "../faq/", type: "Help", description: "Answers to common questions about NIMENA.", keywords: "faq help questions membership contact" },
     { title: "Contact NIMENA", url: "../contact/", type: "Contact", description: "Contact the National Headquarters and regional offices.", keywords: "contact email phone office abuja lagos port harcourt secretariat" },
@@ -86,4 +89,3 @@
   input.value = initialQuery;
   search(initialQuery);
 })();
-

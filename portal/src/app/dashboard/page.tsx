@@ -49,7 +49,7 @@ export default function MemberDashboard() {
             <section className="panel" id="membership">
               <div className="panel__head">
                 <div><h2>Membership record</h2><p>Your current professional standing with NIMENA</p></div>
-                <Link href="#membership">View profile</Link>
+                <Link href="/profile">View profile</Link>
               </div>
               <div className="panel__body">
                 <div className="member-card">
@@ -79,7 +79,7 @@ export default function MemberDashboard() {
                 <Link className="quick-action" href="#documents"><Icon name="upload" /><span>Upload document</span></Link>
                 <Link className="quick-action" href="/conferences"><Icon name="calendar" /><span>Conference centre</span></Link>
                 <Link className="quick-action" href="/research"><Icon name="book" /><span>Research profile</span></Link>
-                <Link className="quick-action" href="#membership"><Icon name="card" /><span>Download ID card</span></Link>
+                <Link className="quick-action" href="/profile"><Icon name="download" /><span>Download profile</span></Link>
                 <Link className="quick-action" href="/programmes"><Icon name="shield" /><span>Institutional programmes</span></Link>
               </div>
             </section>

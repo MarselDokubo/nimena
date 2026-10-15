@@ -10,7 +10,8 @@ export const chapters = ["Lagos Chapter", "Eastern Chapter", "Not sure"] as cons
 
 export const memberNavigation = [
   { href: "/dashboard", label: "Overview", icon: "home" },
-  { href: "/dashboard#membership", label: "Membership", icon: "card" },
+  { href: "/profile", label: "My profile", icon: "card" },
+  { href: "/dashboard#membership", label: "Membership", icon: "shield" },
   { href: "/dashboard#payments", label: "Payments", icon: "wallet" },
   { href: "/dashboard#development", label: "CPD & events", icon: "calendar" },
   { href: "/research", label: "Research profile", icon: "book" },
@@ -123,16 +124,22 @@ export const applicationDetail = {
     ["Telephone", "+234 800 000 0142"],
     ["Date of birth", "18 May 1988"],
     ["Sex", "Male"],
-    ["Nationality", "Nigerian"],
+    ["Country of origin", "Nigeria"],
+    ["Country of residence", "Nigeria"],
     ["Permanent address", "Sample address, Lagos, Nigeria"],
   ],
+  professionalBodies: [
+    {
+      body: "Nigerian Society of Engineers",
+      type: "Corporate Member",
+      number: "SAMPLE-001",
+      effectiveDate: "March 2020",
+    },
+  ],
   registration: [
-    ["Engineering council", "COREN"],
-    ["Registration number", "R.00,000"],
-    ["Other professional body", "Nigerian Society of Engineers"],
-    ["Membership type", "Corporate Member"],
-    ["Membership number", "SAMPLE-001"],
-    ["Effective date", "March 2020"],
+    ["COREN registration number", "R.00,000"],
+    ["Other engineering council", "Engineering Council — Sample"],
+    ["Other council registration number", "EC-SAMPLE-142"],
   ],
   education: [
     {
@@ -168,6 +175,10 @@ export const applicationDetail = {
     { name: "Academic certificates", type: "PDF", state: "Review needed" },
     { name: "Professional membership evidence", type: "PDF", state: "Verified" },
     { name: "Signature", type: "PNG", state: "Verified" },
+  ],
+  declaration: [
+    ["Declaration accepted", "12 September 2026"],
+    ["Form record", "Form No. 1 · Rev. 09 — April 2021"],
   ],
 } as const;
 

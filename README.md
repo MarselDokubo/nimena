@@ -22,8 +22,11 @@ This build keeps the Miiler template's visual system and adapts the content, ima
 - `team/index.html` — National Leadership
 - `team-details/index.html` — Leadership / Institution detail
 - `portfolio/index.html` — Gallery & Activities
+- `archive/index.html` — event-based conference photo and video archive
 - `portfolio-details/index.html` — Activity detail
 - `blog/index.html` — News & Insights
+- `news-maritime-energy-ecm/index.html` — Maritime and Energy Ecosystem Capability Model launch and media coverage
+- `news-eferebo-maritime-innovation-award/index.html` — Maritime Innovation and Technology Leadership Award coverage
 - `blog-details/index.html` — Shipbuilding trend report (latest featured article)
 - `news-singapore-local-capacity/index.html` — Singapore Maritime Week / local-capacity coverage
 - `news-blue-economy-standards/index.html` — Standards and blue-economy coverage
@@ -79,6 +82,7 @@ The public accreditation directory is deliberately empty until NIMENA formally a
 - Journal manuscript submission and peer review remain in OJS at `nimenajournals.com`; the public site and portal link to those records rather than duplicating them.
 - `portal/src/app/research/` demonstrates a member research profile and OJS-linked status summaries.
 - `portal/src/app/conferences/` demonstrates conference registration, CFP submission, attendance and CPD.
+- `portal/src/app/profile/` presents the official-form-based member/applicant profile with PDF print-save and portable data download.
 - `portal/src/app/secretariat/conferences/` demonstrates abstract review, decisions and programme scheduling.
 - `portal/docs/OJS_AUDIT_2026-09-27.md` records the public OJS audit and staging prerequisites.
 
@@ -89,3 +93,10 @@ All new research and conference records are fictional prototype data. No real pa
 The September 29 remodel adopts the useful structural ideas visible in the supplied SNAME screenshots while retaining NIMENA's own content, navy/orange identity and existing site design. It adds connected public routes for membership, community, education/careers, conferences, recognition and industry partnerships; a functional site search; join/renew shortcuts; and a clearer homepage directory.
 
 See `SNAME_SCREENSHOT_FEATURE_MAP.md` for the screenshot inventory, route mapping and accuracy boundaries. Run `python3 scripts/build_public_ecosystem_pages.py` to regenerate the new public hubs from the shared page template, followed by `python3 scripts/refresh_public_site_shell.py` to synchronise navigation, search routes, footer links and public contact details across the static site.
+
+## Conference archive
+
+- `archive/index.html` organises photographs and recordings by event, with filters for media type and year.
+- The first collections cover the 13th and 14th Annual Conferences and the Singapore Maritime Week / Innovation Night engagement.
+- Large conference recordings remain linked to the supplied source collections; they are not stored in the GitHub Pages repository.
+- `portal/docs/CONFERENCE_ARCHIVE_BLUEPRINT.md` and `portal/docs/conference-archive-schema.sql` define the production cataloguing, rights, storage and audit model.
