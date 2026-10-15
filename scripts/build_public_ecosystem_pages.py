@@ -217,7 +217,7 @@ for slug, page in PAGES.items():
     if slug == "search":
         output = output.replace(
             '<script src="../assets/js/main.js?v=20260912-3"></script>',
-            '<script src="../assets/js/site-search.js?v=20261004-1"></script>\n<script src="../assets/js/main.js?v=20260912-3"></script>',
+            '<script src="../assets/js/site-search.js?v=20261015-1"></script>\n<script src="../assets/js/main.js?v=20260912-3"></script>',
         )
     if slug == "archive":
         output = output.replace(

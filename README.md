@@ -25,6 +25,8 @@ This build keeps the Miiler template's visual system and adapts the content, ima
 - `archive/index.html` — event-based conference photo and video archive
 - `portfolio-details/index.html` — Activity detail
 - `blog/index.html` — News & Insights
+- `news-maritime-energy-ecm/index.html` — Maritime and Energy Ecosystem Capability Model launch and media coverage
+- `news-eferebo-maritime-innovation-award/index.html` — Maritime Innovation and Technology Leadership Award coverage
 - `blog-details/index.html` — Shipbuilding trend report (latest featured article)
 - `news-singapore-local-capacity/index.html` — Singapore Maritime Week / local-capacity coverage
 - `news-blue-economy-standards/index.html` — Standards and blue-economy coverage
