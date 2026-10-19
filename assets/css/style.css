@@ -9582,6 +9582,76 @@ blockquote cite::before {
 /* News cards retain photographic quality while fitting Miiler's fixed card proportions. */
 .blog__thumb img, .postbox__thumb > a > img { object-fit:cover; object-position:center; }
 
+/* Official NIMENA Conference 2026 Call for Papers poster.
+   Keep the complete portrait artwork legible instead of cropping it to the
+   standard landscape news-card ratio. */
+.nimena-call-for-papers-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(18px, 3vw, 34px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(26, 171, 220, .28), transparent 34%),
+    linear-gradient(145deg, #061f46 0%, #0b3971 100%);
+}
+.nimena-call-for-papers-visual > a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.nimena-call-for-papers-visual img,
+.nimena-call-for-papers-visual > a > img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 760px;
+  object-fit: contain;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .24);
+}
+.nimena-call-for-papers-visual--article img {
+  max-height: 900px;
+}
+.nimena-call-for-papers-thumb {
+  display: flex;
+  min-height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: linear-gradient(145deg, #061f46 0%, #0b3971 100%);
+}
+.nimena-call-for-papers-thumb > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.nimena-call-for-papers-thumb img,
+.nimena-call-for-papers-thumb > a > img {
+  width: auto;
+  max-width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+}
+.blog__item:hover .nimena-call-for-papers-thumb img,
+.postbox__item:hover .nimena-call-for-papers-visual img {
+  transform: none;
+}
+.rc__post-thumb img[src$="nimena-conference-2026-call-for-papers.jpeg"] {
+  object-fit: contain;
+  background: #082d61;
+}
+@media (max-width: 575px) {
+  .nimena-call-for-papers-visual {
+    padding: 12px;
+  }
+  .nimena-call-for-papers-thumb {
+    min-height: 420px;
+  }
+}
+
 
 /* === NIMENA LAYOUT REFINEMENT 2026-09-10 (executives, cards, focus, footer, overflow) === */
 /* Keep the page within the viewport; the original Miiler history overlap can otherwise create a document-wide x-scrollbar. */
