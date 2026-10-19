@@ -10097,6 +10097,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .nimena-source-list a { display: inline-flex; align-items: center; gap: 7px; min-height: 38px; padding: 8px 13px; color: #082d61; font-size: 14px; font-weight: 650; line-height: 1.2; background: #f2f5f8; border: 1px solid #dfe6ed; }
 .nimena-source-list a:hover { color: #fff; background: #082d61; border-color: #082d61; }
 .nimena-source-list a i { font-size: 12px; }
+.nimena-story-coverage { margin: 24px 0 26px; padding-top: 20px; border-top: 1px solid #e5eaf0; }
+.nimena-story-coverage__label { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; color: #082d61; font-size: 14px; font-weight: 800; letter-spacing: .055em; text-transform: uppercase; }
+.nimena-story-coverage__label b { padding: 4px 8px; color: #5c6670; font-size: 11px; font-weight: 700; letter-spacing: .04em; background: #f2f5f8; border-radius: 2px; }
+.nimena-source-list--compact { gap: 8px; margin: 12px 0 0; }
+.nimena-source-list--compact a { min-height: 34px; padding: 6px 11px; font-size: 13px; }
 .nimena-sidebar-links { margin: 0; }
 .nimena-sidebar-links li { margin-bottom: 10px; }
 .nimena-sidebar-links li a { display: flex; align-items: center; min-height: 44px; padding: 10px 13px; color: #082d61; font-weight: 600; background: #f4f7fa; border-left: 3px solid #ff5e14; }
