@@ -15,7 +15,7 @@ RECENT_UPDATES = """<div class="sidebar__widget mb-40">
 <h3 class="sidebar__widget-title">Recent Updates</h3>
 <div class="sidebar__widget-content">
 <div class="sidebar__post rc__post"><div class="rc__post mb-20 d-flex align-items-center"><div class="rc__post-thumb mr-20"><a href="../news-maritime-energy-ecm/"><img alt="NIMENA Maritime and Energy ECM" src="../assets/img/nimena/archive/hero-shipyard.webp"/></a></div><div class="rc__post-content"><h3 class="rc__post-title"><a href="../news-maritime-energy-ecm/">NIMENA launches Maritime and Energy ECM</a></h3><div class="rc__meta"><span>October 14, 2026</span></div></div></div>
-<div class="rc__post mb-20 d-flex align-items-center"><div class="rc__post-thumb mr-20"><a href="../news-eferebo-maritime-innovation-award/"><img alt="Engr. Eferebo I. Sylvanus" src="../assets/img/executives/eferebo-sylvanus.webp"/></a></div><div class="rc__post-content"><h3 class="rc__post-title"><a href="../news-eferebo-maritime-innovation-award/">Eferebo receives Maritime Innovation Award</a></h3><div class="rc__meta"><span>October 12, 2026</span></div></div></div>
+<div class="rc__post mb-20 d-flex align-items-center"><div class="rc__post-thumb mr-20"><a href="../news-eferebo-maritime-innovation-award/"><img alt="Engr. Eferebo I. Sylvanus receives the Maritime Innovation Award" src="../assets/img/nimena/news/eferebo-maritime-innovation-award.webp"/></a></div><div class="rc__post-content"><h3 class="rc__post-title"><a href="../news-eferebo-maritime-innovation-award/">Eferebo receives Maritime Innovation Award</a></h3><div class="rc__meta"><span>October 12, 2026</span></div></div></div>
 <div class="rc__post mb-20 d-flex align-items-center"><div class="rc__post-thumb mr-20"><a href="../news-call-for-papers/"><img alt="NIMENA call for papers" src="../assets/img/nimena/archive/news-research.webp"/></a></div><div class="rc__post-content"><h3 class="rc__post-title"><a href="../news-call-for-papers/">Call for Papers: NIMENA’s two maritime journals</a></h3><div class="rc__meta"><span>August 17, 2026</span></div></div></div>
 </div>
 </div>
@@ -50,15 +50,17 @@ ARTICLES = [
             "NIMENA National Chairman Engr. Eferebo I. Sylvanus received the Maritime Innovation and "
             "Technology Leadership Award at the 15th Democracy Heroes Award Africa ceremony in Abuja."
         ),
+        "image": "https://nimena.org.ng/assets/img/nimena/news/eferebo-maritime-innovation-award.webp",
+        "image_alt": "Engr. Eferebo I. Sylvanus receives the Maritime Innovation and Technology Leadership Award in Abuja",
         "article": """<article class="postbox__item-single format-image mb-50 transition-3">
 <div class="postbox__thumb m-img">
-<img alt="Engr. Eferebo I. Sylvanus, NIMENA National Chairman" decoding="async" loading="eager" src="../assets/img/executives/eferebo-sylvanus.webp"/>
+<img alt="Engr. Eferebo I. Sylvanus receives the Maritime Innovation and Technology Leadership Award in Abuja" decoding="async" loading="eager" src="../assets/img/nimena/news/eferebo-maritime-innovation-award.webp"/>
 </div>
 <div class="postbox__content">
 <div class="postbox__meta"><span><i class="far fa-calendar-check"></i> October 12, 2026</span><span><i class="far fa-newspaper"></i> NIMENA / Media Coverage</span></div>
 <h3 class="postbox__title">Engr. Eferebo receives Maritime Innovation and Technology Leadership Award</h3>
 <div class="postbox__text"><p class="lead">NIMENA National Chairman Engr. Eferebo I. Sylvanus, PhD, FNSE, received the Maritime Innovation and Technology Leadership Award at the 15th Democracy Heroes Award Africa ceremony in Abuja.</p><p>The recognition was presented during the “Elevate” ceremony held on October 9, 2026 at the Congress Hall, Transcorp Hilton, and acknowledged his work in marine engineering, technology-led sector development and professional leadership.</p><p>Independent reports connected the award to his advocacy for indigenous maritime technology, stronger engineering capability, research, standards and innovation systems that can retain more value within Nigeria’s maritime and energy sectors.</p><p>The honour also reinforces NIMENA’s wider institutional agenda: connecting professional competence, industry collaboration, policy reform and innovation to practical national development.</p><blockquote><p>This NIMENA summary consolidates the institutional announcement and independent media reports. Follow the publisher links below for their complete accounts.</p><cite>NIMENA News Desk</cite></blockquote>
-<h4>Media coverage</h4><div class="nimena-source-list" aria-label="Media coverage of Engr. Eferebo's Maritime Innovation and Technology Leadership Award"><a href="https://dailytrust.com/nimena-national-chair-eferebo-bags-democracy-heroes-award/" rel="noopener noreferrer" target="_blank">Daily Trust <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://leadership.ng/nimena-chairman-eferebo-bags-maritime-innovation-award/" rel="noopener noreferrer" target="_blank">Leadership <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://www.thisdaylive.com/2026/10/11/floodgates-of-congratulations-as-nimena-national-chairman-eferebo-bags-democracy-heroes-award/?clear" rel="noopener noreferrer" target="_blank">ThisDay Recognition <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://www.thisdaylive.com/2026/10/12/eferebo-receives-maritime-innovation-award-at-abuja-ceremony/" rel="noopener noreferrer" target="_blank">ThisDay Ceremony <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://independent.ng/eferebo-advocates-indigenous-maritime-technology-as-he-bags-innovation-award/" rel="noopener noreferrer" target="_blank">Independent <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://blueprint.ng/maritime-expert-bags-innovation-and-technology-leadership-award/" rel="noopener noreferrer" target="_blank">Blueprint <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://peoplesdaily.ng/nigerias-maritime-technology-challenge-takes-centre-stage-as-engineer-wins-africa-award/" rel="noopener noreferrer" target="_blank">Peoples Daily <i class="fa-light fa-arrow-up-right-from-square"></i></a></div></div>
+<h4>Media coverage</h4><div class="nimena-source-list" aria-label="Media coverage of Engr. Eferebo's Maritime Innovation and Technology Leadership Award"><a href="https://dailytrust.com/nimena-national-chair-eferebo-bags-democracy-heroes-award/" rel="noopener noreferrer" target="_blank">Daily Trust <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://leadership.ng/nimena-chairman-eferebo-bags-maritime-innovation-award/" rel="noopener noreferrer" target="_blank">Leadership <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://www.thisdaylive.com/2026/10/11/floodgates-of-congratulations-as-nimena-national-chairman-eferebo-bags-democracy-heroes-award/" rel="noopener noreferrer" target="_blank">ThisDay Recognition <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://www.thisdaylive.com/2026/10/12/eferebo-receives-maritime-innovation-award-at-abuja-ceremony/" rel="noopener noreferrer" target="_blank">ThisDay Ceremony <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://independent.ng/eferebo-advocates-indigenous-maritime-technology-as-he-bags-innovation-award/" rel="noopener noreferrer" target="_blank">Independent <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://blueprint.ng/maritime-expert-bags-innovation-and-technology-leadership-award/" rel="noopener noreferrer" target="_blank">Blueprint <i class="fa-light fa-arrow-up-right-from-square"></i></a><a href="https://peoplesdaily.ng/nigerias-maritime-technology-challenge-takes-centre-stage-as-engineer-wins-africa-award/" rel="noopener noreferrer" target="_blank">Peoples Daily <i class="fa-light fa-arrow-up-right-from-square"></i></a></div></div>
 <div class="postbox__tag tagcloud"><span>Themes: </span><a href="../blog/">Recognition</a><a href="../blog/">Leadership</a><a href="../blog/">Maritime Innovation</a><a href="../blog/">Technology</a></div>
 </div>
 </article>""",
@@ -96,9 +98,19 @@ def build(article: dict[str, str]) -> None:
     html = replace_meta(html, "property", "og:title", f"{title} | NIMENA")
     html = replace_meta(html, "property", "og:description", description)
     html = replace_meta(html, "property", "og:url", url)
+    if article.get("image"):
+        html = replace_meta(html, "property", "og:image", article["image"])
+        html = replace_meta(html, "property", "og:image:secure_url", article["image"])
+        html = replace_meta(html, "property", "og:image:type", "image/webp")
+        html = replace_meta(html, "property", "og:image:width", "1010")
+        html = replace_meta(html, "property", "og:image:height", "730")
+        html = replace_meta(html, "property", "og:image:alt", article["image_alt"])
     html = replace_meta(html, "name", "twitter:title", f"{title} | NIMENA")
     html = replace_meta(html, "name", "twitter:description", description)
     html = replace_meta(html, "name", "twitter:url", url)
+    if article.get("image"):
+        html = replace_meta(html, "name", "twitter:image", article["image"])
+        html = replace_meta(html, "name", "twitter:image:alt", article["image_alt"])
 
     html = re.sub(
         r'(<h3 class="breadcrumb__title-2">News &amp; Insights</h3>\s*)<p>.*?</p>',
