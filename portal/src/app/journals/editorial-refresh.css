@@ -217,3 +217,11 @@
 .nj-conference__note{font-size:.79rem;line-height:1.6;color:#677a8c;max-width:920px;margin:18px 0 0}
 @media(max-width:1050px){.nj-event__layout{grid-template-columns:85px minmax(0,1fr)}.nj-event__aside{display:none}.nj-conference__tracks{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.nj-event__layout{grid-template-columns:1fr;gap:12px;padding-block:24px}.nj-event__date{flex-direction:row;justify-content:flex-start;align-items:baseline;gap:8px;width:max-content;padding:9px 14px;border-top-width:3px}.nj-event__date strong{font-size:1.6rem}.nj-event__date span{font-size:.82rem}.nj-home .nj-event h2{font-size:1.7rem}.nj-event__subtitle{font-size:.96rem}.nj-event__meta{gap:9px}.nj-event__meta span{width:100%;font-size:.83rem}.nj-event__actions{align-items:stretch}.nj-event__actions .nj-btn{width:100%}.nj-conference__tracks{grid-template-columns:1fr}.nj-conference__bottom{align-items:flex-start;flex-direction:column}.nj-conference__bottom>div:last-child{width:100%}}
+
+/* Conference promotion beneath the hero — authentic official flyer. */
+.nj-home .nj-event__layout{grid-template-columns:104px minmax(0,1fr) 190px;align-items:center}
+.nj-home .nj-event__flyer{display:flex;flex-direction:column;align-items:center;gap:8px;align-self:center;color:#092957;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.045em}
+.nj-home .nj-event__flyer img{width:145px;height:205px;object-fit:contain;background:#fff;border:1px solid #d5e1eb;box-shadow:0 8px 24px rgba(10,40,80,.15)}
+.nj-home .nj-event__flyer:hover span{text-decoration:underline}
+@media(max-width:1050px){.nj-home .nj-event__layout{grid-template-columns:85px minmax(0,1fr) 150px}.nj-home .nj-event__flyer img{width:125px;height:177px}}
+@media(max-width:700px){.nj-home .nj-event__layout{grid-template-columns:1fr}.nj-home .nj-event__flyer{justify-self:start;align-items:flex-start;margin-top:10px}.nj-home .nj-event__flyer img{width:125px;height:auto}}
