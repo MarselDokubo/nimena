@@ -62,7 +62,7 @@ export default function JournalsHomePage() {
               <Link className="nj-event__textlink" href="/journals/call-for-papers">Publication &amp; submission guidance →</Link>
             </div>
           </div>
-          <a className="nj-event__flyer" href="/media/nimena-conference-2026.png" target="_blank" rel="noopener noreferrer" aria-label="Open official NIMENA Conference 2026 flyer"><img src="/media/nimena-conference-2026.png" alt="Official NIMENA Conference 2026 Call for Papers flyer" /><span>View official flyer ↗</span></a>
+          <a className="nj-event__flyer" href="https://raw.githubusercontent.com/MarselDokubo/nimena/main/assets/img/nimena/news/nimena-conference-2026-call-for-papers.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open official NIMENA Conference 2026 flyer"><img src="https://raw.githubusercontent.com/MarselDokubo/nimena/main/assets/img/nimena/news/nimena-conference-2026-call-for-papers.jpeg" alt="Official NIMENA Conference 2026 Call for Papers flyer" /><span>View official flyer ↗</span></a>
         </div>
       </section>
 
