@@ -103,7 +103,7 @@ export default function JournalsHomePage() {
         <div className="nj-container">
           <div className="nj-heading"><div><span className="nj-eyebrow">One institution · connected services</span><h2>Move confidently between NIMENA services.</h2></div><p>Research, membership and public information brought together in one coherent experience.</p></div>
           <div className="nj-services">
-            <a href="https://nimena.org.ng/" target="_blank" rel="noopener noreferrer"><span className="nj-services__icon" aria-hidden="true"><Icon name="globe" /></span><span className="nj-services__number">01 / Public</span><h3>Main website</h3><p>Institutional news, programmes and public resources.</p><b>Visit website →</b></a>
+            <a href="https://nimena.org.ng/" target="_blank" rel="noopener noreferrer"><span className="nj-services__icon" aria-hidden="true"><Icon name="home" /></span><span className="nj-services__number">01 / Public</span><h3>Main website</h3><p>Institutional news, programmes and public resources.</p><b>Visit website →</b></a>
             <Link href="/"><span className="nj-services__icon" aria-hidden="true"><Icon name="users" /></span><span className="nj-services__number">02 / Members</span><h3>Member portal</h3><p>Membership, CPD, conferences and professional records.</p><b>Open portal →</b></Link>
             <Link href="/journals/about"><span className="nj-services__icon" aria-hidden="true"><Icon name="book" /></span><span className="nj-services__number">03 / Research</span><h3>Journal platform</h3><p>Discover scholarship, editorial journeys and live OJS publishing.</p><b>Explore journals →</b></Link>
           </div>
