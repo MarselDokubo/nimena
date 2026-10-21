@@ -47,10 +47,10 @@ export default function JournalsHomePage() {
 
       <div className="nj-statbar">
         <div className="nj-container nj-statbar__grid">
-          <div><strong>02</strong><span>Scholarly journals<small>Distinct editorial scopes</small></span></div>
-          <div><strong>05</strong><span>Editorial stages<small>From submission to publication</small></span></div>
-          <div><strong>03</strong><span>Role-based workspaces<small>Authors, reviewers and editors</small></span></div>
-          <div><strong>OJS</strong><span>Publishing platform<small>Live records remain in OJS</small></span></div>
+          <div><span className="nj-stat-icon" aria-hidden="true">✦</span><strong>02</strong><span>Scholarly journals<small>Distinct editorial scopes</small></span></div>
+          <div><span className="nj-stat-icon" aria-hidden="true">◇</span><strong>05</strong><span>Editorial stages<small>From submission to publication</small></span></div>
+          <div><span className="nj-stat-icon" aria-hidden="true">◎</span><strong>03</strong><span>Role-based workspaces<small>Authors, reviewers and editors</small></span></div>
+          <div><span className="nj-stat-icon" aria-hidden="true">↗</span><strong>OJS</strong><span>Publishing platform<small>Live records remain in OJS</small></span></div>
         </div>
       </div>
 
@@ -60,7 +60,7 @@ export default function JournalsHomePage() {
           {journalList.map((journal, index) => (
             <article className="nj-journal" key={journal.slug}>
               <div className={`nj-journal__visual nj-journal__visual--${index + 1}`} role="img" aria-label={index === 0 ? "Ocean and marine engineering imagery" : "Renewable energy at sea"} />
-              <div className="nj-journal__body">
+              <div className="nj-journal__body"><span className="nj-decorative-symbol" aria-hidden="true">✦</span>
                 <span className="nj-journal__index"><b>{String(index + 1).padStart(2, "0")}</b> {journal.acronym}</span>
                 <h3>{journal.name}</h3>
                 <p>{journal.description}</p>
@@ -103,9 +103,9 @@ export default function JournalsHomePage() {
         <div className="nj-container">
           <div className="nj-heading"><div><span className="nj-eyebrow">One institution · connected services</span><h2>Move confidently between NIMENA services.</h2></div><p>Research, membership and public information brought together in one coherent experience.</p></div>
           <div className="nj-services">
-            <a href="https://nimena.org.ng/" target="_blank" rel="noopener noreferrer"><span className="nj-services__number">01 / Public</span><h3>Main website</h3><p>Institutional news, programmes and public resources.</p><b>Visit website →</b></a>
-            <Link href="/"><span className="nj-services__number">02 / Members</span><h3>Member portal</h3><p>Membership, CPD, conferences and professional records.</p><b>Open portal →</b></Link>
-            <Link href="/journals/about"><span className="nj-services__number">03 / Research</span><h3>Journal platform</h3><p>Discover scholarship, editorial journeys and live OJS publishing.</p><b>Explore journals →</b></Link>
+            <a href="https://nimena.org.ng/" target="_blank" rel="noopener noreferrer"><span className="nj-services__icon" aria-hidden="true"><Icon name="globe" /></span><span className="nj-services__number">01 / Public</span><h3>Main website</h3><p>Institutional news, programmes and public resources.</p><b>Visit website →</b></a>
+            <Link href="/"><span className="nj-services__icon" aria-hidden="true"><Icon name="users" /></span><span className="nj-services__number">02 / Members</span><h3>Member portal</h3><p>Membership, CPD, conferences and professional records.</p><b>Open portal →</b></Link>
+            <Link href="/journals/about"><span className="nj-services__icon" aria-hidden="true"><Icon name="book" /></span><span className="nj-services__number">03 / Research</span><h3>Journal platform</h3><p>Discover scholarship, editorial journeys and live OJS publishing.</p><b>Explore journals →</b></Link>
           </div>
         </div>
       </section>
