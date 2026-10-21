@@ -174,3 +174,46 @@
 .nj-home .nj-stages li:nth-child(5n+5)>span{background:#ffddcd;color:#bc481c;border-color:#f3bfa6}
 .nj-home .nj-stages li strong{color:#092b55}
 .nj-home .nj-stages li p{color:#3c526c}
+
+/* NIMENA Conference 2026: event-first, without overwhelming the journal hero. */
+.nj-event{background:#f3f8fc;border-bottom:1px solid #dce8f2;position:relative;overflow:hidden}
+.nj-event__layout{display:grid;grid-template-columns:104px minmax(0,1fr) 212px;align-items:stretch;gap:26px;padding-block:29px}
+.nj-event__date{align-self:start;display:flex;flex-direction:column;align-items:center;background:#fff;border:1px solid #d7e3ee;border-top:4px solid #f76520;border-radius:4px;padding:15px 5px;color:#072957;box-shadow:0 10px 23px rgba(8,41,87,.055)}
+.nj-event__date strong{font-size:2.8rem;line-height:1;font-weight:800}
+.nj-event__date span{font-size:.98rem;font-weight:800;letter-spacing:.12em;margin-top:4px}
+.nj-event__date small{font-size:.77rem;color:#687f96}
+.nj-event__body{padding:0 0 3px;min-width:0}
+.nj-event__topline{display:flex;align-items:center;flex-wrap:wrap;gap:11px;color:#536c85;font-size:.73rem;font-weight:700;letter-spacing:.03em}
+.nj-event__live{display:inline-flex;align-items:center;gap:7px;color:#bd521c;letter-spacing:.09em;text-transform:uppercase}
+.nj-event__live span{width:7px;height:7px;background:#fa6b29;border-radius:50%;box-shadow:0 0 0 4px #ffe9dd}
+.nj-home .nj-event h2{font-size:clamp(1.6rem,2.45vw,2.55rem);font-weight:800!important;line-height:1.15;margin:12px 0 6px}
+.nj-event__subtitle{color:#31516f;font-size:1.01rem;font-weight:500;line-height:1.55;margin:0 0 15px;max-width:680px}
+.nj-event__meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:20px;color:#24486b}
+.nj-event__meta span{display:inline-flex;align-items:center;gap:7px;font-size:.79rem;font-weight:600;line-height:1.4}
+.nj-event__meta svg{width:17px;height:17px;color:#df5c22;flex:none}
+.nj-event__deadline{color:#b74b1e!important}
+.nj-event__actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 23px}
+.nj-event__actions .nj-btn{min-height:42px;font-size:.74rem}
+.nj-event__textlink{font-size:.79rem;font-weight:700;color:#072957;text-decoration:underline!important;text-underline-offset:3px}
+.nj-event__aside{display:flex;justify-content:center;flex-direction:column;gap:13px;padding:21px 22px;color:#fff;background:#082957;border-radius:3px;position:relative;overflow:hidden}
+.nj-event__aside>span{font-size:.69rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#d7e6f4}
+.nj-event__aside strong{font-size:1.35rem;line-height:1.18;letter-spacing:.025em}
+.nj-event__waves{font-size:3rem;letter-spacing:-.2em;color:#4bb5d8;opacity:.65;line-height:.5;position:absolute;bottom:14px;right:32px;transform:rotate(-11deg)}
+.nj-conference{background:#fff!important;border-bottom:1px solid #e6edf3}
+.nj-conference__tracks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.nj-conference__track{padding:23px 20px;border:1px solid #dce7ef;border-top:3px solid #2a719c;background:#f5f9fc;border-radius:3px}
+.nj-conference__track:nth-child(2){background:#edf7f4;border-top-color:#2b8c7d}
+.nj-conference__track:nth-child(3){background:#fff6ef;border-top-color:#e66c31}
+.nj-conference__track:nth-child(4){background:#f3f2fb;border-top-color:#6b6daa}
+.nj-conference__track>span{font-size:.77rem;letter-spacing:.1em;font-weight:800;color:#b34a1a}
+.nj-home .nj-conference__track h3{font-size:1.13rem;letter-spacing:-.02em;line-height:1.25;margin:18px 0 10px;font-weight:800!important}
+.nj-conference__track p{font-size:.9rem;line-height:1.65;color:#3d536d;margin:0}
+.nj-conference__bottom{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:25px 0 15px;border-bottom:1px solid #dce5ee}
+.nj-conference__bottom>div:first-child{display:grid;gap:5px}
+.nj-conference__bottom strong{font-size:1rem}
+.nj-conference__bottom span{font-size:.85rem;color:#4b6179}
+.nj-conference__bottom>div:last-child{display:flex;flex-wrap:wrap;align-items:center;gap:15px}
+.nj-conference__guidance{color:#082957;font-size:.83rem;font-weight:700}
+.nj-conference__note{font-size:.79rem;line-height:1.6;color:#677a8c;max-width:920px;margin:18px 0 0}
+@media(max-width:1050px){.nj-event__layout{grid-template-columns:85px minmax(0,1fr)}.nj-event__aside{display:none}.nj-conference__tracks{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.nj-event__layout{grid-template-columns:1fr;gap:12px;padding-block:24px}.nj-event__date{flex-direction:row;justify-content:flex-start;align-items:baseline;gap:8px;width:max-content;padding:9px 14px;border-top-width:3px}.nj-event__date strong{font-size:1.6rem}.nj-event__date span{font-size:.82rem}.nj-home .nj-event h2{font-size:1.7rem}.nj-event__subtitle{font-size:.96rem}.nj-event__meta{gap:9px}.nj-event__meta span{width:100%;font-size:.83rem}.nj-event__actions{align-items:stretch}.nj-event__actions .nj-btn{width:100%}.nj-conference__tracks{grid-template-columns:1fr}.nj-conference__bottom{align-items:flex-start;flex-direction:column}.nj-conference__bottom>div:last-child{width:100%}}
