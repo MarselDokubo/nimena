@@ -29,6 +29,27 @@ export default function JournalsHomePage() {
   ];
   return (
     <main className="nj-home">
+      <section className="nj-event" aria-labelledby="nj-event-title">
+        <div className="nj-container nj-event__layout">
+          <div className="nj-event__date" aria-label="20 November 2026"><strong>20</strong><span>NOV</span><small>2026</small></div>
+          <div className="nj-event__body">
+            <div className="nj-event__topline"><span className="nj-event__live"><span aria-hidden="true" /> Upcoming conference</span><span className="nj-event__edition">NIMENA Conference 2026 · MARVEL NIGERIA 2026</span></div>
+            <h2 id="nj-event-title">Advancing Maritime Sovereignty</h2>
+            <p className="nj-event__subtitle">Maritime advancement through resilience, vessel development, energy transition &amp; local capacity.</p>
+            <div className="nj-event__meta">
+              <span><Icon name="calendar" /> Friday, 20 November 2026</span>
+              <span><Icon name="home" /> Naval Dockyard Event Hall, Ahmadu Bello Way, Victoria Island, Lagos</span>
+              <span className="nj-event__deadline"><Icon name="clock" /> Abstract deadline: 17 November 2026</span>
+            </div>
+            <div className="nj-event__actions">
+              <a className="nj-btn nj-btn--orange" href="#conference-details">Explore conference details <Icon name="arrow" /></a>
+              <Link className="nj-event__textlink" href="/journals/call-for-papers">Publication &amp; submission guidance →</Link>
+            </div>
+          </div>
+          <div className="nj-event__aside" aria-hidden="true"><span>CALL FOR PAPERS</span><strong>MARITIME<br />RESEARCH<br />2026</strong><span>Four technical research tracks</span><div className="nj-event__waves">≈ ≈ ≈</div></div>
+        </div>
+      </section>
+
       <section className="nj-hero" aria-labelledby="nj-hero-title">
         <div className="nj-hero__image" aria-hidden="true" />
         <div className="nj-container nj-hero__inner">
@@ -42,6 +63,32 @@ export default function JournalsHomePage() {
             </div>
           </div>
           <span className="nj-hero__signature">Research · People · Innovation · A sustainable ocean</span>
+        </div>
+      </section>
+
+      <section className="nj-section nj-conference" id="conference-details" aria-labelledby="nj-conference-heading">
+        <div className="nj-container">
+          <div className="nj-heading">
+            <div><span className="nj-eyebrow">NIMENA Conference 2026 · Call for papers</span><h2 id="nj-conference-heading">Four tracks. One maritime future.</h2></div>
+            <p>Researchers, engineers and maritime professionals are invited to contribute original research, technical studies and evidence-based policy papers.</p>
+          </div>
+          <div className="nj-conference__tracks">
+            {[
+              ["01", "Classification & standards", "Local inspection capacity, vessel safety and structural requirements for West African waters."],
+              ["02", "Green shipping", "Vessel retrofits, alternative fuels, emissions reduction and cleaner operations."],
+              ["03", "Cabotage & shipbuilding", "Domestic fleet development, shipyard capacity, materials and modular construction."],
+              ["04", "Hydrodynamics of domestic craft", "Hull design, resistance, propulsion and stability of coastal, inland and shallow-draught vessels."],
+            ].map(([number, title, copy]) => (
+              <article className="nj-conference__track" key={number}>
+                <span>{number}</span><h3>{title}</h3><p>{copy}</p>
+              </article>
+            ))}
+          </div>
+          <div className="nj-conference__bottom">
+            <div><strong>Abstracts: 150–200 words</strong><span>Deadline: 17 November 2026 · Manuscript deadline: 27 November 2026</span><span>Submissions: Journal portal · Enquiries: editorialoffice@nimenajournals.com</span></div>
+            <div><Link className="nj-btn nj-btn--orange" href="/journals/author">Submission workspace <Icon name="arrow" /></Link><Link className="nj-conference__guidance" href="/journals/call-for-papers">Read submission guidance →</Link></div>
+          </div>
+          <p className="nj-conference__note">Selected conference authors may be invited to submit expanded papers to AJOMENA or JBESED, subject to independent journal editorial assessment and peer review. The prototype submission workspace does not upload files to the live journal portal.</p>
         </div>
       </section>
 
