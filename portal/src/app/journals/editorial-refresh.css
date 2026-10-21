@@ -126,3 +126,7 @@
 .nj-home .nj-stages li p{font-size:.94rem}
 .nj-home .nj-services p{font-size:.96rem}
 }
+
+/* Hero headline: confident without excessive visual weight. */
+.nj-home .nj-hero h1{font-weight:700!important;font-size:clamp(2.8rem,4.45vw,4.9rem);line-height:1.11;letter-spacing:-.035em;max-width:750px}
+@media(max-width:700px){.nj-home .nj-hero h1{font-size:clamp(2.35rem,9vw,3.85rem);line-height:1.12}}
