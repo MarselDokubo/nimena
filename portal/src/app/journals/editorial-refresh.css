@@ -85,3 +85,14 @@
 .nj-cta h2{font-weight:800!important;line-height:1.13}
 @media(max-width:1100px){.nj-home .nj-container{width:min(100% - 48px,1320px)}.nj-journals{gap:18px}.nj-stages{gap:7px}.nj-stages li{padding:18px 14px}}
 @media(max-width:700px){.nj-home .nj-container{width:calc(100% - 36px)}.nj-hero__image{background-image:linear-gradient(90deg,rgba(3,28,62,.81),rgba(3,28,62,.4)),url("/media/journals-hero.webp")}.nj-section{padding-block:62px}.nj-heading{margin-bottom:26px}.nj-statbar__grid>div{flex-wrap:wrap}.nj-journal__body{padding:25px}.nj-article__image{height:210px}.nj-stages{gap:8px}.nj-stages li{min-height:0;padding:20px}.nj-services>a{min-height:230px}}
+
+/* Single solid brand navy for the call-for-papers panel and entire footer. */
+.nj-home .nj-cta,
+.journal-site .journal-footer {
+  background: #061a37 !important;
+  background-image: none !important;
+}
+.journal-site .journal-footer::before,
+.journal-site .journal-footer::after,
+.nj-home .nj-cta::before,
+.nj-home .nj-cta::after { background-image: none !important; }
