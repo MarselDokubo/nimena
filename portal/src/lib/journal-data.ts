@@ -33,6 +33,8 @@ export type Journal = {
   sections: string[];
   proposedReview: string;
   publicationModel: string;
+  liveUrl: string;
+  submissionUrl: string;
   issue: JournalIssue;
   archives: Array<{ label: string; title: string; published: string }>;
 };
@@ -137,10 +139,10 @@ export const journals: Record<JournalSlug, Journal> = {
   ajomena: {
     slug: "ajomena",
     acronym: "AJOMENA",
-    name: "African Journal of Marine Engineering and Naval Architecture",
+    name: "African Journal of Offshore, Marine Engineering and Naval Architecture",
     strapline: "Engineering knowledge for safer, stronger maritime systems",
     description:
-      "A proposed peer-reviewed platform for research and professional practice in marine engineering, naval architecture, shipbuilding and related maritime technologies.",
+      "A peer-reviewed platform for research and professional practice in offshore and marine engineering, naval architecture, shipbuilding and related maritime technologies.",
     scope: [
       "Marine machinery, propulsion and vessel systems",
       "Ship design, hydrodynamics and naval architecture",
@@ -152,6 +154,8 @@ export const journals: Record<JournalSlug, Journal> = {
     sections: ["Original research", "Design study", "Technical note", "Professional practice", "Review article"],
     proposedReview: "Double-blind peer review",
     publicationModel: "Continuous publication with scheduled issues",
+    liveUrl: "https://nimenajournals.com/ajomena",
+    submissionUrl: "https://nimenajournals.com/ajomena/about/submissions",
     issue: {
       slug: "vol-1-no-1-2026",
       label: "Volume 1 · Number 1 · 2026",
@@ -167,10 +171,10 @@ export const journals: Record<JournalSlug, Journal> = {
   jbesed: {
     slug: "jbesed",
     acronym: "JBESED",
-    name: "Journal of Blue Economy and Sustainable Energy Development",
+    name: "Journal of the Blue Economy and Sustainable Energy Development",
     strapline: "Evidence for an inclusive and sustainable ocean economy",
     description:
-      "A proposed interdisciplinary journal connecting blue-economy development, sustainable energy, coastal resilience, policy and responsible maritime investment.",
+      "An interdisciplinary journal connecting blue-economy development, sustainable energy, coastal resilience, policy and responsible maritime investment.",
     scope: [
       "Blue-economy policy, governance and measurement",
       "Marine renewable energy and low-carbon shipping",
@@ -182,6 +186,8 @@ export const journals: Record<JournalSlug, Journal> = {
     sections: ["Original research", "Policy and practice", "Technical note", "Case study", "Review article"],
     proposedReview: "Double-blind peer review",
     publicationModel: "Continuous publication with scheduled issues",
+    liveUrl: "https://nimenajournals.com/jbesed",
+    submissionUrl: "https://nimenajournals.com/jbesed/about/submissions",
     issue: {
       slug: "vol-1-no-1-2026",
       label: "Volume 1 · Number 1 · 2026",

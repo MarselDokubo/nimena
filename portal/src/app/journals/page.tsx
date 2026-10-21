@@ -5,7 +5,7 @@ import { journalList } from "@/lib/journal-data";
 
 export const metadata: Metadata = {
   title: "Research & Journals",
-  description: "Explore the AJOMENA and JBESED journal experience and proposed scholarly publishing workflows.",
+  description: "Explore AJOMENA, JBESED and NIMENA's scholarly publishing services.",
 };
 
 export default function JournalsHomePage() {
@@ -18,15 +18,15 @@ export default function JournalsHomePage() {
       <section className="journal-hero">
         <div className="journal-hero__copy">
           <span className="kicker kicker--light">NIMENA Research & Journals</span>
-          <h1>Maritime research built for practice.</h1>
-          <p>Explore the proposed home of AJOMENA and JBESED, from discovery and submission to review, production and publication.</p>
+          <h1>Engineering knowledge for maritime progress.</h1>
+          <p>Discover research in offshore and marine engineering, naval architecture, the blue economy and sustainable energy—then follow a clear path from manuscript to publication.</p>
           <div className="journal-hero__actions">
             <Link className="button button--primary" href="/journals/author">Submit a manuscript <Icon name="arrow" /></Link>
             <Link className="button journal-button--light" href="#journals">Explore the journals</Link>
           </div>
         </div>
         <div className="journal-hero__issue">
-          <span>Featured prototype issue</span>
+          <span>Featured collection</span>
           <strong>Marine systems, energy transition and local technical capacity</strong>
           <p>Volume 1 · Number 1 · 2026</p>
           <div>
@@ -36,11 +36,23 @@ export default function JournalsHomePage() {
         </div>
       </section>
 
-      <section className="journal-trust-strip" aria-label="Prototype publishing features">
-        <article><strong>02</strong><span>Journal pathways</span></article>
+      <section className="journal-trust-strip" aria-label="Publishing platform features">
+        <article><strong>02</strong><span>Scholarly journals</span></article>
         <article><strong>05</strong><span>Editorial stages</span></article>
-        <article><strong>03</strong><span>Workflow previews</span></article>
-        <article><strong>100%</strong><span>Fictional review data</span></article>
+        <article><strong>03</strong><span>Role-based workspaces</span></article>
+        <article><strong>OJS</strong><span>Live publishing engine</span></article>
+      </section>
+
+      <section className="journal-ecosystem-panel" aria-labelledby="connected-services-title">
+        <div>
+          <span>One institution · three connected services</span>
+          <h2 id="connected-services-title">Move confidently between NIMENA services.</h2>
+        </div>
+        <nav aria-label="Connected NIMENA services">
+          <a href="https://nimena.org.ng/" rel="noreferrer" target="_blank"><small>01</small><strong>Main website</strong><span>Institution, news, programmes and public resources</span><Icon name="arrow" /></a>
+          <Link href="/"><small>02</small><strong>Member portal</strong><span>Membership, CPD, conferences and professional records</span><Icon name="arrow" /></Link>
+          <Link href="/journals"><small>03</small><strong>Journal platform</strong><span>Discovery, submission, peer review and publication</span><Icon name="arrow" /></Link>
+        </nav>
       </section>
 
       <section className="journal-section" id="journals">
@@ -63,6 +75,7 @@ export default function JournalsHomePage() {
               <div className="journal-card__actions">
                 <Link href={`/journals/${journal.slug}`}>Visit journal <Icon name="arrow" /></Link>
                 <Link href={`/journals/${journal.slug}/issues`}>Browse issues</Link>
+                <a href={journal.liveUrl} rel="noreferrer" target="_blank">Live OJS ↗</a>
               </div>
             </article>
           ))}
@@ -73,9 +86,9 @@ export default function JournalsHomePage() {
         <div className="journal-section__head">
           <div>
             <span>Featured research</span>
-            <h2>Read the prototype issue.</h2>
+            <h2>Preview the reading experience.</h2>
           </div>
-          <p>These records are deliberately fictional. They demonstrate article discovery, metadata, citation and full-text presentation.</p>
+          <p>Sample records demonstrate article discovery, metadata, citation and full-text presentation without altering live OJS content.</p>
         </div>
         <div className="article-grid">
           {featuredArticles.map((article) => (

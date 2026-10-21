@@ -2,6 +2,8 @@
 
 Open `index.html` to start the site.
 
+For a guided demonstration of the public website, member portal and redesigned journal experience, see [`NIMENA_ECOSYSTEM_PRESENTATION.md`](NIMENA_ECOSYSTEM_PRESENTATION.md).
+
 This build keeps the Miiler template's visual system and adapts the content, imagery and navigation for the Nigerian Institution of Marine Engineers and Naval Architects (NIMENA).
 
 ## Main pages
@@ -71,7 +73,7 @@ The site uses relative links so it can work both as a GitHub Pages project site 
 - `magazine/index.html` — public professional magazine distinct from AJOMENA and JBESED peer-reviewed journals.
 - `portal/src/app/programmes/` — browser-only prototype submission workspace.
 - `portal/src/app/secretariat/programmes/` — prototype Secretariat screening queue.
-- `portal/src/app/journals/` — presentation prototype for AJOMENA, JBESED, author submission, peer review and editorial production.
+- `portal/src/app/journals/` — redesigned AJOMENA/JBESED presentation site with About, journal, issue, article, Call for Papers, announcements, contact, author, reviewer and editor journeys.
 - `portal/docs/INSTITUTIONAL_PROGRAMMES_BLUEPRINT.md` — governance and production requirements.
 
 The public accreditation directory is deliberately empty until NIMENA formally approves criteria, assessors and publishing authority.

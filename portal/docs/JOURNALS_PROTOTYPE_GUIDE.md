@@ -1,19 +1,30 @@
-# NIMENA Journals Prototype Guide
+# NIMENA Journals Presentation Guide
 
 ## Purpose
 
-This route family is a presentation-ready, browser-only prototype for the future AJOMENA and JBESED experience. It allows NIMENA to review the information architecture, visual identity and editorial journeys before any change is made to the live OJS installation at `nimenajournals.com`.
+This route family is the presentation-ready design target for AJOMENA and JBESED. It allows NIMENA to review the information architecture, visual identity and editorial journeys before the approved interface is implemented as a supported theme on the live OJS installation at `nimenajournals.com`.
+
+The three NIMENA services have deliberately separate responsibilities:
+
+| Service | Responsibility |
+| --- | --- |
+| `nimena.org.ng` | Institutional information, public programmes, news, membership information and research discovery |
+| Member portal | Applications, member records, renewals, CPD, conferences and member research profiles |
+| `nimenajournals.com` | Author accounts, manuscripts, peer review, editorial decisions, production and publication |
 
 ## Presentation routes
 
 | Route | Demonstrates |
 | --- | --- |
 | `/journals` | Shared NIMENA Journals homepage, discovery and publishing journey |
+| `/journals/about` | Publisher purpose, audiences, principles and governance |
 | `/journals/ajomena` | AJOMENA identity, scope and current issue |
 | `/journals/jbesed` | JBESED identity, scope and current issue |
 | `/journals/ajomena/issues` | AJOMENA current issue and archive design |
 | `/journals/jbesed/issues` | JBESED current issue and archive design |
 | `/journals/call-for-papers` | Call for Papers, journal selection and manuscript preparation |
+| `/journals/announcements` | Calls, author notices and publishing developments |
+| `/journals/contact` | Manuscript, editorial and institutional enquiry routes |
 | `/journals/policies` | Proposed policy and research-integrity structure |
 | `/journals/author` | Five-stage manuscript submission |
 | `/journals/reviewer` | Invitation, confidential review and recommendation |
@@ -34,7 +45,7 @@ Once approved, the prototype becomes the implementation specification for the ex
 
 1. Back up the OJS database, `files_dir`, public files and `config.inc.php`.
 2. Clone production to a protected staging environment.
-3. Recreate the approved public interface as a supported OJS 3.5 theme or child theme.
+3. Recreate the approved public interface as a supported theme or child theme compatible with the installed OJS version.
 4. Configure AJOMENA and JBESED as separate journals within the installation.
 5. Enter the approved scopes, sections, policies, boards, email templates, forms and decision options.
 6. Configure DOI, ORCID, preservation, SMTP and indexing integrations only after verification.

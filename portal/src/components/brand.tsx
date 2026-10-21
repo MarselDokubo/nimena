@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Brand({ compact = false, subtitle = "Member Services" }: { compact?: boolean; subtitle?: string }) {
+export function Brand({
+  compact = false,
+  href = "/",
+  subtitle = "Member Services",
+}: {
+  compact?: boolean;
+  href?: string;
+  subtitle?: string;
+}) {
   return (
-    <Link className={`brand${compact ? " brand--compact" : ""}`} href="/">
+    <Link className={`brand${compact ? " brand--compact" : ""}`} href={href}>
       <span className="brand__marks" aria-hidden="true">
         <Image alt="" height={52} priority src="/brand/nimena-logo.webp" width={52} />
         <span className="brand__rule" />

@@ -15,10 +15,10 @@ export default function CallForPapersPage() {
         <div>
           <span className="kicker kicker--light">Call for papers</span>
           <h1>Research that advances maritime practice.</h1>
-          <p>AJOMENA and JBESED invite original research, technical studies, review articles and professional practice contributions within their proposed scopes.</p>
+          <p>AJOMENA and JBESED invite original research, technical studies, review articles and professional practice contributions within their respective scopes.</p>
           <div><Link className="button button--primary" href="/journals/author">Start a submission <Icon name="arrow" /></Link><Link className="button journal-button--light" href="/journals/policies">Read author guidance</Link></div>
         </div>
-        <aside><strong>20</strong><span>quality publications proposed for NIMENA sponsorship</span><small>Eligibility, selection, APC coverage and final terms require written institutional approval.</small></aside>
+        <aside><strong>20</strong><span>quality publications announced for NIMENA sponsorship</span><small>Eligibility, selection, APC coverage and final terms should be confirmed in the official call.</small></aside>
       </section>
 
       <section className="journal-section">

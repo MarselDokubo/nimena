@@ -57,8 +57,8 @@ export default function PortalEntry() {
             <Link className="access-card" href="/journals">
               <span className="access-card__icon"><Icon name="book" /></span>
               <span>
-                <strong>Journals prototype</strong>
-                <small>AJOMENA, JBESED, submission, peer review and editorial workflows</small>
+                <strong>NIMENA Journals</strong>
+                <small>AJOMENA, JBESED, publishing guidance and editorial workflows</small>
               </span>
               <Icon className="access-card__arrow" name="arrow" />
             </Link>
