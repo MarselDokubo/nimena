@@ -5,129 +5,111 @@ import { journalList } from "@/lib/journal-data";
 
 export const metadata: Metadata = {
   title: "Research & Journals",
-  description: "Explore AJOMENA, JBESED and NIMENA's scholarly publishing services.",
+  description: "Discover AJOMENA and JBESED: NIMENA's maritime engineering and blue-economy research journals.",
 };
 
+const stages = [
+  ["01", "Submit", "Prepare your manuscript and supporting details."],
+  ["02", "Screen", "Scope, completeness and research ethics checks."],
+  ["03", "Review", "Independent editorial and peer assessment."],
+  ["04", "Decide", "Editorial decisions, revisions and responses."],
+  ["05", "Publish", "Final production and publication through OJS."],
+];
+
 export default function JournalsHomePage() {
-  const featuredArticles = journalList.flatMap((journal) =>
+  const featured = journalList.flatMap((journal) =>
     journal.issue.articles.slice(0, 2).map((article) => ({ ...article, journal })),
   );
-
+  const photography = [
+    "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85",
+    "https://images.unsplash.com/photo-1498623116890-37e912163d5d?auto=format&fit=crop&w=900&q=85",
+  ];
   return (
-    <div>
-      <section className="journal-hero">
-        <div className="journal-hero__copy">
-          <span className="kicker kicker--light">NIMENA Research & Journals</span>
-          <h1>Engineering knowledge for maritime progress.</h1>
-          <p>Discover research in offshore and marine engineering, naval architecture, the blue economy and sustainable energy—then follow a clear path from manuscript to publication.</p>
-          <div className="journal-hero__actions">
-            <Link className="button button--primary" href="/journals/author">Submit a manuscript <Icon name="arrow" /></Link>
-            <Link className="button journal-button--light" href="#journals">Explore the journals</Link>
+    <main className="nj-home">
+      <section className="nj-hero" aria-labelledby="nj-hero-title">
+        <div className="nj-hero__image" aria-hidden="true" />
+        <div className="nj-container nj-hero__inner">
+          <div className="nj-hero__content">
+            <span className="nj-eyebrow">NIMENA Research &amp; Journals</span>
+            <h1 id="nj-hero-title">Engineering Knowledge for <em>Maritime Progress.</em></h1>
+            <p>Advancing research in offshore and marine engineering, naval architecture, the blue economy and sustainable energy — from rigorous scholarship to real-world impact.</p>
+            <div className="nj-actions">
+              <Link className="nj-btn nj-btn--orange" href="/journals/author">Submit a manuscript <Icon name="arrow" /></Link>
+              <Link className="nj-btn nj-btn--outline" href="#journals">Explore the journals</Link>
+            </div>
           </div>
-        </div>
-        <div className="journal-hero__issue">
-          <span>Featured collection</span>
-          <strong>Marine systems, energy transition and local technical capacity</strong>
-          <p>Volume 1 · Number 1 · 2026</p>
-          <div>
-            <Link href="/journals/ajomena">AJOMENA</Link>
-            <Link href="/journals/jbesed">JBESED</Link>
-          </div>
+          <span className="nj-hero__signature">Research · People · Innovation · A sustainable ocean</span>
         </div>
       </section>
 
-      <section className="journal-trust-strip" aria-label="Publishing platform features">
-        <article><strong>02</strong><span>Scholarly journals</span></article>
-        <article><strong>05</strong><span>Editorial stages</span></article>
-        <article><strong>03</strong><span>Role-based workspaces</span></article>
-        <article><strong>OJS</strong><span>Live publishing engine</span></article>
-      </section>
-
-      <section className="journal-ecosystem-panel" aria-labelledby="connected-services-title">
-        <div>
-          <span>One institution · three connected services</span>
-          <h2 id="connected-services-title">Move confidently between NIMENA services.</h2>
+      <div className="nj-statbar">
+        <div className="nj-container nj-statbar__grid">
+          <div><strong>02</strong><span>Scholarly journals<small>Distinct editorial scopes</small></span></div>
+          <div><strong>05</strong><span>Editorial stages<small>From submission to publication</small></span></div>
+          <div><strong>03</strong><span>Role-based workspaces<small>Authors, reviewers and editors</small></span></div>
+          <div><strong>OJS</strong><span>Publishing platform<small>Live records remain in OJS</small></span></div>
         </div>
-        <nav aria-label="Connected NIMENA services">
-          <a href="https://nimena.org.ng/" rel="noreferrer" target="_blank"><small>01</small><strong>Main website</strong><span>Institution, news, programmes and public resources</span><Icon name="arrow" /></a>
-          <Link href="/"><small>02</small><strong>Member portal</strong><span>Membership, CPD, conferences and professional records</span><Icon name="arrow" /></Link>
-          <Link href="/journals"><small>03</small><strong>Journal platform</strong><span>Discovery, submission, peer review and publication</span><Icon name="arrow" /></Link>
-        </nav>
-      </section>
+      </div>
 
-      <section className="journal-section" id="journals">
-        <div className="journal-section__head">
-          <div>
-            <span>Our journals</span>
-            <h2>Two distinct scholarly conversations.</h2>
-          </div>
-          <p>Each journal has its own scope, sections and editorial identity while sharing one clear NIMENA publishing experience.</p>
-        </div>
-        <div className="journal-cards">
+      <section className="nj-section nj-container" id="journals">
+        <div className="nj-heading"><div><span className="nj-eyebrow">Our journals</span><h2>Two distinct scholarly conversations.</h2></div><p>Individual research identities. One connected NIMENA publishing experience.</p></div>
+        <div className="nj-journals">
           {journalList.map((journal, index) => (
-            <article className={`journal-card journal-card--${index + 1}`} key={journal.slug}>
-              <div className="journal-card__mark"><span>{String(index + 1).padStart(2, "0")}</span><strong>{journal.acronym}</strong></div>
-              <h3>{journal.name}</h3>
-              <p>{journal.description}</p>
-              <ul>
-                {journal.scope.slice(0, 3).map((item) => <li key={item}>{item}</li>)}
-              </ul>
-              <div className="journal-card__actions">
-                <Link href={`/journals/${journal.slug}`}>Visit journal <Icon name="arrow" /></Link>
-                <Link href={`/journals/${journal.slug}/issues`}>Browse issues</Link>
-                <a href={journal.liveUrl} rel="noreferrer" target="_blank">Live OJS ↗</a>
+            <article className="nj-journal" key={journal.slug}>
+              <div className={`nj-journal__visual nj-journal__visual--${index + 1}`} role="img" aria-label={index === 0 ? "Ocean and marine engineering imagery" : "Renewable energy at sea"} />
+              <div className="nj-journal__body">
+                <span className="nj-journal__index"><b>{String(index + 1).padStart(2, "0")}</b> {journal.acronym}</span>
+                <h3>{journal.name}</h3>
+                <p>{journal.description}</p>
+                <ul>{journal.scope.slice(0, 3).map((scope) => <li key={scope}>{scope}</li>)}</ul>
+                <div className="nj-journal__links">
+                  <Link className="nj-btn nj-btn--orange" href={`/journals/${journal.slug}`}>Visit journal <Icon name="arrow" /></Link>
+                  <Link href={`/journals/${journal.slug}/issues`}>Browse issues</Link>
+                  <a href={journal.liveUrl} target="_blank" rel="noopener noreferrer">Live OJS ↗</a>
+                </div>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="journal-section journal-section--tint">
-        <div className="journal-section__head">
-          <div>
-            <span>Featured research</span>
-            <h2>Preview the reading experience.</h2>
+      <section className="nj-section nj-section--mist">
+        <div className="nj-container">
+          <div className="nj-heading"><div><span className="nj-eyebrow">Featured research</span><h2>Recent publications.</h2></div><p>Explore sample article presentations from across our two journals. <Link href="/journals/ajomena/issues">Browse journal issues →</Link></p></div>
+          <div className="nj-articles">
+            {featured.map((article, index) => (
+              <article className="nj-article" key={`${article.journal.slug}-${article.slug}`}>
+                <div className="nj-article__labels"><strong>{article.journal.acronym}</strong><span>{article.section}</span></div>
+                <Link className="nj-article__image" href={`/journals/${article.journal.slug}/article/${article.slug}`} style={{ backgroundImage: `url("${photography[index % photography.length]}")` }} aria-label={`Read ${article.title}`} />
+                <h3><Link href={`/journals/${article.journal.slug}/article/${article.slug}`}>{article.title}</Link></h3>
+                <p>{article.authors.join(" · ")}</p>
+                <div className="nj-article__bottom"><span>Pages {article.pages}</span><Link href={`/journals/${article.journal.slug}/article/${article.slug}`}>Read article →</Link></div>
+              </article>
+            ))}
           </div>
-          <p>Sample records demonstrate article discovery, metadata, citation and full-text presentation without altering live OJS content.</p>
-        </div>
-        <div className="article-grid">
-          {featuredArticles.map((article) => (
-            <article className="article-card" key={`${article.journal.slug}-${article.slug}`}>
-              <div className="article-card__meta"><span>{article.journal.acronym}</span><em>{article.section}</em></div>
-              <h3><Link href={`/journals/${article.journal.slug}/article/${article.slug}`}>{article.title}</Link></h3>
-              <p>{article.authors.join(" · ")}</p>
-              <div className="article-card__footer"><span>Pages {article.pages}</span><Link href={`/journals/${article.journal.slug}/article/${article.slug}`}>Read article <Icon name="arrow" /></Link></div>
-            </article>
-          ))}
+          <p className="nj-disclaimer">Presentation preview: article records shown here are illustrative; verified journal records and manuscripts remain in OJS.</p>
         </div>
       </section>
 
-      <section className="journal-section">
-        <div className="journal-section__head">
-          <div>
-            <span>Editorial journey</span>
-            <h2>A transparent path to publication.</h2>
-          </div>
-          <Link className="journal-text-link" href="/journals/policies">Review proposed policies <Icon name="arrow" /></Link>
-        </div>
-        <ol className="publication-steps">
-          {[
-            ["01", "Submit", "Author details, manuscript files, declarations and metadata."],
-            ["02", "Screen", "Scope, completeness, ethics and similarity checks."],
-            ["03", "Review", "Proposed double-blind assessment by suitable experts."],
-            ["04", "Decide", "Editorial decision, revision and author response."],
-            ["05", "Publish", "Copyediting, proofing, issue scheduling and discovery metadata."],
-          ].map(([number, title, copy]) => (
-            <li key={number}><span>{number}</span><strong>{title}</strong><p>{copy}</p></li>
-          ))}
-        </ol>
+      <section className="nj-section nj-container nj-process">
+        <div className="nj-heading"><div><span className="nj-eyebrow">Editorial journey</span><h2>A transparent path to publication.</h2></div><p>Clear milestones guide the journey from manuscript to discovery. <Link href="/journals/policies">Review proposed policies →</Link></p></div>
+        <ol className="nj-stages">{stages.map(([number, title, description]) => <li key={number}><span>{number}</span><strong>{title}</strong><p>{description}</p></li>)}</ol>
       </section>
 
-      <section className="journal-cfp-banner">
-        <div><span>Call for papers</span><h2>Submit research to AJOMENA or JBESED.</h2></div>
-        <p>Review the themes, proposed process, manuscript requirements and sponsorship notice in one place.</p>
-        <Link className="button journal-button--light" href="/journals/call-for-papers">View call for papers <Icon name="arrow" /></Link>
+      <section className="nj-section nj-section--ecosystem">
+        <div className="nj-container">
+          <div className="nj-heading"><div><span className="nj-eyebrow">One institution · connected services</span><h2>Move confidently between NIMENA services.</h2></div><p>Research, membership and public information brought together in one coherent experience.</p></div>
+          <div className="nj-services">
+            <a href="https://nimena.org.ng/" target="_blank" rel="noopener noreferrer"><span className="nj-services__number">01 / Public</span><h3>Main website</h3><p>Institutional news, programmes and public resources.</p><b>Visit website →</b></a>
+            <Link href="/"><span className="nj-services__number">02 / Members</span><h3>Member portal</h3><p>Membership, CPD, conferences and professional records.</p><b>Open portal →</b></Link>
+            <Link href="/journals/about"><span className="nj-services__number">03 / Research</span><h3>Journal platform</h3><p>Discover scholarship, editorial journeys and live OJS publishing.</p><b>Explore journals →</b></Link>
+          </div>
+        </div>
       </section>
-    </div>
+
+      <section className="nj-cta"><div className="nj-container nj-cta__inner"><div><span className="nj-eyebrow">Call for papers</span><h2>Bring your research to the maritime conversation.</h2></div><Link className="nj-btn nj-btn--orange" href="/journals/call-for-papers">View call for papers <Icon name="arrow" /></Link></div></section>
+    </main>
   );
 }
