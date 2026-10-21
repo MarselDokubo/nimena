@@ -1,3 +1,4 @@
+import "./editorial-refresh.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
