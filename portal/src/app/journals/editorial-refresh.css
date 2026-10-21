@@ -96,3 +96,33 @@
 .journal-site .journal-footer::after,
 .nj-home .nj-cta::before,
 .nj-home .nj-cta::after { background-image: none !important; }
+
+/* Readability pass — comfortable desktop text across the journal landing page. */
+.nj-home{font-size:16px;line-height:1.65}
+.nj-home .nj-heading>p{font-size:1.04rem;line-height:1.75;max-width:370px}
+.nj-home .nj-hero__content>p{font-size:1.13rem;line-height:1.8;max-width:585px}
+.nj-home .nj-statbar span{font-size:.96rem}
+.nj-home .nj-statbar small{font-size:.82rem;line-height:1.5}
+.nj-home .nj-eyebrow{font-size:.76rem}
+.nj-home .nj-journal__index{font-size:.83rem}
+.nj-home .nj-journal__body>p{font-size:.99rem;line-height:1.75}
+.nj-home .nj-journal li{font-size:.9rem;line-height:1.5}
+.nj-home .nj-journal__links>a:not(.nj-btn){font-size:.81rem}
+.nj-home .nj-article__labels{font-size:.75rem}
+.nj-home .nj-article h3{font-size:1.08rem;line-height:1.42}
+.nj-home .nj-article>p{font-size:.9rem}
+.nj-home .nj-article__bottom{font-size:.83rem}
+.nj-home .nj-disclaimer{font-size:.83rem;line-height:1.6}
+.nj-home .nj-stages li strong{font-size:1.12rem}
+.nj-home .nj-stages li p{font-size:.98rem;line-height:1.65}
+.nj-home .nj-services__number{font-size:.78rem}
+.nj-home .nj-services p{font-size:1rem;line-height:1.7}
+.nj-home .nj-services b{font-size:.83rem}
+.nj-home .nj-btn{font-size:.81rem}
+.nj-home .nj-journal__links .nj-btn{font-size:.76rem}
+@media(max-width:700px){
+.nj-home .nj-heading>p{font-size:1rem}
+.nj-home .nj-hero__content>p{font-size:1.03rem}
+.nj-home .nj-stages li p{font-size:.94rem}
+.nj-home .nj-services p{font-size:.96rem}
+}
