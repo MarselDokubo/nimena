@@ -158,3 +158,19 @@
     background-position:center,61% center;
   }
 }
+
+/* Alternating editorial-stage palettes: soft, expressive, and highly legible. */
+.nj-home .nj-stages li{border-radius:10px!important;box-shadow:0 7px 20px rgba(7,36,72,.045);transition:transform .2s ease,box-shadow .2s ease}
+.nj-home .nj-stages li:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(7,36,72,.12)}
+.nj-home .nj-stages li:nth-child(5n+1){background:#eaf2fb;border-color:#cbdff1!important}
+.nj-home .nj-stages li:nth-child(5n+2){background:#e9f6f3;border-color:#c9e7dc!important}
+.nj-home .nj-stages li:nth-child(5n+3){background:#fff3e8;border-color:#f5dfc9!important}
+.nj-home .nj-stages li:nth-child(5n+4){background:#f1effb;border-color:#ddd8f3!important}
+.nj-home .nj-stages li:nth-child(5n+5){background:#fff0e9;border-color:#f2d5c7!important}
+.nj-home .nj-stages li:nth-child(5n+1)>span{background:#d8e8fa;color:#174879;border-color:#b5d1ed}
+.nj-home .nj-stages li:nth-child(5n+2)>span{background:#d3eee5;color:#176b59;border-color:#b0dccc}
+.nj-home .nj-stages li:nth-child(5n+3)>span{background:#ffe5c9;color:#a85a1d;border-color:#f1cfaa}
+.nj-home .nj-stages li:nth-child(5n+4)>span{background:#e2def9;color:#55449a;border-color:#cbc3ef}
+.nj-home .nj-stages li:nth-child(5n+5)>span{background:#ffddcd;color:#bc481c;border-color:#f3bfa6}
+.nj-home .nj-stages li strong{color:#092b55}
+.nj-home .nj-stages li p{color:#3c526c}
