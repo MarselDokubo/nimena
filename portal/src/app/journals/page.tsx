@@ -29,6 +29,22 @@ export default function JournalsHomePage() {
   ];
   return (
     <main className="nj-home">
+      <section className="nj-hero" aria-labelledby="nj-hero-title">
+        <div className="nj-hero__image" aria-hidden="true" />
+        <div className="nj-container nj-hero__inner">
+          <div className="nj-hero__content">
+            <span className="nj-eyebrow">NIMENA Research &amp; Journals</span>
+            <h1 id="nj-hero-title">Engineering Knowledge for <em>Maritime Progress.</em></h1>
+            <p>Advancing research in offshore and marine engineering, naval architecture, the blue economy and sustainable energy — from rigorous scholarship to real-world impact.</p>
+            <div className="nj-actions">
+              <Link className="nj-btn nj-btn--orange" href="/journals/author">Submit a manuscript <Icon name="arrow" /></Link>
+              <Link className="nj-btn nj-btn--outline" href="#journals">Explore the journals</Link>
+            </div>
+          </div>
+          <span className="nj-hero__signature">Research · People · Innovation · A sustainable ocean</span>
+        </div>
+      </section>
+
       <section className="nj-event" aria-labelledby="nj-event-title">
         <div className="nj-container nj-event__layout">
           <div className="nj-event__date" aria-label="20 November 2026"><strong>20</strong><span>NOV</span><small>2026</small></div>
@@ -46,23 +62,7 @@ export default function JournalsHomePage() {
               <Link className="nj-event__textlink" href="/journals/call-for-papers">Publication &amp; submission guidance →</Link>
             </div>
           </div>
-          <div className="nj-event__aside" aria-hidden="true"><span>CALL FOR PAPERS</span><strong>MARITIME<br />RESEARCH<br />2026</strong><span>Four technical research tracks</span><div className="nj-event__waves">≈ ≈ ≈</div></div>
-        </div>
-      </section>
-
-      <section className="nj-hero" aria-labelledby="nj-hero-title">
-        <div className="nj-hero__image" aria-hidden="true" />
-        <div className="nj-container nj-hero__inner">
-          <div className="nj-hero__content">
-            <span className="nj-eyebrow">NIMENA Research &amp; Journals</span>
-            <h1 id="nj-hero-title">Engineering Knowledge for <em>Maritime Progress.</em></h1>
-            <p>Advancing research in offshore and marine engineering, naval architecture, the blue economy and sustainable energy — from rigorous scholarship to real-world impact.</p>
-            <div className="nj-actions">
-              <Link className="nj-btn nj-btn--orange" href="/journals/author">Submit a manuscript <Icon name="arrow" /></Link>
-              <Link className="nj-btn nj-btn--outline" href="#journals">Explore the journals</Link>
-            </div>
-          </div>
-          <span className="nj-hero__signature">Research · People · Innovation · A sustainable ocean</span>
+          <a className="nj-event__flyer" href="/media/nimena-conference-2026.png" target="_blank" rel="noopener noreferrer" aria-label="Open official NIMENA Conference 2026 flyer"><img src="/media/nimena-conference-2026.png" alt="Official NIMENA Conference 2026 Call for Papers flyer" /><span>View official flyer ↗</span></a></div>
         </div>
       </section>
 
