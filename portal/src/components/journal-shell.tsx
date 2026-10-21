@@ -35,6 +35,7 @@ export function JournalShell({ children }: { children: ReactNode }) {
 
   return (
     <div className="journal-site">
+      <div className="nj-announcement" role="region" aria-label="Upcoming NIMENA conference announcement"><span className="nj-announcement__tag">Upcoming · 20 Nov 2026</span><span>NIMENA Conference 2026 — Advancing Maritime Sovereignty</span><Link href="/journals#conference-details">Call for papers · Abstracts due 17 Nov <Icon name="arrow" /></Link></div>
       <div className="journal-ecosystem-bar">
         <span>NIMENA digital services</span>
         <nav aria-label="NIMENA digital services">
