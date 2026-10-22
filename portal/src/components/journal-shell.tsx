@@ -7,11 +7,12 @@ import { Brand } from "@/components/brand";
 import { Icon } from "@/components/icon";
 
 const publicLinks = [
-  { href: "/journals", label: "Journals home" },
-  { href: "/journals/ajomena", label: "AJOMENA" },
-  { href: "/journals/jbesed", label: "JBESED" },
-  { href: "/journals/call-for-papers", label: "Call for papers" },
-  { href: "/journals/policies", label: "Policies" },
+  { href: "/journals", label: "Home" },
+  { href: "/journals/about", label: "About" },
+  { href: "/journals#journals", label: "Our journals" },
+  { href: "/journals/call-for-papers", label: "Publish with us" },
+  { href: "/journals/announcements", label: "Announcements" },
+  { href: "/journals/contact", label: "Contact" },
 ] as const;
 
 const workflowLinks = [
@@ -26,20 +27,27 @@ export function JournalShell({ children }: { children: ReactNode }) {
 
   function isActive(href: string) {
     if (href === "/journals") return pathname === href;
+    if (href === "/journals#journals") {
+      return pathname.startsWith("/journals/ajomena") || pathname.startsWith("/journals/jbesed");
+    }
     return pathname.startsWith(href);
   }
 
   return (
     <div className="journal-site">
-      <div className="journal-preview-bar">
-        <span><i /> Interactive presentation prototype</span>
-        <p>Fictional articles and records · No live OJS data</p>
-        <Link href="/">Return to portal previews</Link>
+      <div className="journal-ecosystem-bar">
+        <span>NIMENA digital services</span>
+        <nav aria-label="NIMENA digital services">
+          <a href="https://nimena.org.ng/" rel="noreferrer" target="_blank">Main website</a>
+          <Link href="/">Member portal</Link>
+          <Link aria-current="page" href="/journals">Journals</Link>
+          <a href="https://nimenajournals.com/index/login" rel="noreferrer" target="_blank">OJS sign in</a>
+        </nav>
       </div>
 
       <header className="journal-header">
         <div className="journal-header__main">
-          <Brand subtitle="Research & Journals" />
+          <Brand href="/journals" subtitle="Research & Journals" />
           <button
             aria-expanded={menuOpen}
             aria-label="Toggle journal navigation"
@@ -66,7 +74,7 @@ export function JournalShell({ children }: { children: ReactNode }) {
         </div>
 
         <div className="journal-workflow-nav">
-          <span>Workflow previews</span>
+          <span><i /> Presentation build · sample records only</span>
           <nav aria-label="Journal workflow previews">
             {workflowLinks.map((item) => (
               <Link className={isActive(item.href) ? "is-active" : ""} href={item.href} key={item.href}>
@@ -81,8 +89,8 @@ export function JournalShell({ children }: { children: ReactNode }) {
 
       <footer className="journal-footer">
         <div className="journal-footer__brand">
-          <Brand subtitle="Research & Journals" />
-          <p>A review prototype for NIMENA&apos;s proposed scholarly publishing experience.</p>
+          <Brand href="/journals" subtitle="Research & Journals" />
+          <p>Two journals. One clear route from research discovery to responsible scholarly publication.</p>
         </div>
         <div>
           <strong>Explore</strong>
@@ -91,18 +99,18 @@ export function JournalShell({ children }: { children: ReactNode }) {
           <Link href="/journals/call-for-papers">Call for papers</Link>
         </div>
         <div>
-          <strong>Workflows</strong>
-          <Link href="/journals/author">Author preview</Link>
-          <Link href="/journals/reviewer">Reviewer preview</Link>
-          <Link href="/journals/editor">Editor preview</Link>
+          <strong>Publishing</strong>
+          <Link href="/journals/call-for-papers">Publish with us</Link>
+          <Link href="/journals/policies">Editorial policies</Link>
+          <a href="https://nimenajournals.com/index/login" rel="noreferrer" target="_blank">Live OJS sign in</a>
         </div>
         <div>
           <strong>Institution</strong>
-          <a href="https://nimena.org.ng/research/" rel="noreferrer" target="_blank">NIMENA Research</a>
+          <a href="https://nimena.org.ng/research/" rel="noreferrer" target="_blank">NIMENA main website</a>
           <Link href="/research">Member research profile</Link>
-          <Link href="/">Member-services previews</Link>
+          <Link href="/">Member services</Link>
         </div>
-        <small className="journal-footer__legal">Prototype for review only. Journal titles, policies, fees, boards, ISSNs, DOI registration and indexing claims require formal approval.</small>
+        <small className="journal-footer__legal">Presentation build. Demonstration articles and workflow records are fictional; verified journal records and live submissions remain in OJS.</small>
       </footer>
     </div>
   );

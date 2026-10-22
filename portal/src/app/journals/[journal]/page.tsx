@@ -33,12 +33,13 @@ export default async function JournalPage({ params }: JournalPageProps) {
           <div>
             <Link className="button button--primary" href="/journals/author">Submit to {journal.acronym} <Icon name="arrow" /></Link>
             <Link className="button journal-button--light" href={`/journals/${journal.slug}/issues`}>Browse issues</Link>
+            <a className="journal-live-link" href={journal.liveUrl} rel="noreferrer" target="_blank">Open live OJS ↗</a>
           </div>
         </div>
         <dl className="journal-title-hero__facts">
-          <div><dt>Review model</dt><dd>{journal.proposedReview}<small>Proposed</small></dd></div>
-          <div><dt>Publication</dt><dd>{journal.publicationModel}<small>Proposed</small></dd></div>
-          <div><dt>Access</dt><dd>Reader access model<small>To be approved</small></dd></div>
+          <div><dt>Review model</dt><dd>{journal.proposedReview}<small>Current platform</small></dd></div>
+          <div><dt>Publication</dt><dd>{journal.publicationModel}<small>Workflow target</small></dd></div>
+          <div><dt>Access</dt><dd>Open access<small>Current platform</small></dd></div>
         </dl>
       </section>
 
@@ -56,7 +57,7 @@ export default async function JournalPage({ params }: JournalPageProps) {
           <span>About the journal</span>
           <h2>{journal.strapline}</h2>
           <p>{journal.description}</p>
-          <p>This presentation version shows how the journal can communicate its purpose, readership and publication process without making unverified claims about indexing, accreditation or metrics.</p>
+          <p>This presentation version shows how the journal can communicate its purpose, readership and publication process while verified records and submissions remain on the live OJS platform.</p>
         </div>
         <aside className="journal-information-card">
           <span>Journal information</span>

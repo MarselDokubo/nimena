@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portal.nimena.org.ng"),
   title: {
     default: "NIMENA Member Services",
     template: "%s | NIMENA Member Services",

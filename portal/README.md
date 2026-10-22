@@ -18,10 +18,13 @@ This directory is intentionally separate from the existing static public website
 | `/secretariat` | Application queue, operational metrics and review activity |
 | `/secretariat/applications/NIM-2026-0142` | Detailed application review and recommendation workspace |
 | `/secretariat/conferences` | Conference review, decisions, scheduling and attendance operations |
-| `/journals` | Branded NIMENA Journals presentation prototype |
+| `/journals` | Branded NIMENA Journals presentation site and ecosystem entry point |
+| `/journals/about` | Publishing purpose, principles and governance |
 | `/journals/ajomena` | AJOMENA public journal and prototype current issue |
 | `/journals/jbesed` | JBESED public journal and prototype current issue |
 | `/journals/call-for-papers` | Journal Call for Papers and preparation guidance |
+| `/journals/announcements` | Calls, author notices and journal developments |
+| `/journals/contact` | Manuscript, editorial and institutional support routes |
 | `/journals/policies` | Proposed author, reviewer and editorial policy architecture |
 | `/journals/author` | Interactive manuscript-submission preview |
 | `/journals/reviewer` | Interactive confidential peer-review preview |
@@ -38,7 +41,7 @@ npm install
 npm run dev -- --hostname 127.0.0.1
 ```
 
-Open `http://127.0.0.1:3000`.
+Open `http://127.0.0.1:3000`. Start at `/` to present all portal journeys, or open `/journals` to begin with the journal website.
 
 Quality checks:
 

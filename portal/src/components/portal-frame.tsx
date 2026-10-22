@@ -82,6 +82,10 @@ export function PortalFrame({ children, eyebrow, title, role = "member" }: Porta
             <span>{eyebrow}</span>
             <h1>{title}</h1>
           </div>
+          <nav className="portal-ecosystem-links" aria-label="NIMENA digital services">
+            <a href="https://nimena.org.ng/" rel="noreferrer" target="_blank">Main website</a>
+            <Link href="/journals">Journals</Link>
+          </nav>
           <div className="topbar__actions">
             <span className="sample-pill">Sample data</span>
             <button className="icon-button notification-button" type="button" aria-label="Notifications">

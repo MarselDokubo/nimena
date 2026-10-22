@@ -66,7 +66,7 @@ export function ResearchWorkspace() {
       <div className="notice-strip">
         <Icon name="shield" />
         <p><strong>Prototype boundary:</strong> the records below are fictional and are not being read from nimenajournals.com.</p>
-        <Link className="button button--small button--outline" href="/journals">Open journals prototype</Link>
+        <Link className="button button--small button--outline" href="/journals">Open NIMENA Journals</Link>
       </div>
 
       <section className="research-metrics" aria-label="Research activity summary">
