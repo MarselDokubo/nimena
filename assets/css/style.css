@@ -9879,12 +9879,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
 }
 
 
-/* === NIMENA + NSE HEADER LOCKUP 2026-09-11 === */
+/* === NIMENA HEADER MARK === */
 .header__bottom .nimena-brand-lockup {
   display: inline-flex !important;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
   width: max-content;
   max-width: none;
 }
@@ -9894,25 +9893,11 @@ html, body { max-width: 100%; overflow-x: hidden; }
   max-width: 98px;
   object-fit: contain;
 }
-.header__bottom .nimena-brand-lockup .nse-partner-logo {
-  width: auto;
-  height: 66px;
-  max-width: 58px;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
 
 @media (max-width: 991px) {
-  .header__bottom .nimena-brand-lockup {
-    gap: 9px;
-  }
   .header__bottom .nimena-brand-lockup .nimena-primary-logo {
     height: 68px;
     max-width: 86px;
-  }
-  .header__bottom .nimena-brand-lockup .nse-partner-logo {
-    height: 60px;
-    max-width: 52px;
   }
 }
 
@@ -9986,16 +9971,9 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .header__bottom .header__bottom-right {
     padding-left: 0 !important;
   }
-  .header__bottom .nimena-brand-lockup {
-    gap: 8px;
-  }
   .header__bottom .nimena-brand-lockup .nimena-primary-logo {
     height: 70px;
     max-width: 88px;
-  }
-  .header__bottom .nimena-brand-lockup .nse-partner-logo {
-    height: 62px;
-    max-width: 54px;
   }
   .header__bottom .header__hamburger button.hamburger-btn {
     width: 52px;
@@ -10008,10 +9986,6 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .header__bottom .nimena-brand-lockup .nimena-primary-logo {
     height: 64px;
     max-width: 80px;
-  }
-  .header__bottom .nimena-brand-lockup .nse-partner-logo {
-    height: 56px;
-    max-width: 48px;
   }
 }
 
