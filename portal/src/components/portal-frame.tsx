@@ -40,6 +40,8 @@ export function PortalFrame({ children, eyebrow, title, role = "member" }: Porta
             const active = item.href === pathname
               || (item.href === "/conferences" && pathname.startsWith("/conferences"))
               || (item.href === "/profile" && pathname.startsWith("/profile"))
+              || (item.href === "/journals" && pathname.startsWith("/journals"))
+              || (item.href === "/secretariat/services" && pathname.startsWith("/secretariat/services"))
               || (pathname.startsWith("/secretariat/applications") && item.label === "Applications");
             return (
               <Link

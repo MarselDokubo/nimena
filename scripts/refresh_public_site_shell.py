@@ -19,7 +19,7 @@ def main_navigation(prefix: str) -> str:
     return f'''<nav id="mobile-menu"><ul>
 <li><a href="{home}">Home</a></li>
 <li class="has-dropdown"><a href="{prefix}membership/">Membership</a><ul class="submenu">
-<li><a href="{prefix}membership/">Membership Overview</a></li><li><a href="{prefix}membership/#benefits">Member Benefits</a></li><li><a href="{prefix}membership/#pathways">Membership Pathways</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}register/">Apply for Membership</a></li><li><a href="{prefix}login/">Member Portal</a></li></ul></li>
+<li><a href="{prefix}membership/">Membership Overview</a></li><li><a href="{prefix}membership/#benefits">Member Benefits</a></li><li><a href="{prefix}membership/#pathways">Membership Pathways</a></li><li><a href="https://portal.nimena.org.ng/verify-member">Verify a Member</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}register/">Apply for Membership</a></li><li><a href="{prefix}login/">Member Portal</a></li></ul></li>
 <li class="has-dropdown"><a href="{prefix}education-careers/">Education &amp; Careers</a><ul class="submenu">
 <li><a href="{prefix}education-careers/">Learning &amp; CPD</a></li><li><a href="{prefix}education-careers/#careers">Careers &amp; Mentoring</a></li><li><a href="{prefix}programmes/#accreditation">Accreditation &amp; Endorsement</a></li><li><a href="{prefix}services/">Professional Services</a></li></ul></li>
 <li class="has-dropdown"><a href="{prefix}conferences/">Conferences</a><ul class="submenu">
@@ -44,8 +44,17 @@ def utility_links(prefix: str, variant: bool) -> str:
 
 def footer_navigation(prefix: str) -> str:
     return f'''<ul class="nimena-footer-nav">
-<li><a href="{prefix}about/">About NIMENA</a></li><li><a href="{prefix}membership/">Membership</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}education-careers/">Education, CPD &amp; Careers</a></li><li><a href="{prefix}conferences/">Conferences &amp; Events</a></li><li><a href="{prefix}archive/">Conference Archive</a></li><li><a href="{prefix}recognition/">Recognition &amp; Awards</a></li><li><a href="{prefix}research/">Research &amp; Publications</a></li><li><a href="{prefix}magazine/">NIMENA Magazine</a></li><li><a href="{prefix}partnerships/">Industry Partnerships</a></li><li><a href="{prefix}programmes/">Institutional Programmes</a></li><li><a href="{prefix}blog/">News &amp; Media</a></li><li><a href="{prefix}portfolio/">Gallery &amp; Activities</a></li><li><a href="{prefix}search/">Search</a></li><li><a href="{prefix}contact/">Contact</a></li>
+<li><a href="{prefix}about/">About NIMENA</a></li><li><a href="{prefix}membership/">Membership</a></li><li><a href="https://portal.nimena.org.ng/verify-member">Verify a Member</a></li><li><a href="{prefix}community/">Chapters &amp; Communities</a></li><li><a href="{prefix}education-careers/">Education, CPD &amp; Careers</a></li><li><a href="{prefix}conferences/">Conferences &amp; Events</a></li><li><a href="{prefix}archive/">Conference Archive</a></li><li><a href="{prefix}recognition/">Recognition &amp; Awards</a></li><li><a href="{prefix}research/">Research &amp; Publications</a></li><li><a href="{prefix}magazine/">NIMENA Magazine</a></li><li><a href="{prefix}partnerships/">Industry Partnerships</a></li><li><a href="{prefix}programmes/">Institutional Programmes</a></li><li><a href="{prefix}blog/">News &amp; Media</a></li><li><a href="{prefix}portfolio/">Gallery &amp; Activities</a></li><li><a href="{prefix}search/">Search</a></li><li><a href="{prefix}contact/">Contact</a></li>
 </ul>'''
+
+
+def normalise_portfolio_label(match: re.Match[str]) -> str:
+    """Keep one useful aria-label on every gallery lightbox link."""
+    opening_tag = match.group(0)
+    labels = re.findall(r'aria-label="([^"]*)"', opening_tag)
+    label = labels[0] if labels else "View gallery image"
+    opening_tag = re.sub(r'\s*aria-label="[^"]*"', "", opening_tag)
+    return opening_tag.replace("<a ", f'<a aria-label="{label}" ', 1)
 
 
 for path in sorted(ROOT.rglob("index.html")):
@@ -66,7 +75,7 @@ for path in sorted(ROOT.rglob("index.html")):
     )
     html = re.sub(
         r'<ul class="header__lang-list">.*?</ul>',
-        f'<ul class="header__lang-list"><li><a href="{prefix}register/">Join NIMENA</a></li><li><a href="{prefix}login/">Member Portal</a></li><li><a href="{prefix}research/">Journals</a></li><li><a href="{prefix}partnerships/">Partnerships</a></li></ul>',
+        f'<ul class="header__lang-list"><li><a href="{prefix}register/">Join NIMENA</a></li><li><a href="{prefix}login/">Member Portal</a></li><li><a href="https://portal.nimena.org.ng/verify-member">Verify Member</a></li><li><a href="{prefix}research/">Journals</a></li><li><a href="{prefix}partnerships/">Partnerships</a></li></ul>',
         html,
         count=1,
         flags=re.S,
@@ -120,9 +129,10 @@ for path in sorted(ROOT.rglob("index.html")):
         f'<a href="{prefix}login/"><i class="fa-regular fa-user"></i></a>',
         f'<a aria-label="Open Member Portal" href="{prefix}login/"><i class="fa-regular fa-user"></i></a>',
     )
-    html = html.replace(
-        'class="portfolio-view-btn popup-image"',
-        'aria-label="View gallery image" class="portfolio-view-btn popup-image"',
+    html = re.sub(
+        r'<a\b[^>]*class="portfolio-view-btn popup-image"[^>]*>',
+        normalise_portfolio_label,
+        html,
     )
 
     html = html.replace("nimenahqt@nimena.com.ng", "nimenahqt@nimena.org.ng")

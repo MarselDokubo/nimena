@@ -21,13 +21,13 @@ PAGES = {
 <span class="nimena-programme-eyebrow">Membership &amp; professional community</span>
 <h1>Belong to the profession shaping Nigeria's maritime future.</h1>
 <p>Build professional standing, technical capability and trusted connections through a membership journey designed for students, graduates, practising professionals and organisations.</p>
-<div class="nimena-programme-actions"><a class="nimena-programme-action" href="../register/">Apply for membership</a><a class="nimena-programme-action nimena-programme-action--outline" href="../login/">Renew or manage membership</a></div>
+<div class="nimena-programme-actions"><a class="nimena-programme-action" href="../register/">Apply for membership</a><a class="nimena-programme-action nimena-programme-action--outline" href="../login/">Renew or manage membership</a><a class="nimena-programme-action nimena-programme-action--outline" href="https://portal.nimena.org.ng/verify-member">Verify a member</a></div>
 </div></div></section>
 <nav class="nimena-action-strip" aria-label="Membership actions"><div class="container"><div class="nimena-action-strip__grid">
 <a href="#benefits"><i class="fa-light fa-badge-check"></i><span><small>Discover</small>Member benefits</span></a>
 <a href="#pathways"><i class="fa-light fa-id-card"></i><span><small>Compare</small>Membership pathways</span></a>
 <a href="#application"><i class="fa-light fa-file-signature"></i><span><small>Understand</small>Application process</span></a>
-<a href="../community/"><i class="fa-light fa-users"></i><span><small>Connect</small>Chapters &amp; communities</span></a>
+<a href="https://portal.nimena.org.ng/verify-member"><i class="fa-light fa-badge-check"></i><span><small>Confirm</small>Verify a member</span></a>
 </div></div></nav>
 <section class="nimena-hub-section" id="benefits"><div class="container"><div class="nimena-hub-heading"><div><span class="nimena-programme-number">MEMBER VALUE</span><h2>A professional relationship that grows with your career.</h2></div><p>NIMENA membership should make it easier to learn, contribute, connect and demonstrate continuing professional engagement.</p></div>
 <div class="nimena-hub-grid nimena-hub-grid--three">
