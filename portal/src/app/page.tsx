@@ -62,6 +62,15 @@ export default function PortalEntry() {
               </span>
               <Icon className="access-card__arrow" name="arrow" />
             </Link>
+
+            <Link className="access-card" href="/verify-member">
+              <span className="access-card__icon"><Icon name="shield" /></span>
+              <span>
+                <strong>Verify a member</strong>
+                <small>Confirm active standing, grade and approved professional information</small>
+              </span>
+              <Icon className="access-card__arrow" name="arrow" />
+            </Link>
           </div>
 
           <div className="entry-divider"><span>New applicant</span></div>

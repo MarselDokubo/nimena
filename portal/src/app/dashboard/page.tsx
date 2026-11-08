@@ -75,12 +75,12 @@ export default function MemberDashboard() {
                 <div><h2>Quick actions</h2><p>Common member services</p></div>
               </div>
               <div className="panel__body quick-actions">
-                <Link className="quick-action" href="#payments"><Icon name="wallet" /><span>Pay or renew</span></Link>
+                <Link className="quick-action" href="/renewals"><Icon name="wallet" /><span>Pay or renew</span></Link>
                 <Link className="quick-action" href="#documents"><Icon name="upload" /><span>Upload document</span></Link>
                 <Link className="quick-action" href="/conferences"><Icon name="calendar" /><span>Conference centre</span></Link>
                 <Link className="quick-action" href="/research"><Icon name="book" /><span>Research profile</span></Link>
                 <Link className="quick-action" href="/profile"><Icon name="download" /><span>Download profile</span></Link>
-                <Link className="quick-action" href="/programmes"><Icon name="shield" /><span>Institutional programmes</span></Link>
+                <Link className="quick-action" href="/learning"><Icon name="book" /><span>CPD & learning</span></Link>
               </div>
             </section>
 
@@ -91,13 +91,13 @@ export default function MemberDashboard() {
               </div>
               <div className="panel__body event-list">
                 <div className="event-item">
-                  <span className="event-date"><strong>24</strong><small>Sep</small></span>
+                  <span className="event-date"><strong>19</strong><small>Nov</small></span>
                   <span className="event-item__copy"><strong>Technical standards roundtable</strong><span>Online · 2 CPD hours · Registration open</span></span>
                   <Link className="button button--small button--outline" href="#development">Register</Link>
                 </div>
                 <div className="event-item">
-                  <span className="event-date"><strong>08</strong><small>Oct</small></span>
-                  <span className="event-item__copy"><strong>Eastern Chapter professional forum</strong><span>Port Harcourt · Chapter event</span></span>
+                  <span className="event-date"><strong>03</strong><small>Dec</small></span>
+                  <span className="event-item__copy"><strong>Eastern Chapter reliability workshop</strong><span>Port Harcourt · Chapter event</span></span>
                   <Link className="button button--small button--outline" href="#development">Details</Link>
                 </div>
               </div>

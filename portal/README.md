@@ -12,10 +12,20 @@ This directory is intentionally separate from the existing static public website
 | `/apply` | Seven-section digital version of NIMENA Form No. 1 (Rev. 09 — April 2021) |
 | `/dashboard` | Member record, renewal, CPD, documents and events |
 | `/profile` | Branded member/applicant profile with PDF print-save and data download |
+| `/renewals` | Annual dues, payment-method selection, standing and receipt history preview |
+| `/verify-member` | Public, privacy-safe membership-number verification |
+| `/community` | Chapters, student sections, Young Professionals and technical communities |
+| `/learning` | CPD catalogue, enrolment preview, credit ledger and certificates |
 | `/research` | Member research profile, OJS-linked activity and reviewer recognition |
 | `/conferences` | Conference catalogue, sample registration, attendance and CPD journey |
 | `/conferences/cfp` | Conference abstract/full-paper submission workspace |
+| `/library` | Searchable standards, technical reports and proceedings catalogue |
+| `/recognition` | Awards, Fellowship and scholarship application workspace |
+| `/careers` | Jobs, internships, mentoring and professional-profile tools |
+| `/partners` | Corporate/academic affiliate and sponsorship proposal workspace |
+| `/governance` | Governance library and responsibility-based Secretariat directory |
 | `/secretariat` | Application queue, operational metrics and review activity |
+| `/secretariat/services` | Cross-service operating dashboard for the Secretariat |
 | `/secretariat/applications/NIM-2026-0142` | Detailed application review and recommendation workspace |
 | `/secretariat/conferences` | Conference review, decisions, scheduling and attendance operations |
 | `/journals` | Branded NIMENA Journals presentation site and ecosystem entry point |
@@ -75,6 +85,14 @@ The prototype deliberately does not contain a real login, database, payment proc
 7. Migration and reconciliation of the existing membership register.
 
 See [docs/PRODUCT_BLUEPRINT.md](docs/PRODUCT_BLUEPRINT.md) and [docs/phase-1-schema.sql](docs/phase-1-schema.sql) for the proposed workflow and data model.
+
+## Institutional platform expansion
+
+The current branch adds the complete service architecture requested for the next NIMENA platform phase: renewals and receipts, public member verification, chapters and professional communities, CPD, conferences and CFP, technical resources, recognition programmes, careers and mentoring, partnerships and sponsorships, governance, and OJS identity linking.
+
+The member-verification preview uses fictional records only. Its API deliberately returns a restricted public profile—membership standing, grade/rank, chapter, validity, disciplines, degrees and approved accomplishments—and never exposes contact details, payment history, uploaded evidence or private notes.
+
+See [docs/INSTITUTIONAL_PLATFORM_V1.md](docs/INSTITUTIONAL_PLATFORM_V1.md) for the implementation map and [docs/institutional-platform-schema.sql](docs/institutional-platform-schema.sql) for the consolidated PostgreSQL production model.
 
 ## Scholarly services prototype
 
